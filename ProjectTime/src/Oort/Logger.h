@@ -3,6 +3,7 @@
 #include <string>
 #include <chrono>
 #include <fstream>
+#include <format>
 
 namespace Oort
 {
@@ -36,26 +37,45 @@ namespace Oort
 			LOG_TYPE_MASTER  = 5
 		};
 		
-		// Main Log Function
+		//* Main Log Function
 		void Log(const std::string& message, LogType level)
 		{
 			// Check if the level is lower than the current log level
 			if (level < m_logLevel)
 				return;
 
+			// Get the time
+			auto timeNow = std::chrono::system_clock::now();
+			std::time_t timeInTimeTformat = std::chrono::system_clock::to_time_t(timeNow);
+			// convert the time into a string
+			std::string theTimeNow = std::ctime(&timeInTimeTformat);
+			
+			// remove the /n at the end of the string and the first 3 characters
+			theTimeNow.erase(theTimeNow.end() - 1);
+
+			// remove the second space between the month and the day
+			int pos = nthOccurrence(theTimeNow, " ", 2);
+			theTimeNow.erase(pos, 1);
+			theTimeNow.replace(pos, 1, ".");
+			
+			// remove the day name from the start of the string
+			theTimeNow.erase(0, 4);
+
+			int color = 90;
+			
 			// Log the message to the console
 			if (m_logToConsole)
-				std::cout << message << std::endl;
+				std::cout << std::format("\x1B[{}m{} >> {}\033[0m\t\t", color, theTimeNow, message) << std::endl;
 
 			// Log the message to the log file
 			if (m_logToFile)
 				if (m_logFile.is_open())
-					m_logFile << message << std::endl;
+					m_logFile << theTimeNow << " >> " << message << std::endl;
 
 			return;
 		}
 
-		// Log File
+		//* Log File
 		void SetLogFile(const std::string& directoryPath)
 		{
 			m_logDirectoryPath = directoryPath;
@@ -83,12 +103,12 @@ namespace Oort
 		}
 
 		
-		std::string& GetLogFilePath()
+		std::string GetLogFilePath()
 		{
-			return m_logDirectoryPath + "\\" + m_logFileName;
+			return std::format("{}\\{}", m_logDirectoryPath, m_logFileName);
 		}
 		
-		// Log Level
+		//* Log Level
 		void SetLogLevel(LogType level)
 		{
 			m_logLevel = level;
@@ -99,7 +119,7 @@ namespace Oort
 			return m_logLevel;
 		}
 
-		// Log To Console or Not
+		//* Log To Console or Not
 		void SetLogToConsole(bool logToConsole)
 		{
 			m_logToConsole = logToConsole;
@@ -118,6 +138,7 @@ namespace Oort
 		bool m_logToConsole            = true;
 		bool m_logToFile               = false;
 		std::ofstream m_logFile;
+		int debugColor = 90;
 	};
 }
 

@@ -25,27 +25,25 @@ public:
 		ImGui::SetNextWindowClass(window_class_);
 		ImGui::Begin("ProjectTimeMenuWindow");
 		
-		// Create a side bar
+		/// Create a side bar
 		ImGui::BeginChild("SideBar", ImVec2(90, 0), true);
 
-		// Create a button with the logo for the side bar
+		//* Create the HOME BUTTON on the side bar
 		if (ImGui::ImageButton(ProjectTimeLogoImage->GetDescriptorSet(), ImVec2(80, 80)))
-		{
-			Logger.Log("Logo Button Pressed", Logger.LOG_TYPE_MASTER);
-			Logger.SetLogFile("path");
-		}
+			HomeButtonPressed();
 
-		// Create a button for the side bar
-		if (ImGui::Button("Icon"))
-		{
-			std::cout << "icon" << std::endl;
-		}
-
-		// End the side bar
+		/// End the side bar
 		ImGui::EndChild();
 
 		// End the Dear ImGui frame
 		ImGui::End();
+	}
+
+private:
+	void HomeButtonPressed()
+	{
+		Logger.Log("Logo Button Pressed", Logger.LOG_TYPE_MASTER);
+		Logger.SetLogFile("path");
 	}
 
 private:
@@ -55,11 +53,11 @@ private:
 
 Walnut::Application* Walnut::CreateApplication(int argc, char** argv)
 {
-	// Create the Walnut Application Specs
+	//* Create the Walnut Application Specs
 	Walnut::ApplicationSpecification ProjectTimeAppSpecs;
 	ProjectTimeAppSpecs.Name = "ProjectTime";
 
-	// Create The Walnut Application
+	//* Create The Walnut Application
 	Walnut::Application* ProjectTimeApp = new Walnut::Application(ProjectTimeAppSpecs);
 	
 	ProjectTimeApp->PushLayer<Menu>();
