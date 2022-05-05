@@ -1,6 +1,0 @@
-{
-    "files.associations": {
-        "*.pm_file": "json",
-        "memory": "cpp"
-    }
-}

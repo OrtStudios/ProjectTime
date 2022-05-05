@@ -2,8 +2,10 @@
 #include "Walnut/EntryPoint.h"
 #include "Walnut/Image.h"
 
-#include "Oort/Icons.h"
+#include <imgui_internal.h>
+
 #include "Oort/Settings.h"
+#include "Oort/Logger.h"
 
 class Menu : public Walnut::Layer
 {
@@ -16,13 +18,30 @@ public:
 
 	virtual void OnUIRender() override
 	{
-		// Start the Dear ImGui frame
+		// Set the Menu Window
+		ImGuiWindowClass window_class;
+		window_class.DockNodeFlagsOverrideSet = ImGuiDockNodeFlags_NoTabBar;
+		ImGuiWindowClass* window_class_ = &window_class;
+		ImGui::SetNextWindowClass(window_class_);
 		ImGui::Begin("ProjectTimeMenuWindow");
-		
 		
 		// Create a side bar
 		ImGui::BeginChild("SideBar", ImVec2(90, 0), true);
-		ImGui::Image(ProjectTimeLogoImage->GetDescriptorSet(), {80, 80});
+
+		// Create a button with the logo for the side bar
+		if (ImGui::ImageButton(ProjectTimeLogoImage->GetDescriptorSet(), ImVec2(80, 80)))
+		{
+			Logger.Log("Logo Button Pressed", Logger.LOG_TYPE_MASTER);
+			Logger.SetLogFile("path");
+		}
+
+		// Create a button for the side bar
+		if (ImGui::Button("Icon"))
+		{
+			std::cout << "icon" << std::endl;
+		}
+
+		// End the side bar
 		ImGui::EndChild();
 
 		// End the Dear ImGui frame
