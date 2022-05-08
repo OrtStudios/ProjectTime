@@ -13,7 +13,6 @@ public:
 	virtual void OnAttach() override
 	{
 		ProjectTimeLogoImage = std::make_shared<Walnut::Image>("Assets/Images/MenuLogo.png");
-		
 	}
 
 	virtual void OnUIRender() override
@@ -26,7 +25,7 @@ public:
 		ImGui::Begin("ProjectTimeMenuWindow");
 		
 		/// Create a side bar
-		ImGui::BeginChild("SideBar", ImVec2(90, 0), true);
+		ImGui::BeginChild("SideBar", ImVec2(100, 0), true);
 
 		//* Create the HOME BUTTON on the side bar
 		if (ImGui::ImageButton(ProjectTimeLogoImage->GetDescriptorSet(), ImVec2(80, 80)))

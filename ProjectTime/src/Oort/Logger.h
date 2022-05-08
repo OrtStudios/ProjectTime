@@ -4,13 +4,16 @@
 #include <chrono>
 #include <fstream>
 #include <format>
+#include <map>
+
+#define string std::string
 
 namespace Oort
 {
 	class m_Logger
 	{
 	private:
-		int nthOccurrence(const std::string& str, const std::string& findMe, int nth)
+		int nthOccurrence(const string str, const string findMe, int nth)
 		{
 			size_t  pos = 0;
 			int     cnt = 0;
@@ -19,7 +22,7 @@ namespace Oort
 			{
 				pos += 1;
 				pos = str.find(findMe, pos);
-				if (pos == std::string::npos)
+				if (pos == string::npos)
 					return -1;
 				cnt++;
 			}
@@ -38,7 +41,7 @@ namespace Oort
 		};
 		
 		//* Main Log Function
-		void Log(const std::string& message, LogType level)
+		void Log(const string message, LogType level)
 		{
 			// Check if the level is lower than the current log level
 			if (level < m_logLevel)
@@ -48,7 +51,7 @@ namespace Oort
 			auto timeNow = std::chrono::system_clock::now();
 			std::time_t timeInTimeTformat = std::chrono::system_clock::to_time_t(timeNow);
 			// convert the time into a string
-			std::string theTimeNow = std::ctime(&timeInTimeTformat);
+			string theTimeNow = std::ctime(&timeInTimeTformat);
 			
 			// remove the /n at the end of the string and the first 3 characters
 			theTimeNow.erase(theTimeNow.end() - 1);
@@ -57,6 +60,16 @@ namespace Oort
 			int pos = nthOccurrence(theTimeNow, " ", 2);
 			theTimeNow.erase(pos, 1);
 			theTimeNow.replace(pos, 1, ".");
+
+			// replace the month name with the month number
+			pos = nthOccurrence(theTimeNow, " ", 1);			
+			
+			string mounthName = theTimeNow.substr(pos + 1, 3);
+			string mounthNumber = m_monthNames.find(mounthName)->second;
+			
+			
+			theTimeNow.replace(pos, 3, mounthNumber);
+			
 			
 			// remove the day name from the start of the string
 			theTimeNow.erase(0, 4);
@@ -76,7 +89,7 @@ namespace Oort
 		}
 
 		//* Log File
-		void SetLogFile(const std::string& directoryPath)
+		void SetLogFile(const string directoryPath)
 		{
 			m_logDirectoryPath = directoryPath;
 
@@ -84,7 +97,7 @@ namespace Oort
 			auto timeNow = std::chrono::system_clock::now();
 			std::time_t timeInTimeTformat = std::chrono::system_clock::to_time_t(timeNow);
 			// convert the time into a string
-			std::string theTimeNow = std::ctime(&timeInTimeTformat);
+			string theTimeNow = std::ctime(&timeInTimeTformat);
 			
 			//File Name Format: <LogDirectoryPath>/ProjectTimeLog_<Time>.log
 			// Time = Mounth / Day
@@ -103,7 +116,7 @@ namespace Oort
 		}
 
 		
-		std::string GetLogFilePath()
+		string GetLogFilePath()
 		{
 			return std::format("{}\\{}", m_logDirectoryPath, m_logFileName);
 		}
@@ -132,13 +145,28 @@ namespace Oort
 		}
 	
 	private:
-		std::string m_logDirectoryPath = "";
-		std::string m_logFileName      = "";
-		LogType m_logLevel             = LOG_TYPE_WARNING;
-		bool m_logToConsole            = true;
-		bool m_logToFile               = false;
+		string m_logDirectoryPath = "";
+		string m_logFileName      = "";
+		LogType m_logLevel        = LOG_TYPE_WARNING;
+		bool m_logToConsole       = true;
+		bool m_logToFile          = false;
 		std::ofstream m_logFile;
 		int debugColor = 90;
+
+		std::map<string, int> m_months = {
+			{ "Jan", 1 },
+			{ "Feb", 2 },
+			{ "Mar", 3 },
+			{ "Apr", 4 },
+			{ "May", 5 },
+			{ "Jun", 6 },
+			{ "Jul", 7 },
+			{ "Aug", 8 },
+			{ "Sep", 9 },
+			{ "Oct", 10 },
+			{ "Nov", 11 },
+			{ "Dec", 12 }
+		};
 	};
 }
 
