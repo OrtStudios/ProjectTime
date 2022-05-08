@@ -41,8 +41,12 @@ public:
 private:
 	void HomeButtonPressed()
 	{
-		Logger.Log("Logo Button Pressed", Logger.LOG_TYPE_MASTER);
-		Logger.SetLogFile("path");
+		Logger.Log("Log Test Debug", Logger.LOG_TYPE_DEBUG);
+		Logger.Log("Log Test Info", Logger.LOG_TYPE_INFO);
+		Logger.Log("Log Test Warning", Logger.LOG_TYPE_WARNING);
+		Logger.Log("Log Test Error", Logger.LOG_TYPE_ERROR);
+		Logger.Log("Log Test Fatal", Logger.LOG_TYPE_FATAL);
+		Logger.Log("Log Test Master", Logger.LOG_TYPE_MASTER);
 	}
 
 private:
@@ -52,6 +56,9 @@ private:
 
 Walnut::Application* Walnut::CreateApplication(int argc, char** argv)
 {
+	Logger.SetLogLevel(Logger.LOG_TYPE_DEBUG);
+
+
 	//* Create the Walnut Application Specs
 	Walnut::ApplicationSpecification ProjectTimeAppSpecs;
 	ProjectTimeAppSpecs.Name = "ProjectTime";

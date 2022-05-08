@@ -60,25 +60,59 @@ namespace Oort
 			int pos = nthOccurrence(theTimeNow, " ", 2);
 			theTimeNow.erase(pos, 1);
 			theTimeNow.replace(pos, 1, ".");
-
-			// replace the month name with the month number
-			pos = nthOccurrence(theTimeNow, " ", 1);			
+			
+			//get the month 
+			pos = nthOccurrence(theTimeNow, " ", 1);		
 			
 			string mounthName = theTimeNow.substr(pos + 1, 3);
-			string mounthNumber = m_monthNames.find(mounthName)->second;
+
+			// get the mounth number from the map
+			string mounthNumber = m_months[mounthName];
 			
-			
-			theTimeNow.replace(pos, 3, mounthNumber);
-			
-			
+			//erase the month name
+			theTimeNow.erase(pos, 3);
+
 			// remove the day name from the start of the string
 			theTimeNow.erase(0, 4);
 
-			int color = 90;
+			// put the mounth number at the start of the string
+			theTimeNow = mounthNumber + theTimeNow;
+
+			// if the mounth is suposed to be in the format D.M change the string
+			if (m_dateFormat == "D.M")
+			{
+				// change the pos to the dot between the day and the mounth
+				int pos = nthOccurrence(theTimeNow, ".", 1);
+
+				// get the day number
+				string dayNumber = theTimeNow.substr(pos + 1, 2);
+				
+				// erase the space in the dayNumber if there is
+				for (int i = 0; i < dayNumber.size(); i++)
+					if (dayNumber[i] == ' ' || dayNumber[i] == '.')
+						dayNumber.erase(i, 1);
+
+				// convert the number to int
+				int dayNumberInt = std::stoi(dayNumber);
+				int mounthNumberInt = std::stoi(mounthNumber);
+
+				// erase the day and the mounth
+				if (dayNumberInt < 10 && mounthNumberInt < 10)
+				{ theTimeNow.erase(0, 3); }
+				else if ((dayNumberInt < 10 && mounthNumberInt > 10) || (dayNumberInt > 10 && mounthNumberInt < 10))
+				{ theTimeNow.erase(0, 4); }
+				else
+					theTimeNow.erase(0, 5);
+				
+				// add the day and the mounth with a dot between them in the start of the string
+				theTimeNow = dayNumber + "." + mounthNumber + theTimeNow;
+			}
 			
 			// Log the message to the console
 			if (m_logToConsole)
-				std::cout << std::format("\x1B[{}m{} >> {}\033[0m\t\t", color, theTimeNow, message) << std::endl;
+				std::cout << std::format(
+					"\x1B[{}m{} >> {}\033[0m\t\t", m_logColors[level], theTimeNow, message
+				) << std::endl;
 
 			// Log the message to the log file
 			if (m_logToFile)
@@ -147,25 +181,34 @@ namespace Oort
 	private:
 		string m_logDirectoryPath = "";
 		string m_logFileName      = "";
+		string m_dateFormat       = "D.M";
 		LogType m_logLevel        = LOG_TYPE_WARNING;
 		bool m_logToConsole       = true;
 		bool m_logToFile          = false;
+		int debugColor            = 90;
 		std::ofstream m_logFile;
-		int debugColor = 90;
 
-		std::map<string, int> m_months = {
-			{ "Jan", 1 },
-			{ "Feb", 2 },
-			{ "Mar", 3 },
-			{ "Apr", 4 },
-			{ "May", 5 },
-			{ "Jun", 6 },
-			{ "Jul", 7 },
-			{ "Aug", 8 },
-			{ "Sep", 9 },
-			{ "Oct", 10 },
-			{ "Nov", 11 },
-			{ "Dec", 12 }
+		std::map<string, string> m_months = {
+			{ "Jan", "1"  },
+			{ "Feb", "2"  },
+			{ "Mar", "3"  },
+			{ "Apr", "4"  },
+			{ "May", "5"  },
+			{ "Jun", "6"  },
+			{ "Jul", "7"  },
+			{ "Aug", "8"  },
+			{ "Sep", "9"  },
+			{ "Oct", "10" },
+			{ "Nov", "11" },
+			{ "Dec", "12" }
+		};
+		std::map<LogType, int> m_logColors = {
+			{ LOG_TYPE_DEBUG,   90 },
+			{ LOG_TYPE_INFO,    94 },
+			{ LOG_TYPE_WARNING, 33 },
+			{ LOG_TYPE_ERROR,   91 },
+			{ LOG_TYPE_FATAL,   31 },
+			{ LOG_TYPE_MASTER,  92 }
 		};
 	};
 }
