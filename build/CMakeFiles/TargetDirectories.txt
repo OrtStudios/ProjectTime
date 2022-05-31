@@ -1,9 +1,0 @@
-C:/Dev/C++/ProjectTime/build/CMakeFiles/Experimental.dir
-C:/Dev/C++/ProjectTime/build/CMakeFiles/Nightly.dir
-C:/Dev/C++/ProjectTime/build/CMakeFiles/Continuous.dir
-C:/Dev/C++/ProjectTime/build/CMakeFiles/NightlyMemoryCheck.dir
-C:/Dev/C++/ProjectTime/build/CMakeFiles/ProjectTime.dir
-C:/Dev/C++/ProjectTime/build/CMakeFiles/PACKAGE.dir
-C:/Dev/C++/ProjectTime/build/CMakeFiles/RUN_TESTS.dir
-C:/Dev/C++/ProjectTime/build/CMakeFiles/ALL_BUILD.dir
-C:/Dev/C++/ProjectTime/build/CMakeFiles/ZERO_CHECK.dir
