@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,7 +25,10 @@ namespace ProjectTime
         {
             InitializeComponent();
 
-            
+            Oort.Oort theOort = new Oort.Oort();
+            String text = theOort.test();
+
+            Hi.Content = text;
         }
     }
 }

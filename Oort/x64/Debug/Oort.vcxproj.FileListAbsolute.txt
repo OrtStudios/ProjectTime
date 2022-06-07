@@ -1,0 +1,5 @@
+C:\Dev\ProjectTime\x64\Debug\Ijwhost.dll
+C:\Dev\ProjectTime\x64\Debug\Oort.deps.json
+C:\Dev\ProjectTime\x64\Debug\Oort.runtimeconfig.json
+C:\Dev\ProjectTime\Oort\x64\Debug\Oort.vcxproj.AssemblyReference.cache
+C:\Dev\ProjectTime\Oort\x64\Debug\Oort.genruntimeconfig.cache

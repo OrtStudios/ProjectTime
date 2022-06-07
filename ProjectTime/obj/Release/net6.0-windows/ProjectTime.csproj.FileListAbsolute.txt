@@ -1,0 +1,5 @@
+C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows\ProjectTime.csproj.AssemblyReference.cache
+C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows\MainWindow.g.cs
+C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows\App.g.cs
+C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows\ProjectTime_MarkupCompile.cache
+C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows\ProjectTime_MarkupCompile.lref

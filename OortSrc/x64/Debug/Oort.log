@@ -1,0 +1,9 @@
+﻿  Scanning sources for module dependencies...
+  Logger.h
+  Compiling...
+  Logger.h
+C:\Dev\ProjectTime\Oort\src\Logger.h(31,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  Source.cpp
+C:\Dev\ProjectTime\Oort\src\Logger.h(31,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+     Creating library C:\Dev\ProjectTime\\Build\x64\Debug\Oort.lib and object C:\Dev\ProjectTime\\Build\x64\Debug\Oort.exp
+  Oort.vcxproj -> C:\Dev\ProjectTime\Build\x64\Debug\Oort.dll

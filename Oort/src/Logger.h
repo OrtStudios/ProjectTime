@@ -1,16 +1,20 @@
 #pragma once
+#pragma warning(disable : 4996)
 
+#include <iostream>
 #include <string>
 #include <chrono>
 #include <fstream>
 #include <format>
 #include <map>
 
+using namespace System;
+
 #define string std::string
 
 namespace Oort
 {
-	class m_Logger
+	public ref class Logger
 	{
 	private:
 		int nthOccurrence(const string str, const string findMe, int nth)
@@ -28,18 +32,18 @@ namespace Oort
 			}
 			return pos;
 		}
-		
+
 	public:
 		enum LogType
 		{
-			LOG_TYPE_DEBUG   = 0,
-			LOG_TYPE_INFO    = 1,
+			LOG_TYPE_DEBUG = 0,
+			LOG_TYPE_INFO = 1,
 			LOG_TYPE_WARNING = 2,
-			LOG_TYPE_ERROR   = 3,
-			LOG_TYPE_FATAL   = 4,
-			LOG_TYPE_MASTER  = 5
+			LOG_TYPE_ERROR = 3,
+			LOG_TYPE_FATAL = 4,
+			LOG_TYPE_MASTER = 5
 		};
-		
+
 		//* Main Log Function
 		void Log(const string message, LogType level)
 		{
@@ -52,7 +56,7 @@ namespace Oort
 			std::time_t timeInTimeTformat = std::chrono::system_clock::to_time_t(timeNow);
 			// convert the time into a string
 			string theTimeNow = std::ctime(&timeInTimeTformat);
-			
+
 			// remove the /n at the end of the string and the first 3 characters
 			theTimeNow.erase(theTimeNow.end() - 1);
 
@@ -60,15 +64,15 @@ namespace Oort
 			int pos = nthOccurrence(theTimeNow, " ", 2);
 			theTimeNow.erase(pos, 1);
 			theTimeNow.replace(pos, 1, ".");
-			
+
 			//get the month 
-			pos = nthOccurrence(theTimeNow, " ", 1);		
-			
+			pos = nthOccurrence(theTimeNow, " ", 1);
+
 			string mounthName = theTimeNow.substr(pos + 1, 3);
 
 			// get the mounth number from the map
 			string mounthNumber = m_months[mounthName];
-			
+
 			//erase the month name
 			theTimeNow.erase(pos, 3);
 
@@ -86,7 +90,7 @@ namespace Oort
 
 				// get the day number
 				string dayNumber = theTimeNow.substr(pos + 1, 2);
-				
+
 				// erase the space in the dayNumber if there is
 				for (int i = 0; i < dayNumber.size(); i++)
 					if (dayNumber[i] == ' ' || dayNumber[i] == '.')
@@ -98,16 +102,20 @@ namespace Oort
 
 				// erase the day and the mounth
 				if (dayNumberInt < 10 && mounthNumberInt < 10)
-				{ theTimeNow.erase(0, 3); }
+				{
+					theTimeNow.erase(0, 3);
+				}
 				else if ((dayNumberInt < 10 && mounthNumberInt > 10) || (dayNumberInt > 10 && mounthNumberInt < 10))
-				{ theTimeNow.erase(0, 4); }
+				{
+					theTimeNow.erase(0, 4);
+				}
 				else
 					theTimeNow.erase(0, 5);
-				
+
 				// add the day and the mounth with a dot between them in the start of the string
 				theTimeNow = dayNumber + "." + mounthNumber + theTimeNow;
 			}
-			
+
 			// Log the message to the console
 			if (m_logToConsole)
 				std::cout << std::format(
@@ -132,7 +140,7 @@ namespace Oort
 			std::time_t timeInTimeTformat = std::chrono::system_clock::to_time_t(timeNow);
 			// convert the time into a string
 			string theTimeNow = std::ctime(&timeInTimeTformat);
-			
+
 			//File Name Format: <LogDirectoryPath>/ProjectTimeLog_<Time>.log
 			// Time = Month / Day
 			theTimeNow.erase(nthOccurrence(theTimeNow, " ", 4));
@@ -145,14 +153,14 @@ namespace Oort
 
 			// save the path
 			m_FullPath = m_logDirectoryPath + m_logFileName;
-			
+
 			// Open the file
 			m_logFile.open(m_logDirectoryPath + m_logFileName);
 
 			return;
 		}
 
-		
+
 		string GetLogFilePath()
 		{
 			return std::format("{}\\{}", m_logDirectoryPath, m_logFileName);
@@ -163,19 +171,19 @@ namespace Oort
 			// save the log file and closes it
 			m_logFile.close();
 		}
-		
+
 		void SaveLogFile()
 		{
 			m_logFile.close();
 			m_logFile.open(m_FullPath);
 		}
-		
+
 		//* Log Level
 		void SetLogLevel(LogType level)
 		{
 			m_logLevel = level;
 		}
-		
+
 		LogType GetLogLevel()
 		{
 			return m_logLevel;
@@ -186,22 +194,22 @@ namespace Oort
 		{
 			m_logToConsole = logToConsole;
 		}
-		
+
 		// Log To File or Not
 		void SetLogToFile(bool logToFile)
 		{
 			m_logToFile = logToFile;
 		}
-	
+
 	private:
 		string m_logDirectoryPath = "";
-		string m_logFileName      = "";
-		string m_FullPath         = "";
-		string m_dateFormat       = "D.M";
-		LogType m_logLevel        = LOG_TYPE_WARNING;
-		bool m_logToConsole       = true;
-		bool m_logToFile          = false;
-		int debugColor            = 90;
+		string m_logFileName = "";
+		string m_FullPath = "";
+		string m_dateFormat = "D.M";
+		LogType m_logLevel = LOG_TYPE_WARNING;
+		bool m_logToConsole = true;
+		bool m_logToFile = false;
+		int debugColor = 90;
 		std::ofstream m_logFile;
 
 		std::map<string, string> m_months = {
@@ -228,5 +236,3 @@ namespace Oort
 		};
 	};
 }
-
-Oort::m_Logger Logger = Oort::m_Logger();

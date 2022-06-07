@@ -1,0 +1,10 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(514,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Oort.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Scanning sources for module dependencies...
+  Logger.h
+  Compiling...
+  Logger.h
+C:\Dev\ProjectTime\OortSrc\src\Logger.h(31,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  Source.cpp
+C:\Dev\ProjectTime\OortSrc\src\Logger.h(31,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+     Creating library C:\Dev\ProjectTime\\Build\x64\Debug\OortSRC.lib and object C:\Dev\ProjectTime\\Build\x64\Debug\OortSRC.exp
+  OortSRC.vcxproj -> C:\Dev\ProjectTime\Build\x64\Debug\OortSRC.dll
