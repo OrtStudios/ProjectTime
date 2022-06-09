@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Oort">
+      <UniqueIdentifier>{C9488A7C-B57F-8B0D-5E6C-71104A82070F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Oort\Logger.h">
+      <Filter>Oort</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Oort\settings.h">
+      <Filter>Oort</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ProjectTime.cpp" />
+  </ItemGroup>
+</Project>

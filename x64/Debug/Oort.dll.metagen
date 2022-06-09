@@ -1,0 +1,24 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly Oort, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Oort.Oort: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Log(String, LogType): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Struct Oort.LogType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Oort.LogType LOG_TYPE_DEBUG = 0 : Public, Static, Literal, HasDefault
+    Oort.LogType LOG_TYPE_INFO = 1 : Public, Static, Literal, HasDefault
+    Oort.LogType LOG_TYPE_WARNING = 2 : Public, Static, Literal, HasDefault
+    Oort.LogType LOG_TYPE_ERROR = 3 : Public, Static, Literal, HasDefault
+    Oort.LogType LOG_TYPE_FATAL = 4 : Public, Static, Literal, HasDefault
+    Oort.LogType LOG_TYPE_MASTER = 5 : Public, Static, Literal, HasDefault

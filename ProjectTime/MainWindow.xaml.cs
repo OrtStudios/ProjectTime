@@ -25,10 +25,7 @@ namespace ProjectTime
         {
             InitializeComponent();
 
-            Oort.Oort theOort = new Oort.Oort();
-            String text = theOort.test();
-
-            Hi.Content = text;
+            new Oort.Oort().Log("Hello", Oort.LogType.LOG_TYPE_ERROR);
         }
     }
 }

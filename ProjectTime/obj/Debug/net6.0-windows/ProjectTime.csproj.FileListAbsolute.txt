@@ -3,7 +3,6 @@ C:\Dev\ProjectTime\ProjectTime\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Dev\ProjectTime\ProjectTime\obj\Debug\net6.0-windows\App.g.cs
 C:\Dev\ProjectTime\ProjectTime\obj\Debug\net6.0-windows\ProjectTime_MarkupCompile.cache
 C:\Dev\ProjectTime\ProjectTime\obj\Debug\net6.0-windows\ProjectTime_MarkupCompile.lref
-C:\Dev\ProjectTime\ProjectTime\bin\Debug\net6.0-windows\Ijwhost.dll
 C:\Dev\ProjectTime\ProjectTime\bin\Debug\net6.0-windows\ProjectTime.exe
 C:\Dev\ProjectTime\ProjectTime\bin\Debug\net6.0-windows\ProjectTime.deps.json
 C:\Dev\ProjectTime\ProjectTime\bin\Debug\net6.0-windows\ProjectTime.runtimeconfig.json

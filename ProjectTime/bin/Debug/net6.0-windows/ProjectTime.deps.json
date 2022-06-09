@@ -15,6 +15,9 @@
         }
       },
       "Oort/1.0.0": {
+        "dependencies": {
+          "Core": "1.0.0"
+        },
         "runtime": {
           "Oort.dll": {}
         }
