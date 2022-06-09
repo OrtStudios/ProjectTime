@@ -1,4 +1,4 @@
-﻿  pch.cpp
-c1xx : warning C4857: C++/CLI mode does not support C++ versions newer than C++17; setting language to /std:c++17
-c1xx : error C7681: two-phase name lookup is not supported for C++/CLI or C++/CX; use /Zc:twoPhase-
-c1xx : fatal error C1903: unable to recover from previous error(s); stopping compilation
+﻿  Oort.cpp
+  AssemblyInfo.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+Core.lib(Logger.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+  Oort.vcxproj -> C:\Dev\ProjectTime\x64\Debug\Oort.dll

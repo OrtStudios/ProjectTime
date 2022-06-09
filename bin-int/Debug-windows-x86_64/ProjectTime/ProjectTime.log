@@ -1,0 +1,5 @@
+﻿  ProjectTime.cpp
+C:\Dev\ProjectTime\ProjectTime\src\Oort\Logger.h(29,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Dev\ProjectTime\ProjectTime\src\Oort\Logger.h(68,26): error C2065: 'm_monthNames': undeclared identifier
+C:\Dev\ProjectTime\ProjectTime\src\Oort\Logger.h(54,29): warning C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Dev\ProjectTime\ProjectTime\src\Oort\Logger.h(100,29): warning C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.

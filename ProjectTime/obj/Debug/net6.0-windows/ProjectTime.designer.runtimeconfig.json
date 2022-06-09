@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\ShakedKod\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\ShakedKod\\.nuget\\packages",
+      "C:\\Users\\shaqu\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\shaqu\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {

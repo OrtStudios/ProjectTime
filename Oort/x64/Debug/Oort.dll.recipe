@@ -2,9 +2,6 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Dev\ProjectTime\x64\Debug\Oort.runtimeconfig.json</FullPath>
-    </ProjectOutput>
-    <ProjectOutput>
       <FullPath>C:\Dev\ProjectTime\x64\Debug\Oort.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
