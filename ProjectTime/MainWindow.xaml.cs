@@ -21,11 +21,28 @@ namespace ProjectTime
     /// </summary>
     public partial class MainWindow : Window
     {
+        Oort.OortMain oort;
+        
+        private void LoadOort()
+        {
+            oort = new Oort.OortMain();
+        }
+
+        private void EndProgram()
+        {
+            oort.Dispose();
+        }
+
         public MainWindow()
         {
+            LoadOort();
+            oort.SetLogLevel(Oort.LogType.LOG_TYPE_INFO);
+            
             InitializeComponent();
 
-            new Oort.Oort().Log("Hello", Oort.LogType.LOG_TYPE_ERROR);
+            oort.Log("Testing", Oort.LogType.LOG_TYPE_INFO);
+
+            EndProgram();
         }
     }
 }

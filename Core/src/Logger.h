@@ -43,7 +43,7 @@ namespace Oort
 		//* Log To Console or Not
 		void SetLogToConsole(bool logToConsole);
 
-		// Log To File or Not
+		//* Log To File or Not
 		void SetLogToFile(bool logToFile);
 
 	private:

@@ -5,12 +5,20 @@ Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934
 	hash=None, flags=None
 Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
-Class Oort.Oort: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class Oort.OortMain: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Interfaces:
     System.IDisposable
   Methods:
     Log(String, LogType): PrivateScope, Public, HideBySig
+    SetLogFile(String): PrivateScope, Public, HideBySig
+    GetLogFilePath(): PrivateScope, Public, HideBySig
+    CloseLogFile(): PrivateScope, Public, HideBySig
+    SaveLogFile(): PrivateScope, Public, HideBySig
+    SetLogLevel(LogType): PrivateScope, Public, HideBySig
+    GetLogLevel(): PrivateScope, Public, HideBySig
+    SetLogToConsole(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetLogToFile(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
     Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
 Struct Oort.LogType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
   :System.Enum

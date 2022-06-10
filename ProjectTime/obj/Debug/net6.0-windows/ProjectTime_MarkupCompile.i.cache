@@ -1,7 +1,7 @@
 ﻿ProjectTime
 1.0.0.0
 
-winexe
+exe
 C#
 .cs
 C:\Dev\ProjectTime\ProjectTime\obj\Debug\net6.0-windows\
@@ -16,5 +16,5 @@ C:\Dev\ProjectTime\ProjectTime\App.xaml
 195-2002695150
 MainWindow.xaml;
 
-True
+False
 
