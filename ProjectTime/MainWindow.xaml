@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:ProjectTime"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <StackPanel>
         <Label Name="Hi">Hello</Label>
-    </Grid>
+        <Button
+            Name="LogError"
+            Click="LogError_Click"
+            >
+            Click Me
+        </Button>
+    </StackPanel>
 </Window>

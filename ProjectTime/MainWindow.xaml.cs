@@ -21,28 +21,33 @@ namespace ProjectTime
     /// </summary>
     public partial class MainWindow : Window
     {
-        Oort.OortMain oort;
+        OORT.OortMain Oort;
         
         private void LoadOort()
         {
-            oort = new Oort.OortMain();
-        }
-
-        private void EndProgram()
-        {
-            oort.Dispose();
+            Oort = new OORT.OortMain();
         }
 
         public MainWindow()
         {
+            // Load Oort
             LoadOort();
-            oort.SetLogLevel(Oort.LogType.LOG_TYPE_INFO);
+            Oort.SetLogLevel(OORT.LogType.LOG_TYPE_DEBUG);
             
+            // Start the window
             InitializeComponent();
+            Oort.Log("Started App", OORT.LogType.LOG_TYPE_INFO);
+        }
 
-            oort.Log("Testing", Oort.LogType.LOG_TYPE_INFO);
+        ~MainWindow()
+        {
+            Oort.Log("Deleting Oort", OORT.LogType.LOG_TYPE_INFO);
+            Oort.Dispose();
+        }
 
-            EndProgram();
+        private void LogError_Click(object sender, RoutedEventArgs e)
+        {
+            Oort.Log("Unimplemented Screen Desgin", OORT.LogType.LOG_TYPE_ERROR);
         }
     }
 }

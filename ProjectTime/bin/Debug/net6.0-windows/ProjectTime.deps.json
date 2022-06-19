@@ -8,18 +8,18 @@
     ".NETCoreApp,Version=v6.0": {
       "ProjectTime/1.0.0": {
         "dependencies": {
-          "Oort": "1.0.0"
+          "OORT": "1.0.0"
         },
         "runtime": {
           "ProjectTime.dll": {}
         }
       },
-      "Oort/1.0.0": {
+      "OORT/1.0.0": {
         "dependencies": {
           "Core": "1.0.0"
         },
         "runtime": {
-          "Oort.dll": {}
+          "OORT.dll": {}
         }
       }
     }
@@ -30,7 +30,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Oort/1.0.0": {
+    "OORT/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

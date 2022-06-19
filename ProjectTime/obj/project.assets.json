@@ -11,16 +11,16 @@
           "bin/placeholder/Core.dll": {}
         }
       },
-      "Oort/1.0.0": {
+      "OORT/1.0.0": {
         "type": "project",
         "dependencies": {
           "Core": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Oort.dll": {}
+          "bin/placeholder/OORT.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Oort.dll": {}
+          "bin/placeholder/OORT.dll": {}
         }
       }
     }
@@ -31,15 +31,15 @@
       "path": "../Core/Core.vcxproj",
       "msbuildProject": "../Core/Core.vcxproj"
     },
-    "Oort/1.0.0": {
+    "OORT/1.0.0": {
       "type": "project",
-      "path": "../Oort/Oort.vcxproj",
-      "msbuildProject": "../Oort/Oort.vcxproj"
+      "path": "../OORT/Oort.vcxproj",
+      "msbuildProject": "../OORT/Oort.vcxproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
-      "Oort >= 1.0.0"
+      "OORT >= 1.0.0"
     ]
   },
   "packageFolders": {

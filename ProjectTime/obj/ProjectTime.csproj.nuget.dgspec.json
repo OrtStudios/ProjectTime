@@ -19,11 +19,11 @@
         "native": {}
       }
     },
-    "C:\\Dev\\ProjectTime\\Oort\\Oort.vcxproj": {
+    "C:\\Dev\\ProjectTime\\OORT\\Oort.vcxproj": {
       "restore": {
-        "projectUniqueName": "C:\\Dev\\ProjectTime\\Oort\\Oort.vcxproj",
-        "projectName": "Oort",
-        "projectPath": "C:\\Dev\\ProjectTime\\Oort\\Oort.vcxproj",
+        "projectUniqueName": "C:\\Dev\\ProjectTime\\OORT\\Oort.vcxproj",
+        "projectName": "OORT",
+        "projectPath": "C:\\Dev\\ProjectTime\\OORT\\Oort.vcxproj",
         "frameworks": {
           "native": {
             "projectReferences": {

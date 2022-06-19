@@ -4,11 +4,12 @@
 #include <msclr\marshal_cppstd.h>
 #include <string>
 
-namespace Oort
+namespace OORT
 {
+	//* Main Oort Functions
 	OortMain::OortMain()
 	{
-		logger = new Logger();
+		logger = new Oort::Logger();
 	}
 
 	OortMain::~OortMain()
@@ -16,10 +17,14 @@ namespace Oort
 		delete logger;
 	}
 
+	//*//////////////////*//
+	//*   Log Functions   *//
+	//*//////////////////*//
+	
 	//* Main Log Function
 	void OortMain::Log(System::String^ message, LogType level)
 	{
-		logger->Log(msclr::interop::marshal_as<std::string>(message), static_cast<Logger::LogType>(level));
+		logger->Log(msclr::interop::marshal_as<std::string>(message), static_cast<Oort::Logger::LogType>(level));
 	}
 
 	//* Log File
@@ -46,7 +51,7 @@ namespace Oort
 	//* Log Level
 	void OortMain::SetLogLevel(LogType level)
 	{
-		logger->SetLogLevel(static_cast<Logger::LogType>(level));
+		logger->SetLogLevel(static_cast<Oort::Logger::LogType>(level));
 	}
 
 	LogType OortMain::GetLogLevel()
@@ -66,4 +71,8 @@ namespace Oort
 		logger->SetLogToFile(logToFile);
 	}
 
+
+	//*//////////////////*//
+	//*   X Functions   *//
+	//*//////////////////*//
 }

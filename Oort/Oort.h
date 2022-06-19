@@ -2,7 +2,7 @@
 
 #include "../Core/src/Logger.h"
 
-namespace Oort 
+namespace OORT
 {
 	public enum class LogType
 	{
@@ -20,6 +20,10 @@ namespace Oort
 		OortMain();
 		~OortMain();
 
+		
+		//*//////////////////*//
+		//*   Log Functions   *//
+		//*//////////////////*//
 		//* Main Log Function
 		void Log(System::String^ message, LogType level);
 
@@ -42,8 +46,13 @@ namespace Oort
 
 		//* Log To File or Not
 		void SetLogToFile(bool logToFile);
+
+		
+		//*//////////////////*//
+		//*   X Functions   *//
+		//*//////////////////*//
 		
 	private:
-		Logger *logger;
+		Oort::Logger *logger;
 	};
 }
