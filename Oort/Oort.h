@@ -53,6 +53,6 @@ namespace OORT
 		//*//////////////////*//
 		
 	private:
-		Oort::Logger *logger;
+		Core::Logger *logger;
 	};
 }

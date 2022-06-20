@@ -11,7 +11,7 @@
 
 using std::string;
 
-namespace Oort
+namespace Core
 {
 	const std::map<string, string> m_months = {
 			{ "Jan", "1"  },
@@ -97,7 +97,9 @@ namespace Oort
 				int pos = nthOccurrence(theTimeNow, ".", 1);
 
 				// get the day number
-				string dayNumber = theTimeNow.substr(pos + 1, 2);
+				string dayNumber = theTimeNow.substr(pos - 2, 2);
+
+				std::cout << "dayNumber: " << dayNumber << std::endl;
 
 				// erase the space in the dayNumber if there is
 				for (int i = 0; i < dayNumber.size(); i++)
@@ -107,6 +109,8 @@ namespace Oort
 				// convert the number to int
 				int dayNumberInt = std::stoi(dayNumber);
 				int mounthNumberInt = std::stoi(mounthNumber);
+
+				std::cout << dayNumberInt << std::endl;
 
 				// erase the day and the mounth
 				if (dayNumberInt < 10 && mounthNumberInt < 10)

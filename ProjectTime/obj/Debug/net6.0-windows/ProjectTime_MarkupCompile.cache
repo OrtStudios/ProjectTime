@@ -1,20 +1,20 @@
 ﻿ProjectTime
-1.0.0.0
+
 
 exe
 C#
 .cs
-c:\Dev\ProjectTime\ProjectTime\obj\Debug\net6.0-windows\
+C:\Dev\ProjectTime\ProjectTime\obj\Debug\net6.0-windows\
 ProjectTime
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-c:\Dev\ProjectTime\ProjectTime\App.xaml
+C:\Dev\ProjectTime\ProjectTime\App.xaml
 11407045341
 
-5-202518737
-1942030480316
+3-1233169557
+195145534253
 MainWindow.xaml;
 
-True
+False
 

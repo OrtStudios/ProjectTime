@@ -9,7 +9,7 @@ namespace OORT
 	//* Main Oort Functions
 	OortMain::OortMain()
 	{
-		logger = new Oort::Logger();
+		logger = new Core::Logger();
 	}
 
 	OortMain::~OortMain()
@@ -24,7 +24,7 @@ namespace OORT
 	//* Main Log Function
 	void OortMain::Log(System::String^ message, LogType level)
 	{
-		logger->Log(msclr::interop::marshal_as<std::string>(message), static_cast<Oort::Logger::LogType>(level));
+		logger->Log(msclr::interop::marshal_as<std::string>(message), static_cast<Core::Logger::LogType>(level));
 	}
 
 	//* Log File
@@ -51,7 +51,7 @@ namespace OORT
 	//* Log Level
 	void OortMain::SetLogLevel(LogType level)
 	{
-		logger->SetLogLevel(static_cast<Oort::Logger::LogType>(level));
+		logger->SetLogLevel(static_cast<Core::Logger::LogType>(level));
 	}
 
 	LogType OortMain::GetLogLevel()

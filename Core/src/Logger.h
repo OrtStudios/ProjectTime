@@ -4,7 +4,7 @@
 #include <fstream>
 #include <map>
 
-namespace Oort
+namespace Core
 {
 	//public ref class Logger
 	class Logger
