@@ -1,10 +1,17 @@
 # Project Time
-
 ## created by ShakedKod
 
-This is Project Time, the project manager for the people that don't have time,
-it supports:
+## Content table
+* [What is Project Time?](#what-is-project-time)
+* [Introduction](#Watch-the-introduction)
+* [How to install](#How-to-install-Project-Time)
+* [tweak the project](#How-to-tweak-this-project-for-your-own-uses)
 
+
+## What is Project Time?
+
+This is Project Time, the project manager for the people that don't have time.
+Project Time supports:
 * a lot of programs and platforms, like:
     * [Blender](https://blender.org)
     * [Resolve](https://www.blackmagicdesign.com/products/davinciresolve)
@@ -34,7 +41,7 @@ it supports:
     * [Unity](https://unity.com) 2D games and apps
     * [Unity](https://unity.com) 3D games and apps
     * and more
-* integrated with git
+* integration with git
 * powerful interface
 * timeline
 * create projects right from the interface
