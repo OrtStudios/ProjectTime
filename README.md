@@ -44,3 +44,18 @@ it supports:
 <a href="https://youtube.com/NotExsistsYet" target="_blank">
     <img src="imageSoon" alt="Watch The Introduction" width="240" height="180" border="10"/>
 </a>
+
+## How to install Project Time
+
+The easiest way to install is:
+
+1. go to the [Project Time Website](https://OortStudios.github.io/Programing/Time/ProjectTime)
+2. click on the download button and wait
+3. follow the steps in the installer
+4. use Project Time
+
+if you steel don't understand, you can watch [this](https://youtube.com/NotExsistsYet) youtube video.
+
+## How to tweak this project for your own uses
+
+TODO
