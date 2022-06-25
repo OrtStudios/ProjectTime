@@ -44,14 +44,14 @@
         "projectUniqueName": "C:\\Dev\\ProjectTime\\ProjectTime\\ProjectTime.csproj",
         "projectName": "ProjectTime",
         "projectPath": "C:\\Dev\\ProjectTime\\ProjectTime\\ProjectTime.csproj",
-        "packagesPath": "C:\\Users\\shaqu\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\ShakedKod\\.nuget\\packages\\",
         "outputPath": "C:\\Dev\\ProjectTime\\ProjectTime\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\shaqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ShakedKod\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

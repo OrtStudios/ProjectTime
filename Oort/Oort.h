@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Core/src/Logger.h"
+#include "Core/src/Logger.h"
 
 namespace OORT
 {

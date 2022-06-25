@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ProjectTime": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

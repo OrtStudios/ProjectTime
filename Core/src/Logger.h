@@ -47,6 +47,11 @@ namespace Core
 		void SetLogToFile(bool logToFile);
 
 	private:
+		std::string m_GetTheTimeNow(std::string Userformat, bool TimeInTheDay = true);
+
+		std::string m_PeraseFormat(std::string Userformat, bool TimeInTheDay = true);
+
+	private:
 		std::string m_logDirectoryPath = "";
 		std::string m_logFileName = "";
 		std::string m_FullPath = "";

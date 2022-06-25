@@ -12,10 +12,14 @@ namespace Oort
 	// Constructor & Destructor
 	OortFile::OortFile(const string path)
 	{
+		m_file = std::fstream(path);
+
+		m_fullName = 
 	}
 	
 	OortFile::~OortFile()
 	{
+		delete &m_file;
 	}
 
 	// Main Functions

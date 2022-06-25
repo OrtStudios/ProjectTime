@@ -32,16 +32,16 @@ namespace ProjectTime
         {
             // Load Oort
             LoadOort();
-            Oort.SetLogLevel(OORT.LogType.LOG_TYPE_DEBUG);
+            Oort!.SetLogLevel(OORT.LogType.LOG_TYPE_DEBUG);
             
             // Start the window
             InitializeComponent();
-            Oort.Log("Started App", OORT.LogType.LOG_TYPE_INFO);
+            //Oort.Log("Started App", OORT.LogType.LOG_TYPE_INFO);
         }
 
         ~MainWindow()
         {
-            Oort.Log("Deleting Oort", OORT.LogType.LOG_TYPE_INFO);
+            //Oort.Log("Deleting Oort", OORT.LogType.LOG_TYPE_INFO);
             Oort.Dispose();
         }
 
