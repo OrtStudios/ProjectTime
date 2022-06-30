@@ -4,17 +4,35 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <format>
 
 using std::string;
 
 namespace Oort
 {
+	// Private functions
+	string OortFile::m_GetFullName(const string path)
+	{
+		size_t lastSlash = path.find_last_of("/");
+
+		if (lastSlash == std::string::npos)
+		{
+			lastSlash = path.find_last_of("\\");
+		}
+		else
+		{
+			throw std::invalid_argument(std::format("Error:\n    the file path: '{}' is invalid", path));
+		}
+
+		return path.substr(lastSlash);
+	}
+
 	// Constructor & Destructor
 	OortFile::OortFile(const string path)
 	{
 		m_file = std::fstream(path);
 
-		m_fullName = 
+		m_fullName = m_GetFullName(path);
 	}
 	
 	OortFile::~OortFile()

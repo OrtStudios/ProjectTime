@@ -7,6 +7,9 @@ namespace Oort
 {
 	class OortFile
 	{
+	private:
+		std::string m_GetFullName(const std::string path);
+
 	public:
 		// Constructor & Destructor
 		OortFile(const std::string path);
