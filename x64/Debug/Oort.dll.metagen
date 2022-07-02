@@ -15,6 +15,7 @@ Class OORT.OortMain: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     GetLogFilePath(): PrivateScope, Public, HideBySig
     CloseLogFile(): PrivateScope, Public, HideBySig
     SaveLogFile(): PrivateScope, Public, HideBySig
+    IsLogToFile(): PrivateScope, Public, HideBySig
     SetLogLevel(LogType): PrivateScope, Public, HideBySig
     GetLogLevel(): PrivateScope, Public, HideBySig
     SetLogToConsole(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig

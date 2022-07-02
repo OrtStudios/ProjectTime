@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace ProjectTime
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         OORT.OortMain Oort;
@@ -33,16 +30,25 @@ namespace ProjectTime
             // Load Oort
             LoadOort();
             Oort!.SetLogLevel(OORT.LogType.LOG_TYPE_DEBUG);
-            
+            Oort.Log("Oort Loaded", OORT.LogType.LOG_TYPE_DEBUG);
+
             // Start the window
             InitializeComponent();
-            //Oort.Log("Started App", OORT.LogType.LOG_TYPE_INFO);
+            Oort.Log("Started App", OORT.LogType.LOG_TYPE_DEBUG);
         }
 
-        ~MainWindow()
+        protected override void OnClosed(EventArgs e)
         {
-            //Oort.Log("Deleting Oort", OORT.LogType.LOG_TYPE_INFO);
-            Oort.Dispose();
+            base.OnClosed(e);
+
+            if (Oort.IsLogToFile())
+            {
+                Oort.SaveLogFile();
+                Oort.CloseLogFile();
+            }
+
+            Oort.Log("Deleting Oort", OORT.LogType.LOG_TYPE_DEBUG);
+            Oort?.Dispose();
         }
 
         private void LogError_Click(object sender, RoutedEventArgs e)

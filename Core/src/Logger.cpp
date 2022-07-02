@@ -36,7 +36,7 @@ namespace Core
 		{ Logger::LOG_TYPE_MASTER,  92 }
 	};
 
-	int Logger::nthOccurrence(const string str, const string findMe, int nth)
+	size_t Logger::nthOccurrence(const string str, const string findMe, int nth)
 	{
 		size_t  pos = 0;
 		int     cnt = 0;
@@ -65,13 +65,13 @@ namespace Core
 			// Log the message to the console
 			if (m_logToConsole)
 				std::cout << std::format(
-					"\x1B[{}m{} >> {}\033[0m\t\t", m_logColors.at(level), "The Time To Be", message
+					"\x1B[{}m{} >> {}\033[0m\t\t", m_logColors.at(level), theTime, message
 				) << std::endl;
 
 			// Log the message to the log file
 			if (m_logToFile)
 				if (m_logFile.is_open())
-					m_logFile << "The Time To Be" << " >> " << message << std::endl;
+					m_logFile << theTime << " >> " << message << std::endl;
 
 			return;
 		}
@@ -123,6 +123,11 @@ namespace Core
 		Logger::LogType Logger::GetLogLevel()
 		{
 			return m_logLevel;
+		}
+
+		bool Logger::IsLogToFile()
+		{
+			return m_logToFile;
 		}
 
 		//* Log To Console or Not

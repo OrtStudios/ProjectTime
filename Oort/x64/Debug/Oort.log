@@ -1,3 +1,4 @@
-﻿  AssemblyInfo.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+﻿  OORT.cpp
+  AssemblyInfo.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
 Core.lib(Logger.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
   Oort.vcxproj -> C:\Dev\ProjectTime\x64\Debug\OORT.dll

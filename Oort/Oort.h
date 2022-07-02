@@ -36,6 +36,8 @@ namespace OORT
 
 		void SaveLogFile();
 
+		bool IsLogToFile();
+
 		//* Log Level
 		void SetLogLevel(LogType level);
 

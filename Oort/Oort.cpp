@@ -38,6 +38,11 @@ namespace OORT
 		return gcnew System::String(logger->GetLogFilePath().c_str());
 	}
 
+	bool OortMain::IsLogToFile()
+	{
+		return logger->IsLogToFile();
+	}
+
 	void OortMain::CloseLogFile()
 	{
 		logger->CloseLogFile();

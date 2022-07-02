@@ -10,7 +10,11 @@ namespace Core
 	class Logger
 	{
 	private:
-		int nthOccurrence(const std::string str, const std::string findMe, int nth);
+		size_t nthOccurrence(const std::string str, const std::string findMe, int nth);
+
+		std::string m_GetTheTimeNow(std::string Userformat, bool TimeInTheDay = true);
+
+		std::string m_PeraseFormat(std::string Userformat, bool TimeInTheDay = true);
 
 	public:
 		enum LogType
@@ -35,6 +39,8 @@ namespace Core
 
 		void SaveLogFile();
 
+		bool IsLogToFile();
+
 		//* Log Level
 		void SetLogLevel(LogType level);
 
@@ -45,11 +51,6 @@ namespace Core
 
 		//* Log To File or Not
 		void SetLogToFile(bool logToFile);
-
-	private:
-		std::string m_GetTheTimeNow(std::string Userformat, bool TimeInTheDay = true);
-
-		std::string m_PeraseFormat(std::string Userformat, bool TimeInTheDay = true);
 
 	private:
 		std::string m_logDirectoryPath = "";
