@@ -3,16 +3,17 @@
 #include <fstream>
 #include <string>
 
-namespace Oort
+namespace Core
 {
 	class OortFile
 	{
 	private:
-		std::string m_GetFullName(const std::string path);
+		std::string* m_GetFullName(const std::string path);
+		std::string m_GetModeName(const std::string mode);
 
 	public:
 		// Constructor & Destructor
-		OortFile(const std::string path);
+		OortFile(const std::string path, const std::string mode);
 		~OortFile();
 
 		// Main Functions
@@ -44,6 +45,7 @@ namespace Oort
 		std::string m_name;
 		std::string m_extension;
 		std::string m_fullName;
+		std::string m_mode;
 		
 		std::fstream m_file;
 		std::fstream m_temp;

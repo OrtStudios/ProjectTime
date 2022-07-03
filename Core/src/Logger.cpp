@@ -28,12 +28,12 @@ namespace Core
 			{ "Dec", "12" }
 	};
 	const std::map<Logger::LogType, int> m_logColors = {
-		{ Logger::LOG_TYPE_DEBUG,   90 },
-		{ Logger::LOG_TYPE_INFO,    94 },
-		{ Logger::LOG_TYPE_WARNING, 33 },
-		{ Logger::LOG_TYPE_ERROR,   91 },
-		{ Logger::LOG_TYPE_FATAL,   31 },
-		{ Logger::LOG_TYPE_MASTER,  92 }
+		{ Logger::DEBUG,   90 },
+		{ Logger::INFO,    94 },
+		{ Logger::WARNING, 33 },
+		{ Logger::ERROR,   91 },
+		{ Logger::FATAL,   31 },
+		{ Logger::MASTER,  92 }
 	};
 
 	size_t Logger::nthOccurrence(const string str, const string findMe, int nth)

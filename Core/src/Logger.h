@@ -19,12 +19,12 @@ namespace Core
 	public:
 		enum LogType
 		{
-			LOG_TYPE_DEBUG = 0,
-			LOG_TYPE_INFO = 1,
-			LOG_TYPE_WARNING = 2,
-			LOG_TYPE_ERROR = 3,
-			LOG_TYPE_FATAL = 4,
-			LOG_TYPE_MASTER = 5
+			DEBUG = 0,
+			INFO = 1,
+			WARNING = 2,
+			ERROR = 3,
+			FATAL = 4,
+			MASTER = 5
 		};
 
 		//* Main Log Function
