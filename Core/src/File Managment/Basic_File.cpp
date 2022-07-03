@@ -202,12 +202,81 @@ namespace Core
 	// Read & Write Functions
 	string OortFile::Read()
 	{
-		return string();
+		Logger logger = Logger();
+		bool alredyOpend = false;
+
+		// open the file if it wansnt alredy open and then read it, then  return the whol file to the user as string
+		if (!m_isOpen)
+		{
+			logger.Log("file is not open, opening it", Logger::LogType::DEBUG);
+			if (!Open())
+			{
+				logger.Log("file can't be opened(Error massege in the open function), returning empty string", Logger::LogType::DEBUG);
+				return "";
+			}
+		}
+		else
+		{
+			logger.Log("file is already open, reading it", Logger::LogType::DEBUG);
+			alredyOpend = true;
+		}
+		
+		string result;
+		std::getline(m_file, result);
+		
+		if (!alredyOpend)
+		{
+			logger.Log("closing the file", Logger::LogType::DEBUG);
+			Close();
+		}
+
+		logger.Log(std::format("file: '{}' read", m_path), Logger::LogType::DEBUG);
+		logger.Log(std::format("The file<{}> content: {}", m_path, result), Logger::LogType::INFO);
+		
+		// delete logger
+		delete &logger;
+
+		// return the file content
+		return result;
 	}
 	
 	bool OortFile::Write(const string str)
 	{
-		return false;
+		Logger logger = Logger();
+		bool alredyOpend = false;
+		
+		// open the file if it wansnt alredy open and then write the string to the file, then close the file
+		if (!m_isOpen)
+		{
+			logger.Log("file is not open, opening it", Logger::LogType::DEBUG);
+			if (!Open())
+			{
+				logger.Log("file can't be opened(Error massege in the open function), returning false", Logger::LogType::DEBUG);
+				return false;
+			}
+		}
+		else
+		{
+			logger.Log("file is already open, writing to it", Logger::LogType::DEBUG);
+			alredyOpend = true;
+		}
+		
+		m_file << str;
+		
+		if (!alredyOpend)
+		{
+			logger.Log("closing the file", Logger::LogType::DEBUG);
+			Close();
+		}
+		
+		logger.Log(std::format("file: '{}' written", m_path), Logger::LogType::DEBUG);
+		logger.Log(std::format("The file<{}> content: {}", m_path, str), Logger::LogType::INFO);
+		
+		// delete logger
+		delete &logger;
+		
+		// return true if the file was written
+		return true;
 	}
 
 	// Cartography Functions
