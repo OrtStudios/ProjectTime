@@ -14,6 +14,8 @@ using std::string;
 
 namespace Core
 {
+	Core::File loggerLogFile;
+	
 	const std::map<string, string> m_months = {
 			{ "Jan", "1"  },
 			{ "Feb", "2"  },
@@ -61,16 +63,16 @@ namespace Core
 
 		// Log the message to the log file
 		if (m_logToFile)
-			if (m_logFile.IsOpen())
-				m_logFile.Write(
+			if (loggerLogFile.IsOpen())
+				loggerLogFile.Write(
 					std::format(
 						"{} >> {}\n", theTime, message
 					)
 				);
 			else
 			{
-				m_logFile.Open();
-				m_logFile.Write(
+				loggerLogFile.Open();
+				loggerLogFile.Write(
 					std::format(
 						"{} >> {}\n", theTime, message
 					)
@@ -93,14 +95,14 @@ namespace Core
 		// Create the file
 		string path = directoryPath + "/ProjectTimeLog_" + theTime + ".log";
 		
-		m_logFile = File(directoryPath + "/ProjectTimeLog_" + theTime + ".log", "a");
+		Core::loggerLogFile = File(directoryPath + "/ProjectTimeLog_" + theTime + ".log", "a");
 
 	}
 
 
 	string Logger::GetLogFilePath()
 	{
-		return m_logFile.GetPath();
+		return loggerLogFile.GetPath();
 	}
 
 	bool Logger::CloseLogFile()
@@ -108,7 +110,7 @@ namespace Core
 		/// <summary>
 		/// close the log file
 		/// </summary>
-		return m_logFile.Close();
+		return loggerLogFile.Close();
 	}
 
 	bool Logger::SaveLogFile()
@@ -116,7 +118,7 @@ namespace Core
 		/// <summary>
 		/// save the log file
 		/// </summary>
-		m_logFile.Save();
+		loggerLogFile.Save();
 	}
 
 	//* Log Level
