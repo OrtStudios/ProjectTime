@@ -54,7 +54,5 @@ namespace Core
 		bool m_isExists;
 		bool m_isReadable;
 		bool m_isWritable;
-		
-		int m_key;
 	};
 }

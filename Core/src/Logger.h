@@ -12,9 +12,9 @@ namespace Core
 	private:
 		size_t nthOccurrence(const std::string str, const std::string findMe, int nth);
 
-		std::string m_GetTheTimeNow(std::string Userformat, bool TimeInTheDay = true);
+		std::string m_GetTheTimeNow(std::string UserFormat, bool TimeInTheDay = true);
 
-		std::string m_PeraseFormat(std::string Userformat, bool TimeInTheDay = true);
+		std::string m_PhraseFormat(std::string UserFormat, bool TimeInTheDay = true);
 
 	public:
 		enum LogType
@@ -57,7 +57,7 @@ namespace Core
 		std::string m_logFileName = "";
 		std::string m_FullPath = "";
 		std::string m_dateFormat = "D.M";
-		LogType m_logLevel = LOG_TYPE_WARNING;
+		LogType m_logLevel = WARNING;
 		bool m_logToConsole = true;
 		bool m_logToFile = false;
 		int debugColor = 90;

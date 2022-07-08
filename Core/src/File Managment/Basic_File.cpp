@@ -8,6 +8,7 @@
 #include <fstream>
 #include <format>
 #include <filesystem>
+#include <conio.h>
 
 using std::string;
 
@@ -112,16 +113,16 @@ namespace Core
 		m_extension = result[1];
 		m_name = result[2];
 
-		// check if the file in the file path exsist alredy
+		// check if the file in the file path exists already
 		if (std::filesystem::exists(path))
 		{
-			m_isExists = true; // the file exsist
-			logger.Log("file exsist in the path spacified", Logger::LogType::DEBUG);
+			m_isExists = true; // the file exists
+			logger.Log("file exists in the path specified", Logger::LogType::DEBUG);
 		}
 		else
 		{
-			m_isExists = false; // the file doesn't exsist
-			logger.Log("file don't exsist in the path spacified", Logger::LogType::DEBUG);
+			m_isExists = false; // the file doesn't exists
+			logger.Log("file don't exists in the path specified", Logger::LogType::DEBUG);
 		}
 		
 		// check if the file is open
@@ -203,28 +204,28 @@ namespace Core
 	string OortFile::Read()
 	{
 		Logger logger = Logger();
-		bool alredyOpend = false;
+		bool alreadyOpened = false;
 
-		// open the file if it wansnt alredy open and then read it, then  return the whol file to the user as string
+		// open the file if it wasn't already open and then read it, then  return the whole file to the user as string
 		if (!m_isOpen)
 		{
 			logger.Log("file is not open, opening it", Logger::LogType::DEBUG);
 			if (!Open())
 			{
-				logger.Log("file can't be opened(Error massege in the open function), returning empty string", Logger::LogType::DEBUG);
+				logger.Log("file can't be opened(Error massage in the open function), returning empty string", Logger::LogType::DEBUG);
 				return "";
 			}
 		}
 		else
 		{
 			logger.Log("file is already open, reading it", Logger::LogType::DEBUG);
-			alredyOpend = true;
+			alreadyOpened = true;
 		}
 		
 		string result;
 		std::getline(m_file, result);
 		
-		if (!alredyOpend)
+		if (!alreadyOpened)
 		{
 			logger.Log("closing the file", Logger::LogType::DEBUG);
 			Close();
@@ -243,27 +244,27 @@ namespace Core
 	bool OortFile::Write(const string str)
 	{
 		Logger logger = Logger();
-		bool alredyOpend = false;
+		bool alreadyOpened = false;
 		
-		// open the file if it wansnt alredy open and then write the string to the file, then close the file
+		// open the file if it wasn't already open and then write the string to the file, then close the file
 		if (!m_isOpen)
 		{
 			logger.Log("file is not open, opening it", Logger::LogType::DEBUG);
 			if (!Open())
 			{
-				logger.Log("file can't be opened(Error massege in the open function), returning false", Logger::LogType::DEBUG);
+				logger.Log("file can't be opened(Error massage in the open function), returning false", Logger::LogType::DEBUG);
 				return false;
 			}
 		}
 		else
 		{
 			logger.Log("file is already open, writing to it", Logger::LogType::DEBUG);
-			alredyOpend = true;
+			alreadyOpened = true;
 		}
 		
 		m_file << str;
 		
-		if (!alredyOpend)
+		if (!alreadyOpened)
 		{
 			logger.Log("closing the file", Logger::LogType::DEBUG);
 			Close();
@@ -282,12 +283,290 @@ namespace Core
 	// Cartography Functions
 	bool OortFile::Encrypt(const int key)
 	{
-		return false;
+		/// <summary>
+		/// encrypt the file with a custom key
+		/// </summary>
+		/// <param name="key">the key that the file will be encrypted with</param>
+		/// <returns>TRUE if succeeded or FALSE if failed</returns>
+
+		Logger logger = Logger();
+
+		// close the file if it was open, open the file in binary mode
+		if (m_isOpen)
+		{
+			logger.Log("file is open, closing it", Logger::LogType::DEBUG);
+			Close();
+		}
+		
+		logger.Log("opening the file in binary mode", Logger::LogType::DEBUG);
+
+		//* Opening Files *//
+		// main file
+		try
+		{
+			m_file.open(m_path, std::ios::binary);
+			m_isOpen = true;
+		}
+		catch (std::exception& e)
+		{
+			logger.Log(std::format("Error:\n    the file: '{}' can't be opened", m_path), Logger::LogType::ERROR);
+			m_isOpen = false;
+
+			// delete logger
+			delete& logger;
+
+			return false;
+		}
+		
+		// output file
+		std::ofstream fout;
+		try
+		{
+			fout.open("output.txt", std::ios::binary);
+		}
+		catch (std::exception& e)
+		{
+			logger.Log(std::format("Error:\n    the file: '{}' can't be opened", "output.txt"), Logger::LogType::ERROR);
+			m_isOpen = false;
+
+			// delete logger
+			delete& logger;
+
+			return false;
+		}
+		
+		//* Encrypting the file *//
+		char c;
+		logger.Log("Encrypting the file", Logger::LogType::INFO);
+		while (!m_file.eof())
+		{
+			m_file >> std::noskipws >> c;
+			logger.Log(std::format("Encrypting char: {}", c), Logger::LogType::DEBUG);
+			int temp = c + key;
+			fout << (char)temp;
+		}
+		logger.Log("Output file encrypted", Logger::LogType::DEBUG);
+
+		
+		//* Closing Files *//
+		// output file
+		try
+		{
+			fout.close();
+		}
+		catch (std::exception& e)
+		{
+			logger.Log(
+				std::format("Error:\n    the file: '{}' can't be closed", "output.txt"),
+				Logger::LogType::ERROR);
+			m_isOpen = true;
+
+			// delete logger
+			delete& logger;
+
+			return false;
+		}
+
+		// setting the content of the output file to the main file and deleting the output file
+		logger.Log("setting the content of the output file to the main file", Logger::LogType::DEBUG);
+		std::ifstream fin;
+		try
+		{
+			fin.open("output.txt", std::ios::binary);
+		}
+		catch (std::exception& e)
+		{
+			logger.Log(
+				std::format("Error:\n    the file: '{}' can't be opened", "output.txt"),
+				Logger::LogType::ERROR);
+			m_isOpen = false;
+
+			// delete logger
+			delete& logger;
+
+			return false;
+		}
+
+		//* Closing Files *//
+		// setting the content of the output file to the main file
+		char c2;
+		logger.Log("setting the content of the output file to the main file", Logger::LogType::DEBUG);
+		while (!fin.eof())
+		{
+			fin >> std::noskipws >> c2;
+			m_file << (char) c2;
+		}
+		logger.Log("File encrypted", Logger::LogType::INFO);
+
+		// closing the output file
+		try
+		{
+			fin.close();
+		}
+		catch (std::exception& e)
+		{
+			logger.Log(
+				std::format("Error:\n    the file: '{}' can't be closed", m_path),
+				Logger::LogType::ERROR);
+			m_isOpen = true;
+
+			// delete logger
+			delete& logger;
+
+			return false;
+		}
+
+		// deleting the output file
+		try
+		{
+			remove("output.txt");
+		}
+		catch (std::exception& e)
+		{
+			logger.Log(
+				std::format("Error:\n    the file: '{}' can't be deleted", "output.txt"),
+				Logger::LogType::ERROR);
+			m_isOpen = true;
+
+			// delete logger
+			delete& logger;
+
+			return false;
+		}
+		
+		// closing the main file
+		try
+		{
+			m_file.close();
+			m_isOpen = false;
+		}
+		catch (std::exception& e)
+		{
+			logger.Log(
+				std::format("Error:\n    the file: '{}' can't be closed", m_path),
+				Logger::LogType::ERROR);
+			m_isOpen = true;
+
+			// delete logger
+			delete& logger;
+
+			return false;
+		}
+		
+
+		//* Deleting the logger and returning true *//
+		delete &logger;
+		return true;
 	}
 	
 	bool OortFile::Decrypt(const int key)
 	{
-		return false;
+		/// <summary>
+		/// decrypt the file with a custom key
+		/// </summary>
+		/// <param name="key">the key that the file will be decrypted with</param>
+		/// <returns>TRUE if succeeded or FALSE if failed</returns>
+
+		Logger logger = Logger();
+
+		// close the file if it was open, open the file in binary mode
+		if (m_isOpen)
+		{
+			logger.Log("file is open, closing it", Logger::LogType::DEBUG);
+			Close();
+		}
+
+		logger.Log("opening the file in binary mode", Logger::LogType::DEBUG);
+
+		//* Opening Files *//
+		// main file
+		try
+		{
+			m_file.open(m_path, std::ios::binary);
+			m_isOpen = true;
+		}
+		catch (std::exception& e)
+		{
+			logger.Log(std::format("Error:\n    the file: '{}' can't be opened", m_path), Logger::LogType::ERROR);
+			m_isOpen = false;
+
+			// delete logger
+			delete& logger;
+
+			return false;
+		}
+
+		// output file
+		std::ofstream fout;
+		try
+		{
+			fout.open(m_path.c_str(), std::ios::binary);
+		}
+		catch (std::exception& e)
+		{
+			logger.Log(std::format("Error:\n    the file: '{}' can't be opened", m_path), Logger::LogType::ERROR);
+			m_isOpen = false;
+
+			// delete logger
+			delete& logger;
+
+			return false;
+		}
+
+		//* Decrypting the file *//
+		logger.Log("Decrypting the file", Logger::LogType::INFO);
+		char c;
+		while (!m_file.eof())
+		{
+			m_file >> std::noskipws >> c;
+			logger.Log(std::format("Decrypting char: {}", c), Logger::LogType::DEBUG);
+			int temp = c - key;
+			fout << (char)temp;
+		}
+		logger.Log("File decrypted", Logger::LogType::INFO);
+
+
+		//* Closing Files *//
+		// main file
+		try
+		{
+			m_file.close();
+			m_isOpen = false;
+		}
+		catch (std::exception& e)
+		{
+			logger.Log(
+				std::format("Error:\n    the file: '{}' can't be closed", m_path),
+				Logger::LogType::ERROR);
+			m_isOpen = true;
+
+			// delete logger
+			delete& logger;
+
+			return false;
+		}
+
+		// output file
+		try
+		{
+			fout.close();
+		}
+		catch (std::exception& e)
+		{
+			logger.Log(
+				std::format("Error:\n    the file: '{}' can't be closed", m_path),
+				Logger::LogType::ERROR);
+			m_isOpen = true;
+
+			// delete logger
+			delete& logger;
+
+			return false;
+		}
+
+		//* Deleting the logger and returning true *//
+		delete& logger;
+		return true;
 	}
 
 	// Check Parameters

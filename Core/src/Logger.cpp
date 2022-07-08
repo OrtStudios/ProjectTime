@@ -144,7 +144,7 @@ namespace Core
 
 		//////////////////////////////////
 		//* get the time
-		string Logger::m_GetTheTimeNow(string Userformat, bool TimeInTheDay)
+		string Logger::m_GetTheTimeNow(string UserFormat, bool TimeInTheDay)
 		{
 			// get the time now
 			std::time_t now = std::time(NULL);
@@ -155,8 +155,8 @@ namespace Core
 			// the buffer
 			char buffer[32];
 
-			// perase the format
-			string format = m_PeraseFormat(Userformat, TimeInTheDay);
+			// phrase the format
+			string format = m_PhraseFormat(UserFormat, TimeInTheDay);
 
 			// convert to string to be stored in the buffer
 			std::strftime(buffer, 32, format.c_str(), ptm);
@@ -164,12 +164,12 @@ namespace Core
 			return buffer;
 		}
 
-		//* convert from user freindly format to the format to be used in the log time
-		string Logger::m_PeraseFormat(std::string Userformat, bool TimeInTheDay)
+		//* convert from user friendly format to the format to be used in the log time
+		string Logger::m_PhraseFormat(std::string UserFormat, bool TimeInTheDay)
 		{
 			if (TimeInTheDay)
 			{
-				if (Userformat == "M.D")
+				if (UserFormat == "M.D")
 				{
 					return "%m.%d.%Y %H:%M:%S";
 				}
@@ -180,7 +180,7 @@ namespace Core
 			}
 			else
 			{
-				if (Userformat == "M.D")
+				if (UserFormat == "M.D")
 				{
 					return "%m.%d.%Y";
 				}

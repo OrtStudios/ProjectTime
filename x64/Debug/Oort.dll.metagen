@@ -25,9 +25,9 @@ Struct OORT.LogType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldIn
   :System.Enum
   Fields:
     Int32 value__ : Public, SpecialName, RTSpecialName
-    OORT.LogType LOG_TYPE_DEBUG = 0 : Public, Static, Literal, HasDefault
-    OORT.LogType LOG_TYPE_INFO = 1 : Public, Static, Literal, HasDefault
-    OORT.LogType LOG_TYPE_WARNING = 2 : Public, Static, Literal, HasDefault
-    OORT.LogType LOG_TYPE_ERROR = 3 : Public, Static, Literal, HasDefault
-    OORT.LogType LOG_TYPE_FATAL = 4 : Public, Static, Literal, HasDefault
-    OORT.LogType LOG_TYPE_MASTER = 5 : Public, Static, Literal, HasDefault
+    OORT.LogType DEBUG = 0 : Public, Static, Literal, HasDefault
+    OORT.LogType INFO = 1 : Public, Static, Literal, HasDefault
+    OORT.LogType WARNING = 2 : Public, Static, Literal, HasDefault
+    OORT.LogType ERROR = 3 : Public, Static, Literal, HasDefault
+    OORT.LogType FATAL = 4 : Public, Static, Literal, HasDefault
+    OORT.LogType MASTER = 5 : Public, Static, Literal, HasDefault

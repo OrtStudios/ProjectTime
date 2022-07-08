@@ -29,12 +29,12 @@ namespace ProjectTime
         {
             // Load Oort
             LoadOort();
-            Oort!.SetLogLevel(OORT.LogType.LOG_TYPE_DEBUG);
-            Oort.Log("Oort Loaded", OORT.LogType.LOG_TYPE_DEBUG);
+            Oort!.SetLogLevel(OORT.LogType.DEBUG);
+            Oort.Log("Oort Loaded", OORT.LogType.DEBUG);
 
             // Start the window
             InitializeComponent();
-            Oort.Log("Started App", OORT.LogType.LOG_TYPE_DEBUG);
+            Oort.Log("Started App", OORT.LogType.DEBUG);
         }
 
         protected override void OnClosed(EventArgs e)
@@ -47,13 +47,13 @@ namespace ProjectTime
                 Oort.CloseLogFile();
             }
 
-            Oort.Log("Deleting Oort", OORT.LogType.LOG_TYPE_DEBUG);
+            Oort.Log("Deleting Oort", OORT.LogType.DEBUG);
             Oort?.Dispose();
         }
 
         private void LogError_Click(object sender, RoutedEventArgs e)
         {
-            Oort.Log("Unimplemented Screen Desgin", OORT.LogType.LOG_TYPE_ERROR);
+            Oort.Log("Unimplemented Screen Desgin", OORT.LogType.ERROR);
         }
     }
 }
