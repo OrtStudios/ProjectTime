@@ -64,6 +64,8 @@
         "xutility": "cpp"
     },
     "cSpell.words": [
-        "fout"
-    ]
+        "fout",
+        "msclr"
+    ],
+    "C_Cpp.errorSquiggles": "Disabled"
 }

@@ -33,6 +33,9 @@ namespace Core
 		bool IsExists();
 		bool IsReadable();
 		bool IsWritable();
+
+		// Delete File
+		bool Delete();
 		
 		// Get Parameters
 		std::string GetPath();

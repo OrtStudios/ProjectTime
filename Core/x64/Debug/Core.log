@@ -1,15 +1,18 @@
 ﻿  Basic_File.cpp
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(167,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(188,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(310,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(327,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(357,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(377,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(406,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(424,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(443,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(488,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(505,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(536,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(554,26): warning C4101: 'e': unreferenced local variable
+C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(189,26): warning C4101: 'e': unreferenced local variable
+C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(214,26): warning C4101: 'e': unreferenced local variable
+C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(345,26): warning C4101: 'e': unreferenced local variable
+C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(362,26): warning C4101: 'e': unreferenced local variable
+C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(392,26): warning C4101: 'e': unreferenced local variable
+C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(412,26): warning C4101: 'e': unreferenced local variable
+C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(441,26): warning C4101: 'e': unreferenced local variable
+C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(459,26): warning C4101: 'e': unreferenced local variable
+C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(478,26): warning C4101: 'e': unreferenced local variable
+C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(523,26): warning C4101: 'e': unreferenced local variable
+C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(540,26): warning C4101: 'e': unreferenced local variable
+C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(571,26): warning C4101: 'e': unreferenced local variable
+C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(589,26): warning C4101: 'e': unreferenced local variable
+C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(663,26): warning C4101: 'e': unreferenced local variable
+  Logger.cpp
+  Generating Code...
   Core.vcxproj -> C:\Dev\ProjectTime\x64\Debug\Core.lib

@@ -36,158 +36,168 @@ namespace Core
 		{ Logger::MASTER,  92 }
 	};
 
-	size_t Logger::nthOccurrence(const string str, const string findMe, int nth)
+	//* Main Log Function
+	void Logger::Log(const string message, Logger::LogType level)
 	{
-		size_t  pos = 0;
-		int     cnt = 0;
+		/// <summary>
+		/// log message to the console and to the log file
+		/// </summary>
+		/// <param name="message">message to log</param>
+		/// <param name="level">the log level of the message</param>
+		
+		// Check if the level is lower than the current log level
+		if (level < m_logLevel)
+			return;
 
-		while (cnt != nth)
-		{
-			pos += 1;
-			pos = str.find(findMe, pos);
-			if (pos == string::npos)
-				return -1;
-			cnt++;
-		}
-		return pos;
+		// Get the time
+		string theTime = m_GetTheTimeNow(m_dateFormat, true);
+
+		// Log the message to the console
+		if (m_logToConsole)
+			std::cout << std::format(
+				"\x1B[{}m{} >> {}\033[0m\t\t", m_logColors.at(level), theTime, message
+			) << std::endl;
+
+		// Log the message to the log file
+		if (m_logToFile)
+			if (m_logFile.is_open())
+				m_logFile << theTime << " >> " << message << std::endl;
+
+		return;
 	}
 
-		//* Main Log Function
-		void Logger::Log(const string message, Logger::LogType level)
+	//* Log File
+	void Logger::SetLogFile(const string directoryPath)
+	{
+		/// <summary>
+		/// set the log file to the given directory path
+		/// </summary>
+		/// <param name="directoryPath"> path to the log file directory </param>
+		m_logDirectoryPath = directoryPath;
+
+		// Get the time
+		string theTime = m_GetTheTimeNow(m_dateFormat, false);
+
+		// Set the file name
+		m_logFileName = "/ProjectTimeLog_" + theTime + ".log";
+
+		// save the path
+		m_FullPath = m_logDirectoryPath + m_logFileName;
+
+		// Open the file
+		m_logFile.open(m_logDirectoryPath + m_logFileName);
+
+		return;
+	}
+
+
+	string Logger::GetLogFilePath()
+	{
+		return m_FullPath;
+	}
+
+	void Logger::CloseLogFile()
+	{
+		/// <summary>
+		/// close the log file
+		/// </summary>
+		m_logFile.close();
+	}
+
+	void Logger::SaveLogFile()
+	{
+		/// <summary>
+		/// save the log file
+		/// </summary>
+		m_logFile.close();
+		m_logFile.open(m_FullPath);
+	}
+
+	//* Log Level
+	void Logger::SetLogLevel(Logger::LogType level)
+	{
+		m_logLevel = level;
+	}
+
+	Logger::LogType Logger::GetLogLevel()
+	{
+		return m_logLevel;
+	}
+
+	bool Logger::IsLogToFile()
+	{
+		return m_logToFile;
+	}
+
+	//* Log To Console or Not
+	void Logger::SetLogToConsole(bool logToConsole)
+	{
+		m_logToConsole = logToConsole;
+	}
+
+	//* Log To File or Not
+	void Logger::SetLogToFile(bool logToFile)
+	{
+		m_logToFile = logToFile;
+	}
+
+	//////////////////////////////////
+	//* get the time
+	string Logger::m_GetTheTimeNow(string UserFormat, bool TimeInTheDay)
+	{
+		/// <summary>
+		/// get the time in the given format
+		/// </summary>
+		/// <param name="UserFormat"> the format of the time </param>
+		/// <param name="TimeInTheDay"> if the time is in the day or not </param>
+		/// <returns> the time in the given format </returns>
+		std::time_t now = std::time(NULL);
+
+		// convert to local time
+		std::tm* ptm = std::localtime(&now);
+
+		// the buffer
+		char buffer[32];
+
+		// phrase the format
+		string format = m_PhraseFormat(UserFormat, TimeInTheDay);
+
+		// convert to string to be stored in the buffer
+		std::strftime(buffer, 32, format.c_str(), ptm);
+
+		return buffer;
+	}
+
+	//* convert from user friendly format to the format to be used in the log time
+	string Logger::m_PhraseFormat(std::string UserFormat, bool TimeInTheDay)
+	{
+		/// <summary>
+		/// convert from user friendly format to the format to be used in the log time
+		/// </summary>
+		/// <param name="UserFormat"> the format of the time </param>
+		/// <param name="TimeInTheDay"> if the time is in the day or not </param>
+		/// <returns> the format to be used in the log time </returns>
+		if (TimeInTheDay)
 		{
-			// Check if the level is lower than the current log level
-			if (level < m_logLevel)
-				return;
-
-			// Get the time
-			string theTime = m_GetTheTimeNow(m_dateFormat, true);
-
-			// Log the message to the console
-			if (m_logToConsole)
-				std::cout << std::format(
-					"\x1B[{}m{} >> {}\033[0m\t\t", m_logColors.at(level), theTime, message
-				) << std::endl;
-
-			// Log the message to the log file
-			if (m_logToFile)
-				if (m_logFile.is_open())
-					m_logFile << theTime << " >> " << message << std::endl;
-
-			return;
-		}
-
-		//* Log File
-		void Logger::SetLogFile(const string directoryPath)
-		{
-			m_logDirectoryPath = directoryPath;
-
-			// Get the time
-			string theTime = m_GetTheTimeNow(m_dateFormat, false);
-
-			// Set the file name
-			m_logFileName = "/ProjectTimeLog_" + theTime + ".log";
-
-			// save the path
-			m_FullPath = m_logDirectoryPath + m_logFileName;
-
-			// Open the file
-			m_logFile.open(m_logDirectoryPath + m_logFileName);
-
-			return;
-		}
-
-
-		string Logger::GetLogFilePath()
-		{
-			return std::format("{}\\{}", m_logDirectoryPath, m_logFileName);
-		}
-
-		void Logger::CloseLogFile()
-		{
-			// save the log file and closes it
-			m_logFile.close();
-		}
-
-		void Logger::SaveLogFile()
-		{
-			m_logFile.close();
-			m_logFile.open(m_FullPath);
-		}
-
-		//* Log Level
-		void Logger::SetLogLevel(Logger::LogType level)
-		{
-			m_logLevel = level;
-		}
-
-		Logger::LogType Logger::GetLogLevel()
-		{
-			return m_logLevel;
-		}
-
-		bool Logger::IsLogToFile()
-		{
-			return m_logToFile;
-		}
-
-		//* Log To Console or Not
-		void Logger::SetLogToConsole(bool logToConsole)
-		{
-			m_logToConsole = logToConsole;
-		}
-
-		//* Log To File or Not
-		void Logger::SetLogToFile(bool logToFile)
-		{
-			m_logToFile = logToFile;
-		}
-
-		//////////////////////////////////
-		//* get the time
-		string Logger::m_GetTheTimeNow(string UserFormat, bool TimeInTheDay)
-		{
-			// get the time now
-			std::time_t now = std::time(NULL);
-
-			// convert to local time
-			std::tm* ptm = std::localtime(&now);
-
-			// the buffer
-			char buffer[32];
-
-			// phrase the format
-			string format = m_PhraseFormat(UserFormat, TimeInTheDay);
-
-			// convert to string to be stored in the buffer
-			std::strftime(buffer, 32, format.c_str(), ptm);
-
-			return buffer;
-		}
-
-		//* convert from user friendly format to the format to be used in the log time
-		string Logger::m_PhraseFormat(std::string UserFormat, bool TimeInTheDay)
-		{
-			if (TimeInTheDay)
+			if (UserFormat == "M.D")
 			{
-				if (UserFormat == "M.D")
-				{
-					return "%m.%d.%Y %H:%M:%S";
-				}
-				else
-				{
-					return "%d.%m.%Y %H:%M:%S";
-				}
+				return "%m.%d.%Y %H:%M:%S";
 			}
 			else
 			{
-				if (UserFormat == "M.D")
-				{
-					return "%m.%d.%Y";
-				}
-				else
-				{
-					return "%d.%m.%Y";
-				}
+				return "%d.%m.%Y %H:%M:%S";
 			}
 		}
+		else
+		{
+			if (UserFormat == "M.D")
+			{
+				return "%m.%d.%Y";
+			}
+			else
+			{
+				return "%d.%m.%Y";
+			}
+		}
+	}
 }

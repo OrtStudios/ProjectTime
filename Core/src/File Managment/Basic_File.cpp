@@ -17,6 +17,11 @@ namespace Core
 	// Private functions
 	string* OortFile::m_GetFullName(const string path)
 	{
+		/// <summary>
+		/// get the full name, the extention and the name of the file
+		/// </summary>
+		/// <param name="path">the path to the file</param>
+		/// <returns>the full name[0], the extention[1] and the file name(without the extention)[2]</returns>
 		string* result = new string[3];
 
 		// find the full name
@@ -52,6 +57,11 @@ namespace Core
 
 	string OortFile::m_GetModeName(const string mode)
 	{
+		/// <summary>
+		/// get the mode name from the mode string
+		/// </summary>
+		/// <param name="mode"> the mode string </param>
+		/// <returns> the mode name </returns>
 		if (mode == "r")
 		{
 			return "read";
@@ -85,6 +95,11 @@ namespace Core
 	// Constructor & Destructor
 	OortFile::OortFile(const string path, const string mode)
 	{
+		/// <summary>
+		/// create the oort file
+		/// </summary>
+		/// <param name="path">the path to the file</param>
+		/// <param name="mode">the mode of the file(r, w, a, r+, w+, a+)</param>
 		Logger logger = Logger();
 		logger.Log("Creating basic file", Logger::LogType::INFO);
 
@@ -147,6 +162,9 @@ namespace Core
 	
 	OortFile::~OortFile()
 	{
+		/// <summary>
+		/// delete the oort file object (don't delete the file itself)
+		/// </summary>
 		Logger logger = Logger();
 		delete &m_file;
 		logger.Log("basic file destroyed", Logger::LogType::INFO);
@@ -158,6 +176,10 @@ namespace Core
 	// Main Functions
 	bool OortFile::Open()
 	{
+		/// <summary>
+		/// open the oort file in the mode you have chosen in the constructor
+		/// </summary>
+		/// <returns>TRUE if succeeded, FALSE if didn't</returns>
 		try
 		{
 			m_file.open(m_path);
@@ -179,6 +201,10 @@ namespace Core
 
 	bool OortFile::Close()
 	{
+		/// <summary>
+		/// close the file
+		/// </summary>
+		/// <returns>TRUE if succeeded, FALSE if didn't</returns>
 		try
 		{
 			m_file.close();
@@ -203,6 +229,10 @@ namespace Core
 	// Read & Write Functions
 	string OortFile::Read()
 	{
+		/// <summary>
+		/// read the file and return the content
+		/// </summary>
+		/// <returns>the content of the file</returns>
 		Logger logger = Logger();
 		bool alreadyOpened = false;
 
@@ -243,6 +273,11 @@ namespace Core
 	
 	bool OortFile::Write(const string str)
 	{
+		/// <summary>
+		/// write the string to the file
+		/// </summary>
+		/// <param name="str">the string to write</param>
+		/// <returns>TRUE if succeeded, FALSE if didn't</returns>
 		Logger logger = Logger();
 		bool alreadyOpened = false;
 		
@@ -609,5 +644,29 @@ namespace Core
 	string OortFile::GetFullName()
 	{
 		return m_fullName;
+	}
+
+	// Delete File
+	bool OortFile::Delete()
+	{
+		/// <summary>
+		/// delete the file itself (not the OortFile object)
+		/// </summary>
+		/// <returns></returns>
+		
+		Logger logger = Logger();
+		logger.Log("Deleting the file", Logger::LogType::INFO);
+		try
+		{
+			remove(m_path.c_str());
+		}
+		catch (std::exception& e)
+		{
+			logger.Log(std::format("Error:\n    the file: '{}' can't be deleted", m_path), Logger::LogType::ERROR);
+			return false;
+		}
+		logger.Log("File deleted", Logger::LogType::INFO);
+		delete& logger;
+		return true;
 	}
 }

@@ -34,12 +34,13 @@ namespace ProjectTime
 
             // Start the window
             InitializeComponent();
-            Oort.Log("Started App", OORT.LogType.DEBUG);
+            Oort.Log("App Started", OORT.LogType.INFO);
         }
 
         protected override void OnClosed(EventArgs e)
         {
             base.OnClosed(e);
+            Oort.Log("App Closed", OORT.LogType.INFO);
 
             if (Oort.IsLogToFile())
             {

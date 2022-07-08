@@ -10,8 +10,6 @@ namespace Core
 	class Logger
 	{
 	private:
-		size_t nthOccurrence(const std::string str, const std::string findMe, int nth);
-
 		std::string m_GetTheTimeNow(std::string UserFormat, bool TimeInTheDay = true);
 
 		std::string m_PhraseFormat(std::string UserFormat, bool TimeInTheDay = true);
