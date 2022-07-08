@@ -8,6 +8,7 @@
 #include <map>
 
 #include "Logger.h"
+#include "File Managment/Basic_File.h"
 
 using std::string;
 
@@ -60,8 +61,21 @@ namespace Core
 
 		// Log the message to the log file
 		if (m_logToFile)
-			if (m_logFile.is_open())
-				m_logFile << theTime << " >> " << message << std::endl;
+			if (m_logFile.IsOpen())
+				m_logFile.Write(
+					std::format(
+						"{} >> {}\n", theTime, message
+					)
+				);
+			else
+			{
+				m_logFile.Open();
+				m_logFile.Write(
+					std::format(
+						"{} >> {}\n", theTime, message
+					)
+				);
+			}
 
 		return;
 	}
@@ -73,44 +87,36 @@ namespace Core
 		/// set the log file to the given directory path
 		/// </summary>
 		/// <param name="directoryPath"> path to the log file directory </param>
-		m_logDirectoryPath = directoryPath;
-
 		// Get the time
 		string theTime = m_GetTheTimeNow(m_dateFormat, false);
 
-		// Set the file name
-		m_logFileName = "/ProjectTimeLog_" + theTime + ".log";
+		// Create the file
+		string path = directoryPath + "/ProjectTimeLog_" + theTime + ".log";
+		
+		m_logFile = File(directoryPath + "/ProjectTimeLog_" + theTime + ".log", "a");
 
-		// save the path
-		m_FullPath = m_logDirectoryPath + m_logFileName;
-
-		// Open the file
-		m_logFile.open(m_logDirectoryPath + m_logFileName);
-
-		return;
 	}
 
 
 	string Logger::GetLogFilePath()
 	{
-		return m_FullPath;
+		return m_logFile.GetPath();
 	}
 
-	void Logger::CloseLogFile()
+	bool Logger::CloseLogFile()
 	{
 		/// <summary>
 		/// close the log file
 		/// </summary>
-		m_logFile.close();
+		return m_logFile.Close();
 	}
 
-	void Logger::SaveLogFile()
+	bool Logger::SaveLogFile()
 	{
 		/// <summary>
 		/// save the log file
 		/// </summary>
-		m_logFile.close();
-		m_logFile.open(m_FullPath);
+		m_logFile.Save();
 	}
 
 	//* Log Level

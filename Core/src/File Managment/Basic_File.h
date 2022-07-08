@@ -5,7 +5,7 @@
 
 namespace Core
 {
-	class OortFile
+	class File
 	{
 	private:
 		std::string* m_GetFullName(const std::string path);
@@ -13,12 +13,13 @@ namespace Core
 
 	public:
 		// Constructor & Destructor
-		OortFile(const std::string path, const std::string mode);
-		~OortFile();
+		File(const std::string path, const std::string mode);
+		~File();
 
 		// Main Functions
 		bool Open();
 		bool Close();
+		bool Save();
 
 		// Read & Write Functions
 		std::string Read();

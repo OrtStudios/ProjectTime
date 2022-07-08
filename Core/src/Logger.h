@@ -33,9 +33,9 @@ namespace Core
 
 		std::string GetLogFilePath();
 
-		void CloseLogFile();
+		bool CloseLogFile();
 
-		void SaveLogFile();
+		bool SaveLogFile();
 
 		bool IsLogToFile();
 
@@ -51,14 +51,11 @@ namespace Core
 		void SetLogToFile(bool logToFile);
 
 	private:
-		std::string m_logDirectoryPath = "";
-		std::string m_logFileName = "";
-		std::string m_FullPath = "";
 		std::string m_dateFormat = "D.M";
 		LogType m_logLevel = WARNING;
 		bool m_logToConsole = true;
 		bool m_logToFile = false;
 		int debugColor = 90;
-		std::ofstream m_logFile;
+
 	};
 }
