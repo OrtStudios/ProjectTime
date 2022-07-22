@@ -36,6 +36,10 @@ namespace OORT
 
 		void SaveLogFile();
 
+		void DeleteLogFile();
+		
+		void ClearLogFile();
+
 		bool IsLogToFile();
 
 		//* Log Level

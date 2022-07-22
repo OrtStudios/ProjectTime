@@ -37,6 +37,10 @@ namespace Core
 
 		bool SaveLogFile();
 
+		bool DeleteLogFile();
+
+		bool ClearLogFile();
+
 		bool IsLogToFile();
 
 		//* Log Level

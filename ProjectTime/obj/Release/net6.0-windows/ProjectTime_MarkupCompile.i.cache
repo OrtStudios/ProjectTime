@@ -1,7 +1,7 @@
 ﻿ProjectTime
 1.0.0.0
 
-winexe
+exe
 C#
 .cs
 C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows\
@@ -13,7 +13,7 @@ C:\Dev\ProjectTime\ProjectTime\App.xaml
 11407045341
 
 5576630154
-1942030480316
+1951957386951
 MainWindow.xaml;
 
 True

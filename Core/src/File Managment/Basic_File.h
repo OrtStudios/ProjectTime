@@ -24,6 +24,7 @@ namespace Core
 		// Read & Write Functions
 		std::string Read();
 		bool Write(const std::string str);
+		bool Clear();
 
 		// Cartography Functions
 		bool Encrypt(const int key = 0);

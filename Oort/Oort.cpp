@@ -53,6 +53,16 @@ namespace OORT
 		logger->SaveLogFile();
 	}
 
+	void OortMain::DeleteLogFile()
+	{
+		logger->DeleteLogFile();
+	}
+	
+	void OortMain::ClearLogFile()
+	{
+		logger->ClearLogFile();
+	}
+
 	//* Log Level
 	void OortMain::SetLogLevel(LogType level)
 	{

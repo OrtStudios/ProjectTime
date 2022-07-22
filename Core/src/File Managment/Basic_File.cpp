@@ -351,6 +351,48 @@ namespace Core
 		return true;
 	}
 
+	bool File::Clear()
+	{
+		/// <summary>
+		/// clear the file
+		/// </summary>
+		/// <returns>TRUE if succeeded, FALSE if didn't</returns>
+		Logger logger = Logger();
+		bool alreadyOpened = false;
+		
+		// open the file if it wasn't already open and then clear the file, then close the file
+		if (!m_isOpen)
+		{
+			logger.Log("file is not open, opening it", Logger::LogType::DEBUG);
+			if (!Open())
+			{
+				logger.Log("file can't be opened(Error massage in the open function), returning false", Logger::LogType::DEBUG);
+				return false;
+			}
+		}
+		else
+		{
+			logger.Log("file is already open, clearing it", Logger::LogType::DEBUG);
+			alreadyOpened = true;
+		}
+		
+		m_file.clear();
+		
+		if (!alreadyOpened)
+		{
+			logger.Log("closing the file", Logger::LogType::DEBUG);
+			Close();
+		}
+		
+		logger.Log(std::format("file: '{}' cleared", m_path), Logger::LogType::INFO);
+		
+		// delete logger
+		delete &logger;
+		
+		// return true if the file was cleared
+		return true;
+	}
+
 	// Cartography Functions
 	bool File::Encrypt(const int key)
 	{

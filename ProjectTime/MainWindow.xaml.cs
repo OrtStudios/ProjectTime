@@ -46,6 +46,7 @@ namespace ProjectTime
             {
                 Oort.SaveLogFile();
                 Oort.CloseLogFile();
+                Oort.DeleteLogFile();
             }
 
             Oort.Log("Deleting Oort", OORT.LogType.DEBUG);

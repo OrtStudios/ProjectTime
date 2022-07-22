@@ -14,7 +14,7 @@ using std::string;
 
 namespace Core
 {
-	Core::File loggerLogFile;
+	Core::File* loggerLogFile;
 	
 	const std::map<string, string> m_months = {
 			{ "Jan", "1"  },
@@ -63,22 +63,22 @@ namespace Core
 
 		// Log the message to the log file
 		if (m_logToFile)
-			if (loggerLogFile.IsOpen())
-				loggerLogFile.Write(
+			if (loggerLogFile->IsOpen())
+				loggerLogFile->Write(
 					std::format(
 						"{} >> {}\n", theTime, message
 					)
 				);
 			else
 			{
-				loggerLogFile.Open();
-				loggerLogFile.Write(
+				loggerLogFile->Open();
+				loggerLogFile->Write(
 					std::format(
 						"{} >> {}\n", theTime, message
 					)
 				);
 			}
-
+		
 		return;
 	}
 
@@ -95,14 +95,14 @@ namespace Core
 		// Create the file
 		string path = directoryPath + "/ProjectTimeLog_" + theTime + ".log";
 		
-		Core::loggerLogFile = File(directoryPath + "/ProjectTimeLog_" + theTime + ".log", "a");
+		Core::loggerLogFile = new File(directoryPath + "/ProjectTimeLog_" + theTime + ".log", "a");
 
 	}
 
 
 	string Logger::GetLogFilePath()
 	{
-		return loggerLogFile.GetPath();
+		return loggerLogFile->GetPath();
 	}
 
 	bool Logger::CloseLogFile()
@@ -110,7 +110,7 @@ namespace Core
 		/// <summary>
 		/// close the log file
 		/// </summary>
-		return loggerLogFile.Close();
+		return loggerLogFile->Close();
 	}
 
 	bool Logger::SaveLogFile()
@@ -118,7 +118,26 @@ namespace Core
 		/// <summary>
 		/// save the log file
 		/// </summary>
-		loggerLogFile.Save();
+		return loggerLogFile->Save();
+	}
+
+	bool Logger::DeleteLogFile()
+	{
+		/// <summary>
+		/// delete the log file
+		/// </summary>
+		bool result = loggerLogFile->Delete();
+		m_logToFile = false;
+		delete loggerLogFile;
+		return result;
+	}
+
+	bool Logger::ClearLogFile()
+	{
+		/// <summary>
+		/// clear the log file
+		/// </summary>
+		return loggerLogFile->Clear();
 	}
 
 	//* Log Level
