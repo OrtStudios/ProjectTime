@@ -135,7 +135,7 @@ namespace Core
 	bool Logger::ClearLogFile()
 	{
 		/// <summary>
-		/// clear the log file
+		/// clear the log file 
 		/// </summary>
 		return loggerLogFile->Clear();
 	}
