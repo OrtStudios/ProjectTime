@@ -6,13 +6,22 @@
         xmlns:local="clr-namespace:ProjectTime"
         mc:Ignorable="d"
         Title="Project Time" Height="450" Width="800">
-    <StackPanel>
+    <Grid>
         <Label Name="Hi">Hello</Label>
         <Button
-            Name="LogError"
-            Click="LogError_Click"
+            x:Name="CreateFile" Margin="40,48,603,305"
             >
-            Click Me
+            Create File
         </Button>
-    </StackPanel>
+        <Button
+            x:Name="WriteToFile" Margin="322,48,322,305"
+            >
+            Write to File
+        </Button>
+        <Button
+            x:Name="SaveFile" Margin="605,48,39,305"
+            >
+            Save File
+        </Button>
+    </Grid>
 </Window>

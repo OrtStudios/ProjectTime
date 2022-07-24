@@ -164,13 +164,14 @@ namespace Core
 	{
 		/// <summary>
 		/// delete the oort file object (don't delete the file itself)
-		/// </summary>
-		Logger logger = Logger();
-		delete &m_file;
-		logger.Log("basic file destroyed", Logger::LogType::INFO);
+		/// </summary>		
+		Close();
 
-		// delete logger
-		delete &logger;
+		delete& m_file;
+		Logger logger = Logger();
+		logger.Log("basic file deleted", Logger::LogType::INFO);
+		delete& logger;
+		
 	}
 
 	// Main Functions
