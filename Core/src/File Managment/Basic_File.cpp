@@ -1,5 +1,3 @@
-#include "pch.h"
-
 #include "Basic_File.h"
 #include "../Logger.h"
 

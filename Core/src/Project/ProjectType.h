@@ -7,8 +7,8 @@ namespace Core
 	namespace ProjectType
 	{
 		class Unknown     : BaseProjectType {};
-		class programing  : BaseProjectType {};
-		class game        : BaseProjectType {};
+		class Programing  : BaseProjectType {};
+		class Game        : BaseProjectType {};
 		class Editing     : BaseProjectType {};
 		class Music       : BaseProjectType {};
 		class Movie       : BaseProjectType {};
@@ -20,143 +20,160 @@ namespace Core
 		namespace Programing
 		{
 			// Programing types
-			class python     : programing {};
-			class dart       : programing {};
-			class java       : programing {};
-			class javaScript : programing {};
-			class cSharp     : programing {};
-			class cPP        : programing {};
-			class c          : programing {};
+			class Python     : Programing {};
+			class Dart       : Programing {};
+			class Java       : Programing {};
+			class JavaScript : Programing {};
+			class CSharp     : Programing {};
+			class CPP        : Programing {};
+			class C          : Programing {};
 
 			namespace Python
 			{
 				// Python
-				class ConsoleApp  : python {};
-				class PyGame      : python {};
-				class PySimpleGUI : python {};
-				class Kivy        : python {};
+				class ConsoleApp  : Python {};
+				class PyGame      : Python {};
+				class PySimpleGUI : Python {};
+				class Kivy        : Python {};
 			}
 
 			namespace Dart
 			{
 				// Dart
-				class ConsoleApp : dart {};
-				class flutter    : dart {};
+				class ConsoleApp : Dart {};
+				class Flutter    : Dart {};
 
 				namespace Flutter
 				{
 					// Dart -> Flutter
-					class FullMobileApp  : flutter {};
-					class AndroidApp     : flutter {};
-					class IOSApp         : flutter {};
-					class WebApp         : flutter {};
-					class FullDesktopApp : flutter {};
-					class WindowsApp     : flutter {};
-					class MacOSApp       : flutter {};
-					class LinuxApp       : flutter {};
+					class FullMobileApp  : Flutter {};
+					class AndroidApp     : Flutter {};
+					class IOSApp         : Flutter {};
+					class WebApp         : Flutter {};
+					class FullDesktopApp : Flutter {};
+					class WindowsApp     : Flutter {};
+					class MacOSApp       : Flutter {};
+					class LinuxApp       : Flutter {};
 				}
 			}
 
 			namespace Java
 			{
 				// Java
-				class ConsoleApp      : java {};
-				class minecraftMod    : java {};
-				class minecraftPlugin : java {};
+				class ConsoleApp      : Java {};
+				class MinecraftMod    : Java {};
+				class MinecraftPlugin : Java {};
 
 				namespace MinecraftMod
 				{
 					// Java -> MinecraftMod
-					class Fabric : minecraftMod {};
-					class Forge  : minecraftMod {};
+					class Fabric : MinecraftMod {};
+					class Forge  : MinecraftMod {};
 				}
 
 				namespace MinecraftPlugin
 				{
 					// Java -> MinecraftPlugin
-					class Bukkit : minecraftPlugin {};
-					class Paper  : minecraftPlugin {};
+					class Bukkit : MinecraftPlugin {};
+					class Paper  : MinecraftPlugin {};
 				}
 			}
 
 			namespace JavaScript
 			{
 				// JavaScript
-				class NodeJS      : javaScript {};
-				class ReactJS     : javaScript {};
-				class VueJS       : javaScript {};
-				class AngularJS   : javaScript {};
-				class ReactNative : javaScript {};
-				class JustWebApp  : javaScript {};
+				class NodeJS      : JavaScript {};
+				class ReactJS     : JavaScript {};
+				class VueJS       : JavaScript {};
+				class AngularJS   : JavaScript {};
+				class ReactNative : JavaScript {};
+				class JustWebApp  : JavaScript {};
 			}
 
 			namespace CSharp
 			{
 				// CSharp
-				class ConsoleApp  : cSharp {};
-				class WPFApp      : cSharp {};
-				class WinFormsApp : cSharp {};
+				class ConsoleApp  : CSharp {};
+				class WPFApp      : CSharp {};
+				class WinFormsApp : CSharp {};
 			}
 
 			namespace CPP
 			{
 				// CPP
-				class ConsoleApp     : cPP {};
-				class StaticLibrery  : cPP {};
-				class DynamicLibrary : cPP {};
-				class Walnut         : cPP {};
-				class ImGui          : cPP {};
+				class ConsoleApp     : CPP {};
+				class StaticLibrary  : CPP {};
+				class DynamicLibrary : CPP {};
+				class Walnut         : CPP {};
+				class ImGui          : CPP {};
 			}
 
 			namespace C
 			{
 				// C
-				class ConsoleApp     : c {};
-				class ImGui          : c {};
-				class StaticLibrery  : c {};
-				class DynamicLibrary : c {};
+				class ConsoleApp     : C {};
+				class ImGui          : C {};
+				class StaticLibrary  : C {};
+				class DynamicLibrary : C {};
 			}
 
 			namespace Combinations
 			{
 				// Combinations
-				class WPFwithCPP : CSharp::WPFApp, CPP::DynamicLibrary {};
-				class PythonWithC : Python::ConsoleApp, C::StaticLibrery {};
-				class PythonWithCPP : Python::ConsoleApp, CPP::StaticLibrery {};
-				class PyGameWithC : Python::PyGame, C::StaticLibrery {};
-				class PyGameWithCPP : Python::PyGame, CPP::StaticLibrery {};
+				class WPFwithCPP    : CSharp::WPFApp,     CPP::DynamicLibrary {};
+				class PythonWithC   : Python::ConsoleApp, C::StaticLibrary    {};
+				class PythonWithCPP : Python::ConsoleApp, CPP::StaticLibrary  {};
+				class PyGameWithC   : Python::PyGame,     C::StaticLibrary    {};
+				class PyGameWithCPP : Python::PyGame,     CPP::StaticLibrary  {};
 			}
 		}
 
 		namespace Game
 		{
 			// Game
-			class Godot : game {};
-			class Unreal : game {};
-			class Unity3D : game {};
-			class Unity2D : game {};
+			class Godot   : Game {};
+			class Unreal  : Game {};
+			class Unity3D : Game {};
+			class Unity2D : Game {};
 		}
 
-		// Editing
-		class Inkscape : Editing {};
-		class Gimp : Editing {};
-		class EditingBlender : Editing {};
-		class Edius : Editing {};
-		class EditingResolve : Editing {};
+		namespace Editing
+		{
+			// Editing
+			class Inkscape : Editing {};
+			class Gimp     : Editing {};
+			class Blender  : Editing {};
+			class Edius    : Editing {};
+			class Resolve  : Editing {};
+		}
 
-		// Music
-		class Audacity : Music {};
-		class FLStudio : Music {};
-		class Waveform : Music {};
+		namespace Music
+		{
+			// Music
+			class Audacity : Music {};
+			class FLStudio : Music {};
+			class Waveform : Music {};
+		}
 
-		// ThreeD
-		class Blender3D : ThreeD {};
+		namespace ThreeD
+		{
+			// ThreeD
+			class Blender : ThreeD {};
+		}
 
-		// TwoD
-		class Blender2D : TwoD {};
+		namespace TwoD
+		{
+			// TwoD
+			class Blender  : TwoD {};
+			class Inkscape : TwoD {};
+			class Gimp     : TwoD {};
+		}
 
-		// Compositing
-		class BlenderCompositing : Compositing {};
-		class ResolveCompositing : Compositing {};
+		namespace Compositing
+		{
+			// Compositing
+			class Blender : Compositing {};
+			class Resolve : Compositing {};
+		}
 	}
 }

@@ -10,7 +10,12 @@ namespace Core
 	class Project
 	{
 	public:
-		Project();
+		Project(
+			std::string name,
+			int id,
+			std::string description,
+			BaseProjectType projectType
+		);
 		~Project();
 
 		void Load();
@@ -18,6 +23,7 @@ namespace Core
 		void Close();
 
 	private:
-		BaseProjectType projectType;
+		BaseProjectType m_projectType;
+		BaseProjectType m_projectTypeCategory;
 	};
 }
