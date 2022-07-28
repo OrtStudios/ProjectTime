@@ -52,10 +52,5 @@ namespace ProjectTime
             Oort.Log("Deleting Oort", OORT.LogType.DEBUG);
             Oort?.Dispose();
         }
-
-        private void LogError_Click(object sender, RoutedEventArgs e)
-        {
-            Oort.Log("Unimplemented Screen Desgin", OORT.LogType.ERROR);
-        }
     }
 }
