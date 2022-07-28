@@ -152,6 +152,7 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="src\Logger.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="src\Project\ProjectType.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\File Managment\ProjectFile.cpp" />

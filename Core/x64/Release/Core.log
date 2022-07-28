@@ -1,20 +1,5 @@
-﻿  pch.cpp
-  Core.cpp
-  Basic_File.cpp
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(199,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(233,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(424,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(441,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(471,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(491,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(520,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(538,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(557,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(602,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(619,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(650,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(668,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(742,26): warning C4101: 'e': unreferenced local variable
-  ProjectFile.cpp
-  Logger.cpp
-  Core.vcxproj -> C:\Dev\ProjectTime\x64\Release\Core.lib
+﻿  ProjectFile.cpp
+C:\Dev\ProjectTime\Core\src\File Managment\ProjectFile.cpp(11,57): error C2664: 'Core::File::File(const Core::File &)': cannot convert argument 1 from 'const std::string' to 'const Core::File &'
+C:\Dev\ProjectTime\Core\src\File Managment\ProjectFile.cpp(12,2): message : Reason: cannot convert from 'const std::string' to 'const Core::File'
+C:\Dev\ProjectTime\Core\src\File Managment\ProjectFile.cpp(11,58): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.h(62,2): message : see declaration of 'Core::File::File'
