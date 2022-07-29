@@ -2,20 +2,20 @@
 
 namespace Core
 {
-	class BaseProjectType {};
+	class ProjectType {};
 	
 	namespace ProjectType
 	{
-		class Unknown     : BaseProjectType {};
-		class Programing  : BaseProjectType {};
-		class Game        : BaseProjectType {};
-		class Editing     : BaseProjectType {};
-		class Music       : BaseProjectType {};
-		class Movie       : BaseProjectType {};
-		class ShortFilm   : BaseProjectType {};
-		class ThreeD      : BaseProjectType {};
-		class TwoD        : BaseProjectType {};
-		class Compositing : BaseProjectType {};
+		class Unknown     : ProjectType {};
+		class Programing  : ProjectType {};
+		class Game        : ProjectType {};
+		class Editing     : ProjectType {};
+		class Music       : ProjectType {};
+		class Movie       : ProjectType {};
+		class ShortFilm   : ProjectType {};
+		class ThreeD      : ProjectType {};
+		class TwoD        : ProjectType {};
+		class Compositing : ProjectType {};
 
 		namespace Programing
 		{
