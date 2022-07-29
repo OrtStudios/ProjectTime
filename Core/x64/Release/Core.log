@@ -1,19 +1,51 @@
-﻿  ProjectFile.cpp
-  Basic_File.cpp
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(197,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(231,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(422,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(439,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(469,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(489,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(518,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(536,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(555,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(600,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(617,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(648,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(666,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\File Managment\Basic_File.cpp(740,26): warning C4101: 'e': unreferenced local variable
-  Core.cpp
-  Logger.cpp
-  Core.vcxproj -> C:\Dev\ProjectTime\x64\Release\Core.lib
+﻿  Project.cpp
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(10,3): error C2757: 'ProjectType': a symbol with this name already exists and therefore this name cannot be used as a namespace name
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(23,4): error C2757: 'Programing': a symbol with this name already exists and therefore this name cannot be used as a namespace name
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(34,5): error C2757: 'Python': a symbol with this name already exists and therefore this name cannot be used as a namespace name
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(43,5): error C2757: 'Dart': a symbol with this name already exists and therefore this name cannot be used as a namespace name
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(49,6): error C2757: 'Flutter': a symbol with this name already exists and therefore this name cannot be used as a namespace name
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(63,5): error C2757: 'Java': a symbol with this name already exists and therefore this name cannot be used as a namespace name
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(70,6): error C2757: 'MinecraftMod': a symbol with this name already exists and therefore this name cannot be used as a namespace name
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(77,6): error C2757: 'MinecraftPlugin': a symbol with this name already exists and therefore this name cannot be used as a namespace name
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(85,5): error C2757: 'JavaScript': a symbol with this name already exists and therefore this name cannot be used as a namespace name
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(96,5): error C2757: 'CSharp': a symbol with this name already exists and therefore this name cannot be used as a namespace name
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(104,5): error C2757: 'CPP': a symbol with this name already exists and therefore this name cannot be used as a namespace name
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(114,5): error C2757: 'C': a symbol with this name already exists and therefore this name cannot be used as a namespace name
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(125,36): error C2039: 'WPFApp': is not a member of 'Core::Project::ProjectType::Programing::CSharp'
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(95): message : see declaration of 'Core::Project::ProjectType::Programing::CSharp'
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(125,42): error C2504: 'WPFApp': base class undefined
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(125,53): error C2039: 'DynamicLibrary': is not a member of 'Core::Project::ProjectType::Programing::CPP'
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(103): message : see declaration of 'Core::Project::ProjectType::Programing::CPP'
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(125,68): error C2504: 'DynamicLibrary': base class undefined
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(126,36): error C2039: 'ConsoleApp': is not a member of 'Core::Project::ProjectType::Programing::Python'
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(33): message : see declaration of 'Core::Project::ProjectType::Programing::Python'
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(126,46): error C2504: 'ConsoleApp': base class undefined
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(126,51): error C2039: 'StaticLibrary': is not a member of 'Core::Project::ProjectType::Programing::C'
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(113): message : see declaration of 'Core::Project::ProjectType::Programing::C'
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(126,68): error C2504: 'StaticLibrary': base class undefined
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(127,36): error C2039: 'ConsoleApp': is not a member of 'Core::Project::ProjectType::Programing::Python'
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(33): message : see declaration of 'Core::Project::ProjectType::Programing::Python'
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(127,46): error C2504: 'ConsoleApp': base class undefined
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(127,53): error C2039: 'StaticLibrary': is not a member of 'Core::Project::ProjectType::Programing::CPP'
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(103): message : see declaration of 'Core::Project::ProjectType::Programing::CPP'
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(127,68): error C2504: 'StaticLibrary': base class undefined
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(128,36): error C2039: 'PyGame': is not a member of 'Core::Project::ProjectType::Programing::Python'
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(33): message : see declaration of 'Core::Project::ProjectType::Programing::Python'
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(128,42): error C2504: 'PyGame': base class undefined
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(128,51): error C2039: 'StaticLibrary': is not a member of 'Core::Project::ProjectType::Programing::C'
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(113): message : see declaration of 'Core::Project::ProjectType::Programing::C'
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(128,68): error C2504: 'StaticLibrary': base class undefined
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(129,36): error C2039: 'PyGame': is not a member of 'Core::Project::ProjectType::Programing::Python'
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(33): message : see declaration of 'Core::Project::ProjectType::Programing::Python'
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(129,42): error C2504: 'PyGame': base class undefined
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(129,53): error C2039: 'StaticLibrary': is not a member of 'Core::Project::ProjectType::Programing::CPP'
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(103): message : see declaration of 'Core::Project::ProjectType::Programing::CPP'
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(129,68): error C2504: 'StaticLibrary': base class undefined
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(134,4): error C2757: 'Game': a symbol with this name already exists and therefore this name cannot be used as a namespace name
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(143,4): error C2757: 'Editing': a symbol with this name already exists and therefore this name cannot be used as a namespace name
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(153,4): error C2757: 'Music': a symbol with this name already exists and therefore this name cannot be used as a namespace name
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(161,4): error C2757: 'ThreeD': a symbol with this name already exists and therefore this name cannot be used as a namespace name
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(167,4): error C2757: 'TwoD': a symbol with this name already exists and therefore this name cannot be used as a namespace name
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(175,4): error C2757: 'Compositing': a symbol with this name already exists and therefore this name cannot be used as a namespace name
+C:\Dev\ProjectTime\Core\src\Project\Project.cpp(14,9): error C2512: 'Core::ProjectFile': no appropriate default constructor available
+C:\Dev\ProjectTime\Core\src\File Managment\ProjectFile.h(9,8): message : see declaration of 'Core::ProjectFile'
