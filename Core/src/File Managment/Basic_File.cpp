@@ -105,10 +105,10 @@ namespace Core
 		// modes:
 		//    "r" - read
 		//    "w" - write
-		//    "a" - append [TODO]
-		//    "r+" - read and write [TODO]
-		//    "w+" - write and read [TODO]
-		//    "a+" - append and read [TODO]
+		//    "a" - append
+		//    "r+" - read and write
+		//    "w+" - write and read 
+		//    "a+" - append and read
 		m_mode = mode;
 		logger.Log(std::format("file mode is: {} mode", m_GetModeName(mode)), Logger::LogType::DEBUG);
 

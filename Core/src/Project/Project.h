@@ -12,11 +12,7 @@ namespace Core
 		class Project
 		{
 		public:
-			Project(
-				std::string name,
-				std::string description,
-				class ProjectType projectType
-			);
+			Project(std::string name, std::string description, class ProjectType projectType);
 			~Project();
 
 			void Load();
