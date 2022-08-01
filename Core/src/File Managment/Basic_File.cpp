@@ -53,64 +53,15 @@ namespace Core
 		return result;
 	}
 
-	string File::m_GetModeName(const string mode)
-	{
-		/// <summary>
-		/// get the mode name from the mode string
-		/// </summary>
-		/// <param name="mode"> the mode string </param>
-		/// <returns> the mode name </returns>
-		if (mode == "r")
-		{
-			return "read";
-		}
-		else if (mode == "w")
-		{
-			return "write";
-		}
-		else if (mode == "a")
-		{
-			return "append";
-		}
-		else if (mode == "r+")
-		{
-			return "read and write";
-		}
-		else if (mode == "w+")
-		{
-			return "write and read";
-		}
-		else if (mode == "a+")
-		{
-			return "append and read";
-		}
-		else
-		{
-			throw std::invalid_argument(std::format("Error:\n    the file mode: '{}' is invalid", mode));
-		}
-	}
-
 	// Constructor & Destructor
-	File::File(const string path, const string mode)
+	File::File(const string path)
 	{
 		/// <summary>
 		/// create the oort file
 		/// </summary>
 		/// <param name="path">the path to the file</param>
-		/// <param name="mode">the mode of the file(r, w, a, r+, w+, a+)</param>
 		Logger logger = Logger();
 		logger.Log("Creating basic file", Logger::LogType::INFO);
-
-		// set the mode
-		// modes:
-		//    "r" - read
-		//    "w" - write
-		//    "a" - append
-		//    "r+" - read and write
-		//    "w+" - write and read 
-		//    "a+" - append and read
-		m_mode = mode;
-		logger.Log(std::format("file mode is: {} mode", m_GetModeName(mode)), Logger::LogType::DEBUG);
 
 		// open the file
 		m_file = std::fstream(path);
@@ -176,7 +127,7 @@ namespace Core
 	bool File::Open()
 	{
 		/// <summary>
-		/// open the oort file in the mode you have chosen in the constructor
+		/// open the file
 		/// </summary>
 		/// <returns>TRUE if succeeded, FALSE if didn't</returns>
 		
@@ -402,11 +353,13 @@ namespace Core
 		/// <returns>TRUE if succeeded or FALSE if failed</returns>
 
 		Logger logger = Logger();
+		bool wasOpen = false;
 
 		// close the file if it was open, open the file in binary mode
 		if (m_isOpen)
 		{
 			logger.Log("file is open, closing it", Logger::LogType::DEBUG);
+			wasOpen = true;
 			Close();
 		}
 		
@@ -434,11 +387,11 @@ namespace Core
 		std::ofstream fout;
 		try
 		{
-			fout.open("output.txt", std::ios::binary);
+			fout.open("temp.txt", std::ios::binary);
 		}
 		catch (std::exception& e)
 		{
-			logger.Log(std::format("Error:\n    the file: '{}' can't be opened", "output.txt"), Logger::LogType::ERROR);
+			logger.Log(std::format("Error:\n    the file: '{}' can't be opened", "temp.txt"), Logger::LogType::ERROR);
 			m_isOpen = false;
 
 			// delete logger
@@ -469,7 +422,7 @@ namespace Core
 		catch (std::exception& e)
 		{
 			logger.Log(
-				std::format("Error:\n    the file: '{}' can't be closed", "output.txt"),
+				std::format("Error:\n    the file: '{}' can't be closed", "temp.txt"),
 				Logger::LogType::ERROR);
 			m_isOpen = true;
 
@@ -484,12 +437,12 @@ namespace Core
 		std::ifstream fin;
 		try
 		{
-			fin.open("output.txt", std::ios::binary);
+			fin.open("temp.txt", std::ios::binary);
 		}
 		catch (std::exception& e)
 		{
 			logger.Log(
-				std::format("Error:\n    the file: '{}' can't be opened", "output.txt"),
+				std::format("Error:\n    the file: '{}' can't be opened", "temp.txt"),
 				Logger::LogType::ERROR);
 			m_isOpen = false;
 
@@ -531,12 +484,12 @@ namespace Core
 		// deleting the output file
 		try
 		{
-			remove("output.txt");
+			remove("temp.txt");
 		}
 		catch (std::exception& e)
 		{
 			logger.Log(
-				std::format("Error:\n    the file: '{}' can't be deleted", "output.txt"),
+				std::format("Error:\n    the file: '{}' can't be deleted", "temp.txt"),
 				Logger::LogType::ERROR);
 			m_isOpen = true;
 
@@ -565,6 +518,12 @@ namespace Core
 			return false;
 		}
 		
+		if (wasOpen)	
+		{
+			logger.Log("file was open, opening it again", Logger::LogType::DEBUG);
+			Open();
+		}
+		
 
 		//* Deleting the logger and returning true *//
 		delete &logger;
@@ -580,11 +539,13 @@ namespace Core
 		/// <returns>TRUE if succeeded or FALSE if failed</returns>
 
 		Logger logger = Logger();
+		bool wasOpen = false;
 
 		// close the file if it was open, open the file in binary mode
 		if (m_isOpen)
 		{
 			logger.Log("file is open, closing it", Logger::LogType::DEBUG);
+			wasOpen = true;
 			Close();
 		}
 
@@ -612,11 +573,11 @@ namespace Core
 		std::ofstream fout;
 		try
 		{
-			fout.open(m_path.c_str(), std::ios::binary);
+			fout.open("temp.txt", std::ios::binary);
 		}
 		catch (std::exception& e)
 		{
-			logger.Log(std::format("Error:\n    the file: '{}' can't be opened", m_path), Logger::LogType::ERROR);
+			logger.Log(std::format("Error:\n    the file: '{}' can't be opened", "temp.txt"), Logger::LogType::ERROR);
 			m_isOpen = false;
 
 			// delete logger
@@ -626,8 +587,8 @@ namespace Core
 		}
 
 		//* Decrypting the file *//
-		logger.Log("Decrypting the file", Logger::LogType::INFO);
 		char c;
+		logger.Log("Decrypting the file", Logger::LogType::INFO);
 		while (!m_file.eof())
 		{
 			m_file >> std::noskipws >> c;
@@ -635,11 +596,96 @@ namespace Core
 			int temp = c - key;
 			fout << (char)temp;
 		}
-		logger.Log("File decrypted", Logger::LogType::INFO);
+		logger.Log("Output file decrypted", Logger::LogType::DEBUG);
 
 
 		//* Closing Files *//
-		// main file
+		// output file
+		try
+		{
+			fout.close();
+		}
+		catch (std::exception& e)
+		{
+			logger.Log(
+				std::format("Error:\n    the file: '{}' can't be closed", "temp.txt"),
+				Logger::LogType::ERROR);
+			m_isOpen = true;
+
+			// delete logger
+			delete& logger;
+
+			return false;
+		}
+
+		//* setting the content of the output file to the main file and deleting the output file
+		logger.Log("setting the content of the output file to the main file", Logger::LogType::DEBUG);
+		std::ifstream fin;
+		try
+		{
+			fin.open("temp.txt", std::ios::binary);
+		}
+		catch (std::exception& e)
+		{
+			logger.Log(
+				std::format("Error:\n    the file: '{}' can't be opened", "temp.txt"),
+				Logger::LogType::ERROR);
+			m_isOpen = false;
+
+			// delete logger
+			delete& logger;
+
+			return false;
+		}
+
+		//* Closing Files *//
+		// setting the content of the output file to the main file
+		char c2;
+		logger.Log("setting the content of the output file to the main file", Logger::LogType::DEBUG);
+		while (!fin.eof())
+		{
+			fin >> std::noskipws >> c2;
+			m_file << (char)c2;
+		}
+		logger.Log("File encrypted", Logger::LogType::INFO);
+
+		// closing the output file
+		try
+		{
+			fin.close();
+		}
+		catch (std::exception& e)
+		{
+			logger.Log(
+				std::format("Error:\n    the file: '{}' can't be closed", m_path),
+				Logger::LogType::ERROR);
+			m_isOpen = true;
+
+			// delete logger
+			delete& logger;
+
+			return false;
+		}
+
+		// deleting the output file
+		try
+		{
+			remove("temp.txt");
+		}
+		catch (std::exception& e)
+		{
+			logger.Log(
+				std::format("Error:\n    the file: '{}' can't be deleted", "temp.txt"),
+				Logger::LogType::ERROR);
+			m_isOpen = true;
+
+			// delete logger
+			delete& logger;
+
+			return false;
+		}
+
+		// closing the main file
 		try
 		{
 			m_file.close();
@@ -658,23 +704,12 @@ namespace Core
 			return false;
 		}
 
-		// output file
-		try
+		if (wasOpen)
 		{
-			fout.close();
+			logger.Log("file was open, opening it again", Logger::LogType::DEBUG);
+			Open();
 		}
-		catch (std::exception& e)
-		{
-			logger.Log(
-				std::format("Error:\n    the file: '{}' can't be closed", m_path),
-				Logger::LogType::ERROR);
-			m_isOpen = true;
 
-			// delete logger
-			delete& logger;
-
-			return false;
-		}
 
 		//* Deleting the logger and returning true *//
 		delete& logger;
