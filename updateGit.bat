@@ -9,4 +9,4 @@ git commit -m "updated ProjectTime repository"
 echo pushing to github
 git push
 
-echo finished commiting & pushing
+echo finished commiting and pushing
