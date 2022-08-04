@@ -151,19 +151,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\File Managment\ProjectFile.h" />
-    <ClInclude Include="src\File Managment\Basic_File.h" />
+    <ClInclude Include="src\Base\FileManagment\Basic_File.h" />
+    <ClInclude Include="src\FileManagment\ProjectFile.h" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="src\Logger.h" />
+    <ClInclude Include="src\Base\Logger.h" />
     <ClInclude Include="src\Project\Project.h" />
     <ClInclude Include="src\Project\ProjectType.h" />
+    <ClInclude Include="src\Base\Time\Time.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Base\FileManagment\Basic_File.cpp" />
     <ClCompile Include="src\Project\Project.cpp" />
-    <ClCompile Include="src\File Managment\ProjectFile.cpp" />
-    <ClCompile Include="src\File Managment\Basic_File.cpp" />
+    <ClCompile Include="src\FileManagment\ProjectFile.cpp" />
     <ClCompile Include="Core.cpp" />
-    <ClCompile Include="src\Logger.cpp" />
+    <ClCompile Include="src\Base\Logger.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

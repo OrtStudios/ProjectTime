@@ -3,7 +3,7 @@
 #include <string>
 
 #include "src/Project/ProjectType.h"
-#include "src/File Managment/ProjectFile.h"
+#include "src/FileManagment/ProjectFile.h"
 
 namespace Core
 {

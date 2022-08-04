@@ -133,10 +133,18 @@ namespace Core
 			namespace Game
 			{
 				// Game
-				class Godot   : Game {};
-				class Unreal  : Game {};
-				class Unity3D : Game {};
-				class Unity2D : Game {};
+				class Godot     : Game {};
+				class Unreal    : Game {};
+				class Unity3D   : Game {};
+				class Unity2D   : Game {};
+				class Minecraft : Game {};
+
+				namespace Minecraft
+				{
+					// Minecraft
+					class ResourcePack : Minecraft {};
+					class DataPack     : Minecraft {};
+				}
 			}
 
 			namespace Editing
