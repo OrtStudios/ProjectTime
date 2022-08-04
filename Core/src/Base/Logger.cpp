@@ -5,6 +5,8 @@
 #include <format>
 #include <map>
 
+#include "rang.hpp"
+
 #include "Logger.h"
 #include "src/Base/FileManagment/Basic_File.h"
 
@@ -28,13 +30,23 @@ namespace Core
 			{ "Nov", "11" },
 			{ "Dec", "12" }
 	};
-	const std::map<Logger::LogType, int> m_logColors = {
-		{ Logger::DEBUG,   90 },
-		{ Logger::INFO,    94 },
-		{ Logger::WARNING, 33 },
-		{ Logger::ERROR,   91 },
-		{ Logger::FATAL,   31 },
-		{ Logger::MASTER,  92 }
+	const std::map<Logger::LogType, rang::fg> m_logColors = {
+		{ Logger::DEBUG,   rang::fg::gray   },
+		{ Logger::INFO,    rang::fg::blue   },
+		{ Logger::WARNING, rang::fg::yellow },
+		{ Logger::_ERROR,  rang::fg::redB   },
+		{ Logger::FATAL,   rang::fg::red    },
+		{ Logger::MASTER,  rang::fg::green  }
+	};
+	
+	const std::map<Logger::LogType, string> m_logTypeString =
+	{
+		{ Logger::DEBUG,   "Debug"   },
+		{ Logger::INFO,    "Info"    },
+		{ Logger::WARNING, "Warning" },
+		{ Logger::_ERROR,  "Error"   },
+		{ Logger::FATAL,   "Fatal"   },
+		{ Logger::MASTER,  "Master"  }
 	};
 
 	//* Main Log Function
@@ -50,21 +62,23 @@ namespace Core
 		if (level < m_logLevel)
 			return;
 
+		string type = m_logTypeString.at(level);
+
 		// Get the time
 		string theTime = m_GetTheTimeNow(m_dateFormat, true);
 
 		// Log the message to the console
 		if (m_logToConsole)
-			std::cout << std::format(
-				"\x1B[{}m{} >> {}\033[0m\t\t", m_logColors.at(level), theTime, message
-			) << std::endl;
+			std::cout << m_logColors.at(level) << std::format(
+				"{}: {} >> {}", type, theTime, message
+			) << rang::style::reset << std::endl;
 
 		// Log the message to the log file
 		if (m_logToFile)
 			if (loggerLogFile->IsOpen())
 				loggerLogFile->Write(
 					std::format(
-						"{} >> {}\n", theTime, message
+						"{}: {} >> {}\n", type, theTime, message
 					)
 				);
 			else
@@ -72,7 +86,7 @@ namespace Core
 				loggerLogFile->Open();
 				loggerLogFile->Write(
 					std::format(
-						"{} >> {}\n", theTime, message
+						"{}: {} >> {}\n", type, theTime, message
 					)
 				);
 			}
@@ -93,7 +107,7 @@ namespace Core
 		// Create the file
 		string path = directoryPath + "/ProjectTimeLog_" + theTime + ".log";
 		
-		Core::loggerLogFile = new File(directoryPath + "/ProjectTimeLog_" + theTime + ".log", "a");
+		Core::loggerLogFile = new File(directoryPath + "/ProjectTimeLog_" + theTime + ".log");
 
 	}
 

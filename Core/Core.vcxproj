@@ -118,7 +118,7 @@
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Dev\ProjectTime\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\ProjectTime\Core\include;C:\Dev\ProjectTime\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeaderOutputFile />
     </ClCompile>
     <Link>
@@ -139,7 +139,7 @@
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Dev\ProjectTime\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\ProjectTime\Core\include;C:\Dev\ProjectTime\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeaderOutputFile />
     </ClCompile>
     <Link>
@@ -165,6 +165,9 @@
     <ClCompile Include="src\FileManagment\ProjectFile.cpp" />
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="src\Base\Logger.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="src\Base\Error\ErrorFormating.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

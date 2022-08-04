@@ -17,12 +17,12 @@ namespace Core
 	public:
 		enum LogType
 		{
-			DEBUG = 0,
-			INFO = 1,
+			DEBUG   = 0,
+			INFO    = 1,
 			WARNING = 2,
-			ERROR = 3,
-			FATAL = 4,
-			MASTER = 5
+			_ERROR  = 3,
+			FATAL   = 4,
+			MASTER  = 5
 		};
 
 		//* Main Log Function
