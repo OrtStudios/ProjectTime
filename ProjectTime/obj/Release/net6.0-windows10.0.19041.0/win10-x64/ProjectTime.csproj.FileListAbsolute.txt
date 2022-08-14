@@ -271,12 +271,6 @@ C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\
 C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xbf
 C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\XamlSaveStateFile.xml
 C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\ProjectTime.GeneratedMSBuildEditorConfig.editorconfig
-C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png
-C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png
-C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png
-C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png
-C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png
-C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\mauisplash.stamp
 C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\mauifont.stamp
 C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf
 C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf
