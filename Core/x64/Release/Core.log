@@ -1,39 +1,4 @@
-﻿  Basic_File.cpp
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(151,99): error C2838: 'ERROR': illegal qualified name in member declaration
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(151,104): error C2065: 'ERROR': undeclared identifier
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(187,22): error C2838: 'ERROR': illegal qualified name in member declaration
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(187,27): error C2065: 'ERROR': undeclared identifier
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(377,99): error C2838: 'ERROR': illegal qualified name in member declaration
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(377,104): error C2065: 'ERROR': undeclared identifier
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(394,103): error C2838: 'ERROR': illegal qualified name in member declaration
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(394,108): error C2065: 'ERROR': undeclared identifier
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(426,22): error C2838: 'ERROR': illegal qualified name in member declaration
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(426,27): error C2065: 'ERROR': undeclared identifier
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(446,22): error C2838: 'ERROR': illegal qualified name in member declaration
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(446,27): error C2065: 'ERROR': undeclared identifier
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(475,22): error C2838: 'ERROR': illegal qualified name in member declaration
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(475,27): error C2065: 'ERROR': undeclared identifier
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(493,22): error C2838: 'ERROR': illegal qualified name in member declaration
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(493,27): error C2065: 'ERROR': undeclared identifier
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(512,22): error C2838: 'ERROR': illegal qualified name in member declaration
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(512,27): error C2065: 'ERROR': undeclared identifier
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(563,99): error C2838: 'ERROR': illegal qualified name in member declaration
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(563,104): error C2065: 'ERROR': undeclared identifier
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(580,103): error C2838: 'ERROR': illegal qualified name in member declaration
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(580,108): error C2065: 'ERROR': undeclared identifier
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(612,22): error C2838: 'ERROR': illegal qualified name in member declaration
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(612,27): error C2065: 'ERROR': undeclared identifier
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(632,22): error C2838: 'ERROR': illegal qualified name in member declaration
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(632,27): error C2065: 'ERROR': undeclared identifier
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(661,22): error C2838: 'ERROR': illegal qualified name in member declaration
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(661,27): error C2065: 'ERROR': undeclared identifier
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(679,22): error C2838: 'ERROR': illegal qualified name in member declaration
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(679,27): error C2065: 'ERROR': undeclared identifier
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(698,22): error C2838: 'ERROR': illegal qualified name in member declaration
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(698,27): error C2065: 'ERROR': undeclared identifier
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(777,100): error C2838: 'ERROR': illegal qualified name in member declaration
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(777,105): error C2065: 'ERROR': undeclared identifier
-  Project.cpp
+﻿  Project.cpp
 C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(10,3): error C2757: 'ProjectType': a symbol with this name already exists and therefore this name cannot be used as a namespace name
 C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(23,4): error C2757: 'Programing': a symbol with this name already exists and therefore this name cannot be used as a namespace name
 C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(34,5): error C2757: 'Python': a symbol with this name already exists and therefore this name cannot be used as a namespace name
@@ -89,5 +54,4 @@ C:\Dev\ProjectTime\Core\src\Project\Project.cpp(19,27): error C2280: 'Core::Proj
 C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(34): message : compiler has generated 'Core::ProjectFile::operator =' here
 C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(34,2): message : 'Core::ProjectFile &Core::ProjectFile::operator =(const Core::ProjectFile &)': function was implicitly deleted because a base class invokes a deleted or inaccessible function 'Core::File &Core::File::operator =(const Core::File &)'
 C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.h(60,2): message : 'Core::File &Core::File::operator =(const Core::File &)': function was implicitly deleted because a data member invokes a deleted or inaccessible function 'std::basic_fstream<char,std::char_traits<char>> &std::basic_fstream<char,std::char_traits<char>>::operator =(const std::basic_fstream<char,std::char_traits<char>> &)'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\fstream(1256,20): message : 'std::basic_fstream<char,std::char_traits<char>> &std::basic_fstream<char,std::char_traits<char>>::operator =(const std::basic_fstream<char,std::char_traits<char>> &)': function was explicitly deleted
-  Logger.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31721\include\fstream(1253,20): message : 'std::basic_fstream<char,std::char_traits<char>> &std::basic_fstream<char,std::char_traits<char>>::operator =(const std::basic_fstream<char,std::char_traits<char>> &)': function was explicitly deleted

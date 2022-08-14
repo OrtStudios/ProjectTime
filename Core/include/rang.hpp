@@ -63,11 +63,13 @@ enum class style {
 
 enum class fg {
     black   = 30,
-	redB    = 91,
+	blackB  = 90,
     red     = 31,
+    redB    = 91,
     green   = 32,
     yellow  = 33,
     blue    = 34,
+	blueB   = 94,
     magenta = 35,
     cyan    = 36,
     gray    = 37,

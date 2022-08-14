@@ -1,2 +1,0 @@
-﻿  OORT.cpp
-C:\Dev\ProjectTime\OORT\OORT.cpp(1,10): fatal error C1853: 'x64\Release\OORT.pch' precompiled header file is from a different version of the compiler, or the precompiled header is C++ and you are using it from C (or vice versa)

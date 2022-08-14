@@ -1,8 +1,8 @@
 {
   "profiles": {
-    "ProjectTime": {
-      "commandName": "Project",
-      "nativeDebugging": true
+    "Windows Machine": {
+      "commandName": "MsixPackage",
+      "nativeDebugging": false
     }
   }
 }

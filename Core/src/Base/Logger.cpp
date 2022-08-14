@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <chrono>
-#include <fstream>
+#include <fstream> 
 #include <format>
 #include <map>
 
@@ -31,8 +31,8 @@ namespace Core
 			{ "Dec", "12" }
 	};
 	const std::map<Logger::LogType, rang::fg> m_logColors = {
-		{ Logger::DEBUG,   rang::fg::gray   },
-		{ Logger::INFO,    rang::fg::blue   },
+		{ Logger::DEBUG,   rang::fg::blackB },
+		{ Logger::INFO,    rang::fg::blueB  },
 		{ Logger::WARNING, rang::fg::yellow },
 		{ Logger::_ERROR,  rang::fg::redB   },
 		{ Logger::FATAL,   rang::fg::red    },
