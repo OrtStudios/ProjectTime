@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0-maccatalyst;net6.0-windows10.0.19041.0</TargetFrameworks>
+		<TargetFrameworks>net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net6.0-windows10.0.19041.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
@@ -16,7 +16,7 @@
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.projecttime</ApplicationId>
-		<ApplicationIdGuid>a607ce95-4215-492e-8667-570d923a1d6c</ApplicationIdGuid>
+		<ApplicationIdGuid>20ca6460-e03d-48fd-aa84-67e5b2f755dc</ApplicationIdGuid>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
@@ -28,8 +28,7 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
-		<BaseOutputPath>$(SolutionDir)bin\$(Configuration)\$(SolutionName)\</BaseOutputPath>
-		<BaseIntermediateOutputPath></BaseIntermediateOutputPath>
+		<BaseOutputPath>$(SolutionDir)bin\$(Configuration)\$(SolutionName)</BaseOutputPath>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -37,9 +36,11 @@
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
 		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -49,12 +50,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Resources\Fonts\" />
-	  <Folder Include="Resources\Images\" />
-	  <Folder Include="Resources\MVVM\Model\" />
-	  <Folder Include="Resources\MVVM\ViewModel\" />
-	  <Folder Include="Resources\MVVM\View\" />
-	  <Folder Include="Resources\Raw\" />
+	  <Compile Remove="Platforms\Android\**" />
+	  <EmbeddedResource Remove="Platforms\Android\**" />
+	  <MauiCss Remove="Platforms\Android\**" />
+	  <MauiXaml Remove="Platforms\Android\**" />
+	  <None Remove="Platforms\Android\**" />
 	</ItemGroup>
 
 </Project>

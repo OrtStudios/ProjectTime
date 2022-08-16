@@ -3,7 +3,6 @@
 #include <string>
 
 #include "src/Project/ProjectType.h"
-#include "src/FileManagment/ProjectFile.h"
 
 namespace Core
 {
@@ -12,7 +11,7 @@ namespace Core
 		class Project
 		{
 		public:
-			Project(std::string name, std::string description, class ProjectType projectType);
+			Project(std::string name, std::string description, _ProjectType projectType);
 			~Project();
 
 			void Load();
@@ -31,11 +30,11 @@ namespace Core
 
 		private:
 			// project type
-			class ProjectType m_ProjectType;
-			class ProjectType m_ProjectTypeCategory;
+			_ProjectType m_ProjectType;
+			_ProjectType m_ProjectTypeCategory;
 
 			// project file
-			ProjectFile m_ProjectFile;
+			//ProjectFile m_ProjectFile;
 
 			// string data
 			std::string m_Name;

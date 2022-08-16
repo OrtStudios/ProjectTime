@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="a607ce95-4215-492e-8667-570d923a1d6c" Publisher="CN=User Name" Version="1.0.0.1" ProcessorArchitecture="x64" />
+  <Identity Name="20ca6460-e03d-48fd-aa84-67e5b2f755dc" Publisher="CN=User Name" Version="1.0.0.1" ProcessorArchitecture="x64" />
   <Properties>
     <DisplayName>ProjectTime</DisplayName>
     <PublisherDisplayName>User Name</PublisherDisplayName>
@@ -30,7 +30,7 @@
             <uap:ShowOn Tile="wide310x150Logo" />
           </uap:ShowNameOnTiles>
         </uap:DefaultTile>
-        <uap:SplashScreen Image="$placeholder$.png" />
+        <uap:SplashScreen Image="splashSplashScreen.png" />
       </uap:VisualElements>
     </Application>
   </Applications>

@@ -4,6 +4,7 @@ C:\Dev\ProjectTime\bin\Release\ProjectTime\Release\net6.0-maccatalyst\maccatalys
 C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-maccatalyst\maccatalyst-x64\mauiimage.inputs
 C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-maccatalyst\maccatalyst-x64\mauifont.inputs
 C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-maccatalyst\maccatalyst-x64\mauisplash.inputs
+C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-maccatalyst\maccatalyst-x64\mauisplash.stamp
 C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
 C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon29x29@2x.png
@@ -16,6 +17,9 @@ C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-maccatalyst\maccatalyst-x64\re
 C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
 C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
+C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot.png
+C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@2x.png
+C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@3x.png
 C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-maccatalyst\maccatalyst-x64\mauiimage.stamp
 C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-maccatalyst\maccatalyst-x64\resizetizer\f\MauiInfo.plist
 C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-maccatalyst\maccatalyst-x64\mauifont.stamp

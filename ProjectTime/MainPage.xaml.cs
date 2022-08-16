@@ -13,6 +13,8 @@
         {
             count++;
 
+            Core.LogTest($"this is count: {count}");
+
             if (count == 1)
                 CounterBtn.Text = $"Clicked {count} time";
             else

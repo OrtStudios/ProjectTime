@@ -1,12 +1,12 @@
 #include "ProjectFile.h"
 
 #include <string>
+#include <src/Base/Logger.h>
 
 using std::string;
 
 namespace Core
 {
-	// Constructor & Destructor
 	ProjectFile::ProjectFile(const string file_path) : File(file_path)
 	{
 	}
