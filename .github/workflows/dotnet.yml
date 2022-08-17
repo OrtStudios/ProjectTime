@@ -25,5 +25,3 @@ jobs:
       run: dotnet build ProjectTime/ProjectTime.csproj -c Release -f net6.0-windows10.0.19041.0 --no-restore
     - name: Build Mac
       run: dotnet build ProjectTime/ProjectTime.csproj -c Release -f net6.0-maccatalyst --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
