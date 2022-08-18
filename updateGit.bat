@@ -1,5 +1,8 @@
 @echo off
 
+echo pulling from github
+git pull
+
 echo adding changes
 git add .
 
