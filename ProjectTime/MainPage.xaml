@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjectTime.MainPage">
+             x:Class="ProjectTime.MainPage"
+             BackgroundColor="Transparent">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -14,5 +15,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
     </Grid>
+    
+    <!--Remove the top bar(the one with the exit button, resize button, and samll button) and replace with my own-->
 
 </ContentPage>
