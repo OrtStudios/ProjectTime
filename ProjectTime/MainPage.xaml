@@ -14,8 +14,12 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+
+        <Label Text="Project Time" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center"
+                   Grid.Column="2"/>
+
     </Grid>
-    
-    <!--Remove the top bar(the one with the exit button, resize button, and samll button) and replace with my own-->
+
+    <!--Remove the top bar(the one with the exit button, resize button, and samll button) and replace with my own-->      
 
 </ContentPage>

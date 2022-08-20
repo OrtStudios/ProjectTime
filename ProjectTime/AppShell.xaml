@@ -5,7 +5,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:ProjectTime"
     Shell.FlyoutBehavior="Disabled"
-    Shell.NavBarIsVisible="False">
+    Shell.NavBarIsVisible="False"
+    Shell.BackgroundColor="Transparent">
 
     <ShellContent ContentTemplate="{DataTemplate local:MainPage}"
                   Route="MainPage" />
