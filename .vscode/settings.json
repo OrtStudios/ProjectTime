@@ -63,7 +63,10 @@
         "xtree": "cpp",
         "xutility": "cpp",
         "filesystem": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "mutex": "cpp",
+        "stop_token": "cpp",
+        "thread": "cpp"
     },
     "cSpell.words": [
         "fout",
