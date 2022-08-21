@@ -7,7 +7,7 @@ using std::string;
 
 namespace Core
 {
-	ProjectFile::ProjectFile(const string file_path) : File(file_path)
+	ProjectFile::ProjectFile(const string file_path) : public File(file_path)
 	{
 	}
 

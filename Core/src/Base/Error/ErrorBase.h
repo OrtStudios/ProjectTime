@@ -15,7 +15,7 @@ namespace Core
                 std::string Error,
                 std::string Description,
                 std::string FullDescription = "",
-                std::string File,
+                std::string FilePath,
                 std::string Function,
                 std::string ErrorLogFilePath = "Log.log"
             );
@@ -32,16 +32,16 @@ namespace Core
             File m_ErrorLogFile;
 
         public:
-            std::string Error;
-            std::string Description;
-            std::string FullDescription;
+            std::string m_Error;
+            std::string m_Description;
+            std::string m_FullDescription;
 
-            std::string FilePath;
-            std::string Function;
+            std::string m_FilePath;
+            std::string m_Function;
 
-            std::string ErrorLogFilePath;
+            std::string m_ErrorLogFilePath;
 
-            int Line;
+            int m_Line;
         };
     }
 }
