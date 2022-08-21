@@ -6,9 +6,35 @@ using std::string;
 
 #include "./src/Base/Logger.h"
 
-CRaper void LogTest(string message)
+//--------------------------------------------//
+//* Logger *//
+CRaper void LogDebug(std::string message)
 {
-	Core::Logger logger = Core::Logger();
-	
-	logger.Log(message, Core::Logger::MASTER);
+	Core::Logger().Log(message, Core::Logger::DEBUG);
 }
+
+CRaper void LogInfo(std::string message)
+{
+	Core::Logger().Log(message, Core::Logger::DEBUG);
+}
+
+CRaper void LogWarning(std::string message)
+{
+	Core::Logger().Log(message, Core::Logger::WARNING);
+}
+
+CRaper void LogError(std::string message)
+{
+	Core::Logger().Log(message, Core::Logger::_ERROR);
+}
+
+CRaper void LogFatal(std::string message)
+{
+	Core::Logger().Log(message, Core::Logger::FATAL);
+}
+
+CRaper void LogMaster(std::string message)
+{
+	Core::Logger().Log(message, Core::Logger::MASTER);
+}
+//--------------------------------------------//

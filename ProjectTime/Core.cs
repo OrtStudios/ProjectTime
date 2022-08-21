@@ -5,13 +5,38 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace ProjectTime
 {
-    internal class Core
+    namespace Core
     {
-        const string CoreDllPath = "C:\\Dev\\ProjectTime\\bin\\Release\\Core\\Core.dll";
+        internal static class CoreDllPath
+        {
+            public const string GetCoreDllPath = "C:\\Dev\\ProjectTime\\bin\\Release\\Core\\Core.dll";
+        }
 
-        [DllImport(CoreDllPath)]
-        public static extern void LogTest(string message);
+        class Logger
+        {
+            [DllImport(CoreDllPath.GetCoreDllPath)]
+            public static extern void LogDebug(string message);
+
+            [DllImport(CoreDllPath.GetCoreDllPath)]
+            public static extern void LogInfo(string message);
+
+            [DllImport(CoreDllPath.GetCoreDllPath)]
+            public static extern void LogWarning(string message);
+
+            [DllImport(CoreDllPath.GetCoreDllPath)]
+            public static extern void LogError(string message);
+
+            [DllImport(CoreDllPath.GetCoreDllPath)]
+            public static extern void LogFatal(string message);
+
+            [DllImport(CoreDllPath.GetCoreDllPath)]
+            public static extern void LogMaster(string message);
+            
+        }
     }
 }
+

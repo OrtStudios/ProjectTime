@@ -6,5 +6,11 @@
 
 extern "C"
 {
-	CRaper void LogTest(std::string message);
+	//* Logger *//
+	CRaper void LogDebug   (std::string message);
+	CRaper void LogInfo    (std::string message);
+	CRaper void LogWarning (std::string message);
+	CRaper void LogError   (std::string message);
+	CRaper void LogFatal   (std::string message);
+	CRaper void LogMaster  (std::string message);
 }
