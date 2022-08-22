@@ -3,12 +3,13 @@
 #include "src/Base/FileManagment/Basic_File.h"
 
 #include <string>
+#include <exception>
 
 namespace Core
 {
     namespace Error
     {
-        class Base
+        class Base : public std::exception
         {
             // (Con/De)structors
             Base(
@@ -24,6 +25,8 @@ namespace Core
         public:
             std::string ToString();
             std::string FullString();
+
+            virtual void what();
 
         private:
             //File m_ErrorLogFile;

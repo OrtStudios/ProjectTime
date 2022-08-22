@@ -1,5 +1,7 @@
 #include "ErrorBase.h"
 
+#include "src/Base/Logger.h"
+
 #include <format>
 
 namespace Core
@@ -56,5 +58,11 @@ namespace Core
                 m_ErrorLogFilePath
             );
         }
+
+        void Base::what()
+        {
+            Logger().Log(ToString());
+            return;
+;        }
     }
 }
