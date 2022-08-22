@@ -4,12 +4,8 @@ namespace Core
 {
     namespace Error
     {
-        TypeError::TypeError() : public Base()
-        {
-        }
-        
-        ~TypeError() : public ~Base()
-        {
-        }
+        //TypeError::TypeError() : Base()
+        //{
+        //}
     }
 }

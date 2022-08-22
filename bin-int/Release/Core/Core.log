@@ -1,7 +1,0 @@
-﻿  Project.cpp
-     Creating library C:\Dev\ProjectTime\bin\Release\Core\Core.lib and object C:\Dev\ProjectTime\bin\Release\Core\Core.exp
-  Generating code
-  Previous IPDB not found, fall back to full compilation.
-  All 1256 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Finished generating code
-  Core.vcxproj -> C:\Dev\ProjectTime\bin\Release\Core\Core.dll

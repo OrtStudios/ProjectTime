@@ -1,10 +1,10 @@
-﻿namespace ProjectTime
+﻿namespace ProjectTime;
+
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
-    }
+	public MainPage()
+	{
+		InitializeComponent();
+	}
 }
+

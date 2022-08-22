@@ -1,25 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjectTime.MainPage"
-             BackgroundColor="Transparent">
+             x:Class="ProjectTime.MainPage">
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-        <Label Text="Project Time" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center"
+            <Label Text="Project Time" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center"
                    Grid.Column="2"/>
 
     </Grid>
-
-    <!--Remove the top bar(the one with the exit button, resize button, and samll button) and replace with my own-->      
 
 </ContentPage>

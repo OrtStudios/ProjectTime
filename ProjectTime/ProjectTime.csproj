@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks>net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net6.0-windows10.0.19041.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
@@ -16,7 +16,7 @@
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.projecttime</ApplicationId>
-		<ApplicationIdGuid>20ca6460-e03d-48fd-aa84-67e5b2f755dc</ApplicationIdGuid>
+		<ApplicationIdGuid>47bead27-4547-454c-b4e1-05c04ed54230</ApplicationIdGuid>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
@@ -28,7 +28,7 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
-		<BaseOutputPath>$(SolutionDir)bin\$(Configuration)\$(SolutionName)</BaseOutputPath>
+		<BaseOutputPath>$(SolutionDir)bin\$(Configuration)\ProjectTime</BaseOutputPath>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -50,11 +50,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Remove="Platforms\Android\**" />
-	  <EmbeddedResource Remove="Platforms\Android\**" />
-	  <MauiCss Remove="Platforms\Android\**" />
-	  <MauiXaml Remove="Platforms\Android\**" />
-	  <None Remove="Platforms\Android\**" />
+	  <AndroidResource Remove="MVVM - Copy\**" />
+	  <Compile Remove="MVVM - Copy\**" />
+	  <EmbeddedResource Remove="MVVM - Copy\**" />
+	  <MauiCss Remove="MVVM - Copy\**" />
+	  <MauiXaml Remove="MVVM - Copy\**" />
+	  <None Remove="MVVM - Copy\**" />
 	</ItemGroup>
 
 	<ItemGroup>

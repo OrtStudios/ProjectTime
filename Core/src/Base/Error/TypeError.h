@@ -11,6 +11,6 @@ namespace Core
             // (Con/De)structors
             TypeError();
             ~TypeError();
-        }
+        };
     }
 }
