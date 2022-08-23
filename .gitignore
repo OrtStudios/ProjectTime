@@ -1,3 +1,6 @@
 # ignore the .vs folder
 .vs/*
 .vscode/*
+
+# ignore the Keystore folder
+Keystore/*
