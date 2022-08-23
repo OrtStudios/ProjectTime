@@ -15,8 +15,6 @@ namespace Core
             Base(
                 std::string Error,
                 std::string Description,
-                std::string FilePath,
-                std::string Function,
                 std::string FullDescription = "",
                 std::string ErrorLogFilePath = "Log.log"
             );
