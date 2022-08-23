@@ -21,7 +21,18 @@ jobs:
       run: dotnet workload install maui
     - name: Restore dependencies
       run: dotnet restore
+    - name: Decrypt PFX File
+      run: |
+        echo "${{ secrets.OORT_STUDIOS_PROJECT_TIME_GITHUB_ACTIONS_DOTNET_MAUI_BUILD_WINDOWS_PFX_FILE }}" > cert.pfx.asc
+        certutil -decode cert.pfx.asc cert.pfx
+    - name: Add Certificet to Store
+      run: certutil -user -q -p ${{ secrets.OORT_STUDIOS_PROJECT_TIME_GITHUB_ACTIONS_DOTNET_MAUI_BUILD_WINDOWS_PFX_FILE_PASSWORD }} -importpfx cert.pfx NoRoot
     - name: Build Windows
-      run: dotnet build ProjectTime/ProjectTime.csproj -c Release -f net6.0-windows10.0.19041.0 --no-restore
+      run: dotnet publish ProjectTime/ProjectTime.csproj -c Release -f net6.0-windows10.0.19041.0 /p:GenerateAppxPackageOnBuild=true /p:AppxPackageSigningEnabled=true /p:PackageCertificateThumbprint="${{ secrets.OORT_STUDIOS_PROJECT_TIME_GITHUB_ACTIONS_DOTNET_MAUI_BUILD_WINDOWS_CERTIFICAT_THUMBPRINT }}"
+    - name: Upload a Build Artifacts
+      uses: actions/upload-artifact@v3.1.0
+      with:
+        path: .\**\AppPackages\**\*.*
+    
     - name: Build Mac
       run: dotnet build ProjectTime/ProjectTime.csproj -c Release -f net6.0-maccatalyst --no-restore
