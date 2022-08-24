@@ -6,11 +6,10 @@ namespace Core
 {
     namespace Error
     {
-        class TypeError : public Base
+        class SyntaxError : public Base
         {
             // (Con/De)structors
-            TypeError();
-            ~TypeError();
+            SyntaxError()  : Base("TypeError", "you have written something wrong") {}
         };
     }
 }
