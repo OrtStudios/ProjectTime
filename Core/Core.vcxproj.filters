@@ -39,13 +39,13 @@
     <ClInclude Include="src\Base\Error\ErrorBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Base\Error\TypeError.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\Base\FileManagment\Basic_File.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Base\Time\Time.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Base\Error\SyntaxError.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -63,9 +63,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Base\Logger.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Base\Error\TypeError.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Base\FileManagment\Basic_File.cpp">

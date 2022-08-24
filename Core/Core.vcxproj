@@ -175,7 +175,7 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="include\rang.hpp" />
     <ClInclude Include="src\Base\Error\ErrorBase.h" />
-    <ClInclude Include="src\Base\Error\TypeError.h" />
+    <ClInclude Include="src\Base\Error\SyntaxError.h" />
     <ClInclude Include="src\Base\FileManagment\Basic_File.h" />
     <ClInclude Include="src\Base\Logger.h" />
     <ClInclude Include="src\Base\Time\Time.h" />
@@ -186,7 +186,6 @@
   <ItemGroup>
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="src\Base\Error\ErrorBase.cpp" />
-    <ClCompile Include="src\Base\Error\TypeError.cpp" />
     <ClCompile Include="src\Base\FileManagment\Basic_File.cpp" />
     <ClCompile Include="src\Base\Logger.cpp" />
     <ClCompile Include="src\FileManagment\ProjectFile.cpp" />

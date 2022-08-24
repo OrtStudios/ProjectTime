@@ -9,7 +9,7 @@ namespace Core
         class SyntaxError : public Base
         {
             // (Con/De)structors
-            SyntaxError()  : Base("TypeError", "you have written something wrong") {}
+            SyntaxError() : Base("TypeError", "you have written something wrong") {}
         };
     }
 }
