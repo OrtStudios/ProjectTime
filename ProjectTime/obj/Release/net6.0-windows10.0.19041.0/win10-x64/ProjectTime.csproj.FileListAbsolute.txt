@@ -343,3 +343,11 @@ C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\
 C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+C:\Dev\ProjectTime\bin\Release\ProjectTime\Release\net6.0-windows10.0.19041.0\win10-x64\ProjectTime.exe
+C:\Dev\ProjectTime\bin\Release\ProjectTime\Release\net6.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xbf
+C:\Dev\ProjectTime\bin\Release\ProjectTime\Release\net6.0-windows10.0.19041.0\win10-x64\ProjectTime.deps.json
+C:\Dev\ProjectTime\bin\Release\ProjectTime\Release\net6.0-windows10.0.19041.0\win10-x64\ProjectTime.runtimeconfig.json
+C:\Dev\ProjectTime\bin\Release\ProjectTime\Release\net6.0-windows10.0.19041.0\win10-x64\ProjectTime.dll
+C:\Dev\ProjectTime\bin\Release\ProjectTime\Release\net6.0-windows10.0.19041.0\win10-x64\ProjectTime.pdb
+C:\Dev\ProjectTime\bin\Release\ProjectTime\Release\net6.0-windows10.0.19041.0\win10-x64\resources.pri
+C:\Dev\ProjectTime\bin\Release\ProjectTime\Release\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml

@@ -8,8 +8,8 @@ namespace Core
     {
         class SyntaxError : public Base
         {
-            // (Con/De)structors
-            SyntaxError() : Base("TypeError", "you have written something wrong") {}
+            // Constructor
+            SyntaxError() : Base("SyntaxError", "Wrong") {}
         };
     }
 }
