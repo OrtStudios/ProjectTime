@@ -4,7 +4,7 @@
 
 using std::string;
 
-#include "./src/Base/Logger.h"
+#include "src/Base/Logger.h"
 
 //--------------------------------------------//
 //* Logger *//

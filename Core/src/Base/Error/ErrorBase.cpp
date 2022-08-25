@@ -71,7 +71,7 @@ namespace Core
             );
         }
 
-        void Base::what()
+        string Base::what()
         {
             // get file
             m_FilePath = __FILE__;
@@ -99,7 +99,7 @@ namespace Core
             
             //TODO: set it to the log file
 
-            return;
+            return ToString();
 ;        }
     }
 }

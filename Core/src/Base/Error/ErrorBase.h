@@ -24,7 +24,7 @@ namespace Core
             std::string ToString();
             std::string FullString();
 
-            virtual void what();
+            std::string what();
 
         private:
             //File m_ErrorLogFile;
