@@ -8,20 +8,16 @@ namespace Core
 {
     namespace Project
     {
-        Project::Project(std::string name, std::string description, _ProjectType projectType)
+        Project::Project(std::string name, std::string description, class ProjectType projectType) :
+            m_ProjectFile("src/Project/" + name + ".project")
         {
             m_Name = name;
             m_Description = description;
             m_ProjectType = projectType;
-
-            //m_ProjectFile = ProjectFile(
-            //    "src/Project/" + m_Name + ".project"
-            //);
         }
 
         Project::~Project()
         {
-            //delete &m_ProjectFile;
         }
 		
         void Project::Load()
