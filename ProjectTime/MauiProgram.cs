@@ -4,7 +4,7 @@ public static class MauiProgram
 {
 	public static MauiApp CreateMauiApp()
 	{
-		System.Console.OpenStandardOutput();
+		// System.Console.OpenStandardOutput();
 
         var builder = MauiApp.CreateBuilder();
 		builder
