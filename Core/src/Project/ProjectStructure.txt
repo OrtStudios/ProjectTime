@@ -1,0 +1,13 @@
+Project Structure:
+	Name: ${value}
+	Type: ${value}
+	Base Type: ${value}
+	Path: ${value}
+	Project File Path: ${value}.ptp -> ProjectTimeProject
+
+
+Project File Structure:
+	{
+		"ID": "${value}",
+		"Name": "${value}"
+	}
