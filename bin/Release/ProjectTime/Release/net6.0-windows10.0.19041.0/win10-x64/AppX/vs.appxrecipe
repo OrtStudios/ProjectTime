@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Dev\ProjectTime\bin\Release\ProjectTime\Release\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-09-01T04:22:26.008</Modified>
+      <Modified>2022-09-04T14:15:07.602</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\bin\Release\ProjectTime\Release\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-09-01T04:22:25.647</Modified>
+      <Modified>2022-09-04T14:09:40.998</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\bin\Release\ProjectTime\Release\net6.0-windows10.0.19041.0\win10-x64\ProjectTime.runtimeconfig.json">
       <PackagePath>ProjectTime.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\bin\Release\ProjectTime\Release\net6.0-windows10.0.19041.0\win10-x64\ProjectTime.dll">
       <PackagePath>ProjectTime.dll</PackagePath>
-      <Modified>2022-09-01T04:22:24.849</Modified>
+      <Modified>2022-09-04T14:15:07.107</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>ProjectTime.exe</PackagePath>
-      <Modified>2022-09-01T04:22:23.907</Modified>
+      <Modified>2022-09-04T14:15:06.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Runtime.win-x64\6.0.8\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1063,7 +1063,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\ProjectTime.deps.json">
       <PackagePath>ProjectTime.deps.json</PackagePath>
-      <Modified>2022-09-01T04:22:25.855</Modified>
+      <Modified>2022-09-04T14:15:07.453</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\6.0.486\ref\net6.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -1111,147 +1111,151 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2022-08-22T06:58:52.081</Modified>
+      <Modified>2022-09-04T14:09:39.301</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.236</Modified>
+      <Modified>2022-09-04T14:09:39.477</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.246</Modified>
+      <Modified>2022-09-04T14:09:39.488</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.254</Modified>
+      <Modified>2022-09-04T14:09:39.497</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.268</Modified>
+      <Modified>2022-09-04T14:09:39.511</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.320</Modified>
+      <Modified>2022-09-04T14:09:39.566</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.090</Modified>
+      <Modified>2022-09-04T14:09:39.312</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.093</Modified>
+      <Modified>2022-09-04T14:09:39.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.096</Modified>
+      <Modified>2022-09-04T14:09:39.320</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.099</Modified>
+      <Modified>2022-09-04T14:09:39.324</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.102</Modified>
+      <Modified>2022-09-04T14:09:39.329</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.140</Modified>
+      <Modified>2022-09-04T14:09:39.377</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.145</Modified>
+      <Modified>2022-09-04T14:09:39.382</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.153</Modified>
+      <Modified>2022-09-04T14:09:39.387</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.160</Modified>
+      <Modified>2022-09-04T14:09:39.395</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.173</Modified>
+      <Modified>2022-09-04T14:09:39.411</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.121</Modified>
+      <Modified>2022-09-04T14:09:39.352</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.124</Modified>
+      <Modified>2022-09-04T14:09:39.356</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.127</Modified>
+      <Modified>2022-09-04T14:09:39.361</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.130</Modified>
+      <Modified>2022-09-04T14:09:39.366</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.137</Modified>
+      <Modified>2022-09-04T14:09:39.373</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.105</Modified>
+      <Modified>2022-09-04T14:09:39.332</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.108</Modified>
+      <Modified>2022-09-04T14:09:39.335</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.111</Modified>
+      <Modified>2022-09-04T14:09:39.338</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.114</Modified>
+      <Modified>2022-09-04T14:09:39.341</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.118</Modified>
+      <Modified>2022-09-04T14:09:39.348</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.179</Modified>
+      <Modified>2022-09-04T14:09:39.416</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.185</Modified>
+      <Modified>2022-09-04T14:09:39.423</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.192</Modified>
+      <Modified>2022-09-04T14:09:39.431</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.203</Modified>
+      <Modified>2022-09-04T14:09:39.442</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.229</Modified>
+      <Modified>2022-09-04T14:09:39.468</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\bg.scale-100.png">
+      <PackagePath>bg.scale-100.png</PackagePath>
+      <Modified>2022-08-09T16:21:42.731</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.115</Modified>
+      <Modified>2022-09-04T14:09:39.283</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.123</Modified>
+      <Modified>2022-09-04T14:09:39.293</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.133</Modified>
+      <Modified>2022-09-04T14:09:39.308</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.152</Modified>
+      <Modified>2022-09-04T14:09:39.328</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2022-08-22T06:58:52.192</Modified>
+      <Modified>2022-09-04T14:09:39.372</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

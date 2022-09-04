@@ -2,21 +2,41 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjectTime.MainPage">
+    <Grid Background="#002857">
+        <!-- Background Image -->
+        <FlexLayout>
+            <Image Source="bg.png"/>
+        </FlexLayout>
 
-    <Grid>
+        <!-- Main Grid -->
+        <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="100"/>
             </Grid.ColumnDefinitions>
 
-            <Label Text="Project Time" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center"
-                   Grid.Column="2"/>
+            <!-- Menu Bar -->
+            <!-- Logo Image -->
+            <ImageButton Source="dotnet_bot.png"
+                         Grid.Row="1"
+                         Grid.Column="1"
+                         
+                         WidthRequest="100"
+                         HeightRequest="50"/>
 
+            <ImageButton Source="bg.png"
+                         Grid.Row="1"
+                         Grid.Column="2"
+                         
+                         WidthRequest="100"
+                         HeightRequest="50"/>
+
+        </Grid>
     </Grid>
 
 </ContentPage>

@@ -71,5 +71,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="src\Base\Error\ErrorFormating.txt" />
+    <Text Include="src\Project\ProjectStructure.txt" />
   </ItemGroup>
 </Project>
