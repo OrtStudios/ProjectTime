@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <chrono>
 #include <fstream> 
 #include <format>
 #include <map>
@@ -9,6 +8,7 @@
 
 #include "Logger.h"
 #include "src/Base/FileManagment/Basic_File.h"
+#include "src/Base/Time/Time.h"
 
 using std::string;
 
@@ -65,7 +65,7 @@ namespace Core
 		string type = m_logTypeString.at(level);
 
 		// Get the time
-		string theTime = m_GetTheTimeNow(m_dateFormat, true);
+		string theTime = Time::GetTime(m_dateFormat, true);
 
 		// Log the message to the console
 		if (m_logToConsole)
@@ -102,7 +102,7 @@ namespace Core
 		/// </summary>
 		/// <param name="directoryPath"> path to the log file directory </param>
 		// Get the time
-		string theTime = m_GetTheTimeNow(m_dateFormat, false);
+		string theTime = Time::GetTime(m_dateFormat, false);
 
 		// Create the file
 		string path = directoryPath + "/ProjectTimeLog_" + theTime + ".log";
@@ -178,65 +178,5 @@ namespace Core
 	void Logger::SetLogToFile(bool logToFile)
 	{
 		m_logToFile = logToFile;
-	}
-
-	//////////////////////////////////
-	//* get the time
-	string Logger::m_GetTheTimeNow(string UserFormat, bool TimeInTheDay)
-	{
-		/// <summary>
-		/// get the time in the given format
-		/// </summary>
-		/// <param name="UserFormat"> the format of the time </param>
-		/// <param name="TimeInTheDay"> if the time is in the day or not </param>
-		/// <returns> the time in the given format </returns>
-		std::time_t now = std::time(NULL);
-
-		// convert to local time
-		std::tm* ptm = std::localtime(&now);
-
-		// the buffer
-		char buffer[32];
-
-		// phrase the format
-		string format = m_PhraseFormat(UserFormat, TimeInTheDay);
-
-		// convert to string to be stored in the buffer
-		std::strftime(buffer, 32, format.c_str(), ptm);
-
-		return buffer;
-	}
-
-	//* convert from user friendly format to the format to be used in the log time
-	string Logger::m_PhraseFormat(std::string UserFormat, bool TimeInTheDay)
-	{
-		/// <summary>
-		/// convert from user friendly format to the format to be used in the log time
-		/// </summary>
-		/// <param name="UserFormat"> the format of the time </param>
-		/// <param name="TimeInTheDay"> if the time is in the day or not </param>
-		/// <returns> the format to be used in the log time </returns>
-		if (TimeInTheDay)
-		{
-			if (UserFormat == "M.D")
-			{
-				return "%m.%d.%Y %H:%M:%S";
-			}
-			else
-			{
-				return "%d.%m.%Y %H:%M:%S";
-			}
-		}
-		else
-		{
-			if (UserFormat == "M.D")
-			{
-				return "%m.%d.%Y";
-			}
-			else
-			{
-				return "%d.%m.%Y";
-			}
-		}
 	}
 }

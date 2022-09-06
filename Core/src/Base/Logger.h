@@ -9,11 +9,6 @@ namespace Core
 	//public ref class Logger
 	class Logger
 	{
-	private:
-		std::string m_GetTheTimeNow(std::string UserFormat, bool TimeInTheDay = true);
-
-		std::string m_PhraseFormat(std::string UserFormat, bool TimeInTheDay = true);
-
 	public:
 		enum LogType
 		{
