@@ -7,10 +7,10 @@
 namespace Core
 {
 	//public ref class Logger
-	class Logger
+	static class Logger
 	{
 	public:
-		enum LogType
+		static enum LogType
 		{
 			DEBUG   = 0,
 			INFO    = 1,
@@ -21,40 +21,40 @@ namespace Core
 		};
 
 		//* Main Log Function
-		void Log(const std::string message, LogType level);
+		static void Log(const std::string message, LogType level);
 
 		//* Log File
-		void SetLogFile(const std::string directoryPath);
+		static void SetLogFile(const std::string directoryPath);
 
-		std::string GetLogFilePath();
+		static std::string GetLogFilePath();
 
-		bool CloseLogFile();
+		static bool CloseLogFile();
 
-		bool SaveLogFile();
+		static bool SaveLogFile();
 
-		bool DeleteLogFile();
+		static bool DeleteLogFile();
 
-		bool ClearLogFile();
+		static bool ClearLogFile();
 
-		bool IsLogToFile();
+		static bool IsLogToFile();
 
 		//* Log Level
-		void SetLogLevel(LogType level);
+		static void SetLogLevel(LogType level);
 
-		LogType GetLogLevel();
+		static LogType GetLogLevel();
 
 		//* Log To Console or Not
-		void SetLogToConsole(bool logToConsole);
+		static void SetLogToConsole(bool logToConsole);
 
 		//* Log To File or Not
-		void SetLogToFile(bool logToFile);
+		static void SetLogToFile(bool logToFile);
 
 	private:
-		std::string m_dateFormat = "D.M";
-		LogType m_logLevel = WARNING;
-		bool m_logToConsole = true;
-		bool m_logToFile = false;
-		int debugColor = 90;
+		static std::string m_dateFormat = "D.M";
+		static LogType m_logLevel = WARNING;
+		static bool m_logToConsole = true;
+		static bool m_logToFile = false;
+		static int debugColor = 90;
 
 	};
 }

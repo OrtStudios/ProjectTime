@@ -13,4 +13,5 @@ extern "C"
 	CRaper void LogError   (std::string message);
 	CRaper void LogFatal   (std::string message);
 	CRaper void LogMaster  (std::string message);
+	CRaper void SetLogLevel(const char  level  );
 }

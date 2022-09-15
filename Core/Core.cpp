@@ -8,33 +8,61 @@ using std::string;
 
 //--------------------------------------------//
 //* Logger *//
-CRaper void LogDebug(std::string message)
+CRaper void LogDebug(const std::string message)
 {
-	Core::Logger().Log(message, Core::Logger::DEBUG);
+	Core::Logger::Log(message, Core::Logger::DEBUG);
 }
 
-CRaper void LogInfo(std::string message)
+CRaper void LogInfo(const std::string message)
 {
-	Core::Logger().Log(message, Core::Logger::DEBUG);
+	Core::Logger::Log(message, Core::Logger::DEBUG);
 }
 
-CRaper void LogWarning(std::string message)
+CRaper void LogWarning(const std::string message)
 {
-	Core::Logger().Log(message, Core::Logger::WARNING);
+	Core::Logger::Log(message, Core::Logger::WARNING);
 }
 
-CRaper void LogError(std::string message)
+CRaper void LogError(const std::string message)
 {
-	Core::Logger().Log(message, Core::Logger::_ERROR);
+	Core::Logger::Log(message, Core::Logger::_ERROR);
 }
 
-CRaper void LogFatal(std::string message)
+CRaper void LogFatal(const std::string message)
 {
-	Core::Logger().Log(message, Core::Logger::FATAL);
+	Core::Logger::Log(message, Core::Logger::FATAL);
 }
 
-CRaper void LogMaster(std::string message)
+CRaper void LogMaster(const std::string message)
 {
-	Core::Logger().Log(message, Core::Logger::MASTER);
+	Core::Logger::Log(message, Core::Logger::MASTER);
+}
+
+CRaper void SetLogLevel(const char level)
+{
+	if (level == 'd')
+	{
+		Core::Logger::SetLogLevel(Core::Logger::DEBUG);
+	}
+	else if (level == 'i')
+	{
+		Core::Logger::SetLogLevel(Core::Logger::INFO);
+	}
+	else if (level == 'w')
+	{
+		Core::Logger::SetLogLevel(Core::Logger::WARNING);
+	}
+	else if (level == 'e')
+	{
+		Core::Logger::SetLogLevel(Core::Logger::_ERROR);
+	}
+	else if (level == 'f')
+	{
+		Core::Logger::SetLogLevel(Core::Logger::FATAL);
+	}
+	else
+	{
+		Core::Logger::SetLogLevel(Core::Logger::MASTER);
+	}
 }
 //--------------------------------------------//

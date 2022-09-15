@@ -76,7 +76,7 @@ namespace Core
 					namespace MinecraftPluginNS
 					{
 						// Java -> MinecraftPlugin
-						class Bukkit : MinecraftPlugin {};
+						class Spigot : MinecraftPlugin {};
 						class Paper  : MinecraftPlugin {};
 					}
 				}
