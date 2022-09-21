@@ -1,6 +1,7 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Preview\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(519,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
 C:\Program Files\Microsoft Visual Studio\2022\Preview\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(520,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
   Core.cpp
+C:\Dev\ProjectTime\Core\Core.h(18,3): warning C4091: '__declspec(dllexport)': ignored on left of 'LogType' when no variable is declared
 C:\Dev\ProjectTime\Core\src\Base\Logger.h(21): warning C4091: 'static ': ignored on left of 'Core::Logger::LogType' when no variable is declared
 C:\Dev\ProjectTime\Core\src\Base\Logger.h(53,42): error C2864: 'Core::Logger::m_dateFormat': a static data member with an in-class initializer must have non-volatile const integral type or be specified as 'inline'
 C:\Dev\ProjectTime\Core\src\Base\Logger.h(53,42): message : type is 'std::string'
@@ -13,6 +14,8 @@ C:\Dev\ProjectTime\Core\src\Base\Logger.h(56,34): message : type is 'bool'
 C:\Dev\ProjectTime\Core\src\Base\Logger.h(57,29): error C2864: 'Core::Logger::debugColor': a static data member with an in-class initializer must have non-volatile const integral type or be specified as 'inline'
 C:\Dev\ProjectTime\Core\src\Base\Logger.h(57,29): message : type is 'int'
 C:\Dev\ProjectTime\Core\src\Base\Logger.h(59,3): warning C4091: 'static ': ignored on left of 'Core::Logger' when no variable is declared
+C:\Dev\ProjectTime\Core\Core.cpp(55,32): error C2838: '_ERROR': illegal qualified name in member declaration
+C:\Dev\ProjectTime\Core\Core.cpp(55,38): error C2065: '_ERROR': undeclared identifier
   ErrorBase.cpp
 C:\Dev\ProjectTime\Core\src\Base\Logger.h(21): warning C4091: 'static ': ignored on left of 'Core::Logger::LogType' when no variable is declared
 C:\Dev\ProjectTime\Core\src\Base\Logger.h(53,42): error C2864: 'Core::Logger::m_dateFormat': a static data member with an in-class initializer must have non-volatile const integral type or be specified as 'inline'

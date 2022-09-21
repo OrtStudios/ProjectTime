@@ -38,25 +38,25 @@ CRaper void LogMaster(const std::string message)
 	Core::Logger::Log(message, Core::Logger::MASTER);
 }
 
-CRaper void SetLogLevel(const char level)
+CRaper void SetLogLevel(LogType logLevel)
 {
-	if (level == 'd')
+	if (logLevel == LogType::DEBUG)
 	{
 		Core::Logger::SetLogLevel(Core::Logger::DEBUG);
 	}
-	else if (level == 'i')
+	else if (logLevel == LogType::INFO)
 	{
 		Core::Logger::SetLogLevel(Core::Logger::INFO);
 	}
-	else if (level == 'w')
+	else if (logLevel == LogType::WARNING)
 	{
 		Core::Logger::SetLogLevel(Core::Logger::WARNING);
 	}
-	else if (level == 'e')
+	else if (logLevel == LogType::_ERROR)
 	{
 		Core::Logger::SetLogLevel(Core::Logger::_ERROR);
 	}
-	else if (level == 'f')
+	else if (logLevel == LogType::FATAL)
 	{
 		Core::Logger::SetLogLevel(Core::Logger::FATAL);
 	}
