@@ -1,4 +1,4 @@
-#include <iostream>
+
 #include <string>
 #include <fstream> 
 #include <format>
@@ -15,6 +15,12 @@ using std::string;
 namespace Core
 {
 	Core::File* loggerLogFile;
+
+	std::string     Logger::m_dateFormat   = "D.M";
+	Logger::LogType Logger::m_logLevel     = Core::Logger::LogType::WARNING;
+	bool            Logger::m_logToConsole = true;
+	bool            Logger::m_logToFile    = false;
+	int             Logger::debugColor     = 90;
 	
 	const std::map<string, string> m_months = {
 			{ "Jan", "1"  },
@@ -31,22 +37,22 @@ namespace Core
 			{ "Dec", "12" }
 	};
 	const std::map<Logger::LogType, rang::fg> m_logColors = {
-		{ Logger::DEBUG,   rang::fg::blackB },
-		{ Logger::INFO,    rang::fg::blueB  },
-		{ Logger::WARNING, rang::fg::yellow },
-		{ Logger::_ERROR,  rang::fg::redB   },
-		{ Logger::FATAL,   rang::fg::red    },
-		{ Logger::MASTER,  rang::fg::green  }
+		{ Logger::LogType::DEBUG,   rang::fg::blackB },
+		{ Logger::LogType::INFO,    rang::fg::blueB  },
+		{ Logger::LogType::WARNING, rang::fg::yellow },
+		{ Logger::LogType::ERROR,  rang::fg::redB   },
+		{ Logger::LogType::FATAL,   rang::fg::red    },
+		{ Logger::LogType::MASTER,  rang::fg::green  }
 	};
 	
 	const std::map<Logger::LogType, string> m_logTypeString =
 	{
-		{ Logger::DEBUG,   "Debug"   },
-		{ Logger::INFO,    "Info"    },
-		{ Logger::WARNING, "Warning" },
-		{ Logger::_ERROR,  "Error"   },
-		{ Logger::FATAL,   "Fatal"   },
-		{ Logger::MASTER,  "Master"  }
+		{ Logger::LogType::DEBUG,   "Debug"   },
+		{ Logger::LogType::INFO,    "Info"    },
+		{ Logger::LogType::WARNING, "Warning" },
+		{ Logger::LogType::ERROR,  "Error"   },
+		{ Logger::LogType::FATAL,   "Fatal"   },
+		{ Logger::LogType::MASTER,  "Master"  }
 	};
 
 	//* Main Log Function

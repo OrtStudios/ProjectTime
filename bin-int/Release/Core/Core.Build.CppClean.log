@@ -1,11 +1,10 @@
 c:\dev\projecttime\bin-int\release\core\vc143.pdb
-c:\dev\projecttime\bin-int\release\core\errorbase.obj
-c:\dev\projecttime\bin-int\release\core\typeerror.obj
-c:\dev\projecttime\bin-int\release\core\project.obj
-c:\dev\projecttime\bin-int\release\core\logger.obj
-c:\dev\projecttime\bin-int\release\core\basic_file.obj
 c:\dev\projecttime\bin-int\release\core\core.obj
 c:\dev\projecttime\bin-int\release\core\projectfile.obj
+c:\dev\projecttime\bin-int\release\core\project.obj
+c:\dev\projecttime\bin-int\release\core\basic_file.obj
+c:\dev\projecttime\bin-int\release\core\errorbase.obj
+c:\dev\projecttime\bin-int\release\core\logger.obj
 c:\dev\projecttime\bin\release\core\core.lib
 c:\dev\projecttime\bin\release\core\core.exp
 c:\dev\projecttime\bin\release\core\core.dll

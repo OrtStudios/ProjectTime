@@ -73,4 +73,7 @@
     <Text Include="src\Base\Error\ErrorFormating.txt" />
     <Text Include="src\Project\ProjectStructure.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+  </ItemGroup>
 </Project>

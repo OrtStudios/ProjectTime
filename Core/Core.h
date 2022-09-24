@@ -7,7 +7,7 @@
 extern "C"
 {
 	//* Logger *//
-	CRaper enum LogType
+	enum LogType
 	{
 		DEBUG = 0,
 		INFO = 1,

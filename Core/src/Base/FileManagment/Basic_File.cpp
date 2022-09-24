@@ -134,10 +134,10 @@ namespace Core
 			m_isOpen = true;
 			return true;
 		}
-		catch (std::exception& e)
+		catch (std::exception&)
 		{
 			
-			Logger::Log(std::format("Error:\n    the file: '{}' can't be opened", m_path), Logger::LogType::_ERROR);
+			Logger::Log(std::format("Error:\n    the file: '{}' can't be opened", m_path), Logger::LogType::ERROR);
 			m_isOpen = false;
 
 			return false;
@@ -170,7 +170,7 @@ namespace Core
 			
 			Logger::Log(
 				std::format("Error:\n    the file: '{}' can't be closed", m_path),
-				Logger::LogType::_ERROR);
+				Logger::LogType::ERROR);
 			m_isOpen = true;
 
 			return false;
@@ -349,7 +349,7 @@ namespace Core
 		}
 		catch (std::exception& e)
 		{
-			Logger::Log(std::format("Error:\n    the file: '{}' can't be opened", m_path), Logger::LogType::_ERROR);
+			Logger::Log(std::format("Error:\n    the file: '{}' can't be opened", m_path), Logger::LogType::ERROR);
 			m_isOpen = false;
 
 			return false;
@@ -363,7 +363,7 @@ namespace Core
 		}
 		catch (std::exception& e)
 		{
-			Logger::Log(std::format("Error:\n    the file: '{}' can't be opened", "temp.txt"), Logger::LogType::_ERROR);
+			Logger::Log(std::format("Error:\n    the file: '{}' can't be opened", "temp.txt"), Logger::LogType::ERROR);
 			m_isOpen = false;
 
 			return false;
@@ -392,7 +392,7 @@ namespace Core
 		{
 			Logger::Log(
 				std::format("Error:\n    the file: '{}' can't be closed", "temp.txt"),
-				Logger::LogType::_ERROR);
+				Logger::LogType::ERROR);
 			m_isOpen = true;
 
 			return false;
@@ -409,7 +409,7 @@ namespace Core
 		{
 			Logger::Log(
 				std::format("Error:\n    the file: '{}' can't be opened", "temp.txt"),
-				Logger::LogType::_ERROR);
+				Logger::LogType::ERROR);
 			m_isOpen = false;
 
 			return false;
@@ -435,7 +435,7 @@ namespace Core
 		{
 			Logger::Log(
 				std::format("Error:\n    the file: '{}' can't be closed", m_path),
-				Logger::LogType::_ERROR);
+				Logger::LogType::ERROR);
 			m_isOpen = true;
 
 			return false;
@@ -450,7 +450,7 @@ namespace Core
 		{
 			Logger::Log(
 				std::format("Error:\n    the file: '{}' can't be deleted", "temp.txt"),
-				Logger::LogType::_ERROR);
+				Logger::LogType::ERROR);
 			m_isOpen = true;
 
 			return false;
@@ -466,7 +466,7 @@ namespace Core
 		{
 			Logger::Log(
 				std::format("Error:\n    the file: '{}' can't be closed", m_path),
-				Logger::LogType::_ERROR);
+				Logger::LogType::ERROR);
 			m_isOpen = true;
 
 			return false;
@@ -510,7 +510,7 @@ namespace Core
 		}
 		catch (std::exception& e)
 		{
-			Logger::Log(std::format("Error:\n    the file: '{}' can't be opened", m_path), Logger::LogType::_ERROR);
+			Logger::Log(std::format("Error:\n    the file: '{}' can't be opened", m_path), Logger::LogType::ERROR);
 			m_isOpen = false;
 
 			return false;
@@ -524,7 +524,7 @@ namespace Core
 		}
 		catch (std::exception& e)
 		{
-			Logger::Log(std::format("Error:\n    the file: '{}' can't be opened", "temp.txt"), Logger::LogType::_ERROR);
+			Logger::Log(std::format("Error:\n    the file: '{}' can't be opened", "temp.txt"), Logger::LogType::ERROR);
 			m_isOpen = false;
 
 			return false;
@@ -553,7 +553,7 @@ namespace Core
 		{
 			Logger::Log(
 				std::format("Error:\n    the file: '{}' can't be closed", "temp.txt"),
-				Logger::LogType::_ERROR);
+				Logger::LogType::ERROR);
 			m_isOpen = true;
 
 			return false;
@@ -570,7 +570,7 @@ namespace Core
 		{
 			Logger::Log(
 				std::format("Error:\n    the file: '{}' can't be opened", "temp.txt"),
-				Logger::LogType::_ERROR);
+				Logger::LogType::ERROR);
 			m_isOpen = false;
 
 			return false;
@@ -596,7 +596,7 @@ namespace Core
 		{
 			Logger::Log(
 				std::format("Error:\n    the file: '{}' can't be closed", m_path),
-				Logger::LogType::_ERROR);
+				Logger::LogType::ERROR);
 			m_isOpen = true;
 
 			return false;
@@ -611,7 +611,7 @@ namespace Core
 		{
 			Logger::Log(
 				std::format("Error:\n    the file: '{}' can't be deleted", "temp.txt"),
-				Logger::LogType::_ERROR);
+				Logger::LogType::ERROR);
 			m_isOpen = true;
 
 			return false;
@@ -627,7 +627,7 @@ namespace Core
 		{
 			Logger::Log(
 				std::format("Error:\n    the file: '{}' can't be closed", m_path),
-				Logger::LogType::_ERROR);
+				Logger::LogType::ERROR);
 			m_isOpen = true;
 
 			return false;
@@ -699,7 +699,7 @@ namespace Core
 		}
 		catch (std::exception& e)
 		{
-			Logger::Log(std::format("Error:\n    the file: '{}' can't be deleted", m_path), Logger::LogType::_ERROR);
+			Logger::Log(std::format("Error:\n    the file: '{}' can't be deleted", m_path), Logger::LogType::ERROR);
 			return false;
 		}
 		Logger::Log("File deleted", Logger::LogType::INFO);

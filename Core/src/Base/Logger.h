@@ -4,18 +4,22 @@
 #include <fstream>
 #include <map>
 
+#ifdef ERROR
+#undef ERROR
+#endif
+
 namespace Core
 {
 	//public ref class Logger
-	static class Logger
+	class Logger
 	{
 	public:
-		static enum LogType
+		enum class LogType
 		{
 			DEBUG   = 0,
 			INFO    = 1,
 			WARNING = 2,
-			_ERROR  = 3,
+			ERROR   = 3,
 			FATAL   = 4,
 			MASTER  = 5
 		};
@@ -39,7 +43,7 @@ namespace Core
 		static bool IsLogToFile();
 
 		//* Log Level
-		static void SetLogLevel(LogType level);
+		static void SetLogLevel(Logger::LogType level);
 
 		static LogType GetLogLevel();
 
@@ -50,11 +54,10 @@ namespace Core
 		static void SetLogToFile(bool logToFile);
 
 	private:
-		static std::string m_dateFormat = "D.M";
-		static LogType m_logLevel = WARNING;
-		static bool m_logToConsole = true;
-		static bool m_logToFile = false;
-		static int debugColor = 90;
-
+		static std::string m_dateFormat;
+		static LogType m_logLevel;
+		static bool m_logToConsole;
+		static bool m_logToFile;
+		static int debugColor;
 	};
 }

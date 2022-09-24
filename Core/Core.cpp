@@ -10,59 +10,59 @@ using std::string;
 //* Logger *//
 CRaper void LogDebug(const std::string message)
 {
-	Core::Logger::Log(message, Core::Logger::DEBUG);
+	Core::Logger::Log(message, Core::Logger::LogType::DEBUG);
 }
 
 CRaper void LogInfo(const std::string message)
 {
-	Core::Logger::Log(message, Core::Logger::DEBUG);
+	Core::Logger::Log(message, Core::Logger::LogType::DEBUG);
 }
 
 CRaper void LogWarning(const std::string message)
 {
-	Core::Logger::Log(message, Core::Logger::WARNING);
+	Core::Logger::Log(message, Core::Logger::LogType::WARNING);
 }
 
 CRaper void LogError(const std::string message)
 {
-	Core::Logger::Log(message, Core::Logger::_ERROR);
+	Core::Logger::Log(message, Core::Logger::LogType::ERROR);
 }
 
 CRaper void LogFatal(const std::string message)
 {
-	Core::Logger::Log(message, Core::Logger::FATAL);
+	Core::Logger::Log(message, Core::Logger::LogType::FATAL);
 }
 
 CRaper void LogMaster(const std::string message)
 {
-	Core::Logger::Log(message, Core::Logger::MASTER);
+	Core::Logger::Log(message, Core::Logger::LogType::MASTER);
 }
 
-CRaper void SetLogLevel(LogType logLevel)
+CRaper void SetLogLevel(Core::Logger::LogType logLevel)
 {
-	if (logLevel == LogType::DEBUG)
+	if (logLevel == Core::Logger::LogType::DEBUG)
 	{
-		Core::Logger::SetLogLevel(Core::Logger::DEBUG);
+		Core::Logger::SetLogLevel(Core::Logger::LogType::DEBUG);
 	}
-	else if (logLevel == LogType::INFO)
+	else if (logLevel == Core::Logger::LogType::INFO)
 	{
-		Core::Logger::SetLogLevel(Core::Logger::INFO);
+		Core::Logger::SetLogLevel(Core::Logger::LogType::INFO);
 	}
-	else if (logLevel == LogType::WARNING)
+	else if (logLevel == Core::Logger::LogType::WARNING)
 	{
-		Core::Logger::SetLogLevel(Core::Logger::WARNING);
+		Core::Logger::SetLogLevel(Core::Logger::LogType::WARNING);
 	}
-	else if (logLevel == LogType::_ERROR)
+	else if (logLevel == Core::Logger::LogType::ERROR)
 	{
-		Core::Logger::SetLogLevel(Core::Logger::_ERROR);
+		Core::Logger::SetLogLevel(Core::Logger::LogType::ERROR);
 	}
-	else if (logLevel == LogType::FATAL)
+	else if (logLevel == Core::Logger::LogType::FATAL)
 	{
-		Core::Logger::SetLogLevel(Core::Logger::FATAL);
+		Core::Logger::SetLogLevel(Core::Logger::LogType::FATAL);
 	}
 	else
 	{
-		Core::Logger::SetLogLevel(Core::Logger::MASTER);
+		Core::Logger::SetLogLevel(Core::Logger::LogType::MASTER);
 	}
 }
 //--------------------------------------------//
