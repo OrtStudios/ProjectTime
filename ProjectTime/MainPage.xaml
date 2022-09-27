@@ -16,22 +16,22 @@
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="10"/>
                 <ColumnDefinition Width="100"/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
             <!-- Menu Bar -->
             <!-- Logo Image -->
-            <ImageButton Source="dotnet_bot.png"
+            <ImageButton Source="bg.png"
                          Grid.Row="1"
-                         Grid.Column="1"
+                         Grid.Column="2"
                          
                          WidthRequest="100"
                          HeightRequest="50"/>
 
             <ImageButton Source="bg.png"
                          Grid.Row="1"
-                         Grid.Column="2"
+                         Grid.Column="1"
                          
                          WidthRequest="100"
                          HeightRequest="50"/>

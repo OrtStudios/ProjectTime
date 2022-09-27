@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Dev\ProjectTime\bin\Release\ProjectTime\Release\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-09-24T11:02:48.937</Modified>
+      <Modified>2022-09-25T08:56:53.315</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\bin\Release\ProjectTime\Release\net6.0-windows10.0.19041.0\win10-x64\ProjectTime.dll">
       <PackagePath>ProjectTime.dll</PackagePath>
-      <Modified>2022-09-24T11:02:48.155</Modified>
+      <Modified>2022-09-25T08:56:52.967</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>ProjectTime.exe</PackagePath>
-      <Modified>2022-09-24T11:02:47.177</Modified>
+      <Modified>2022-09-25T08:56:52.163</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Runtime.win-x64\6.0.8\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1063,7 +1063,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Dev\ProjectTime\ProjectTime\obj\Release\net6.0-windows10.0.19041.0\win10-x64\ProjectTime.deps.json">
       <PackagePath>ProjectTime.deps.json</PackagePath>
-      <Modified>2022-09-24T11:02:48.662</Modified>
+      <Modified>2022-09-25T08:56:53.211</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\6.0.486\ref\net6.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
