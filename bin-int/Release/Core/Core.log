@@ -1,26 +1,10 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Preview\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(519,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
 C:\Program Files\Microsoft Visual Studio\2022\Preview\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(520,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
-  Basic_File.cpp
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(168,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(350,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(364,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(391,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(408,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(434,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(449,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(465,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(511,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(525,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(552,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(569,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(595,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(610,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(626,26): warning C4101: 'e': unreferenced local variable
-C:\Dev\ProjectTime\Core\src\Base\FileManagment\Basic_File.cpp(700,26): warning C4101: 'e': unreferenced local variable
+  ProjectFile.cpp
      Creating library C:\Dev\ProjectTime\bin\Release\Core\Core.lib and object C:\Dev\ProjectTime\bin\Release\Core\Core.exp
   Generating code
-  5 of 1264 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
+  6 of 1264 functions ( 0.5%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    8 functions had inline decision re-evaluated but remain unchanged
+    7 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Core.vcxproj -> C:\Dev\ProjectTime\bin\Release\Core\Core.dll

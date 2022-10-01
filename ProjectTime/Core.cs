@@ -16,6 +16,16 @@ namespace ProjectTime
             public const string GetCoreDllPath = "C:\\Dev\\ProjectTime\\bin\\Release\\Core\\Core.dll";
         }
 
+        enum LogType
+        {
+            DEBUG = 0,
+            INFO = 1,
+            WARNING = 2,
+            ERROR = 3,
+            FATAL = 4,
+            MASTER = 5
+        }
+
         class Logger
         {
             [DllImport(CoreDllPath.GetCoreDllPath)]
@@ -35,7 +45,10 @@ namespace ProjectTime
 
             [DllImport(CoreDllPath.GetCoreDllPath)]
             public static extern void LogMaster(string message);
-            
+
+            [DllImport(CoreDllPath.GetCoreDllPath)]
+            public static extern void SetLogLevel(LogType logLevel);
+
         }
     }
 }

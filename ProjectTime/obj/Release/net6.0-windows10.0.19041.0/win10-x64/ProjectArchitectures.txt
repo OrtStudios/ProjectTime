@@ -1,0 +1,1 @@
+C:\Dev\ProjectTime\ProjectTime\ProjectTime.csproj;x64
