@@ -4,3 +4,4 @@
 
 # ignore the github acton staff folder
 GithubActionsStaff/*
+ProjectTime/obj/*
