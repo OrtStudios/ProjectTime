@@ -9,5 +9,6 @@ Project Structure:
 Project File Structure:
 	{
 		"ID": "${value}",
-		"Name": "${value}"
+		"Name": "${value}",
+		
 	}

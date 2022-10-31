@@ -1,7 +1,9 @@
 #include "ProjectFile.h"
 
 #include <string>
+#include <vector>
 #include <src/Base/Logger.h>
+#include <src/Base/String/StringFunc.h>
 
 using std::string;
 
@@ -18,6 +20,35 @@ namespace Core
 	// Load & Reload
 	void ProjectFile::Load()
 	{
+		// load file
+		Open();
+	
+		// get file data
+		string fileData = Read();
+	
+		// split file data
+		std::vector<string> fileDataSplitted = StringFunc::Split(fileData, '\n');
+	
+		// iterate through file data
+		for (int i = 0; i < fileDataSplitted.size(); i++)
+		{
+			// split line
+			std::vector<string> lineData = StringFunc::Split(fileDataSplitted[i], '=');
+	
+			// check if line is valid
+			if (lineData.size() == 2)
+			{
+				// add line data to map
+				projectData[lineData[0]] = lineData[1];
+			}
+		}
+		
+		// Log the project data
+		Logger::Log("Project file loaded", Logger::LogType::INFO);
+		for (auto const& x : projectData)
+		{
+			Logger::Log(x.first + " = " + x.second, Logger::LogType::DEBUG);
+		}
 	}
 	
 	void ProjectFile::Reload()

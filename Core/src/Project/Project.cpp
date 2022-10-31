@@ -8,7 +8,7 @@ namespace Core
 {
     namespace Project
     {
-        Project::Project(std::string name, std::string description, class ProjectType projectType) :
+        Project::Project(std::string name, std::string description, ProjectType projectType) :
             m_ProjectFile("src/Project/" + name + ".project")
         {
             m_Name = name;

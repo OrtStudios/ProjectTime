@@ -188,6 +188,7 @@
     <ClCompile Include="src\Base\Error\ErrorBase.cpp" />
     <ClCompile Include="src\Base\FileManagment\Basic_File.cpp" />
     <ClCompile Include="src\Base\Logger.cpp" />
+    <ClCompile Include="src\Base\String\StringFunc.h" />
     <ClCompile Include="src\FileManagment\ProjectFile.cpp" />
     <ClCompile Include="src\Project\Project.cpp" />
   </ItemGroup>
