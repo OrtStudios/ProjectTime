@@ -15,6 +15,7 @@ namespace Core
 
 	ProjectFile::~ProjectFile()
 	{
+		Close();
 	}
 	
 	// Load & Reload

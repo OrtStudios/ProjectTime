@@ -7,7 +7,6 @@
 * [How to install](#How-to-install-Project-Time)
 * [tweak the project](#How-to-tweak-this-project-for-your-own-uses)
 
-
 ## What is Project Time?
 
 This is Project Time, the project manager for the people that don't have time.

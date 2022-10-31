@@ -18,6 +18,7 @@ namespace Core
 			void Load();
 			void Save();
 			void Close();
+			void SaveAndClose();
 
 			void SetName(std::string name);
 			void SetDescription(std::string description);
@@ -49,8 +50,6 @@ namespace Core
 			// bool data
 			bool m_IsLoaded;
 			bool m_IsSaved;
-			bool m_IsClosed;
-			bool m_IsExist;
 			bool m_IsEdited;
 		};
 	}
