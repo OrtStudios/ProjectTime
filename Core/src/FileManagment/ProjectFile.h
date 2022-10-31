@@ -14,6 +14,7 @@ namespace Core
 
 		void Load();
 		void Reload();
+		void Save();
 
 		std::string GetProjectName();
 		std::string GetProjectPath();

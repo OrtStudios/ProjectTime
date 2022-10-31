@@ -53,70 +53,90 @@ namespace Core
 	
 	void ProjectFile::Reload()
 	{
+		// clear map
+		projectData.clear();
+	
+		// reload file
+		Load();
 	}
 	
+	void ProjectFile::Save()
+	{
+		// get the file data and create a string from it
+		string fileData = "";
+		for (auto const& x : projectData)
+		{
+			fileData += x.first + "=" + x.second + "\n";
+		}
+
+		// clear the file and write the data to it
+		Open();
+		Clear();
+		Write(fileData);
+	}
+
 	// Getters
 	string ProjectFile::GetProjectName()
 	{
-		return "";
+		return projectData["name"];
 	}
 	
 	string ProjectFile::GetProjectPath()
 	{
-		return std::string();
+		return projectData["path"];
 	}
 	
 	string ProjectFile::GetProjectFilePath()
 	{
-		return std::string();
+		return projectData["file_path"];
 	}
 	
 	string ProjectFile::GetCreationDate()
 	{
-		return std::string();
+		return projectData["creation_date"];
 	}
 	
 	string ProjectFile::GetLastModifiedDate()
 	{
-		return std::string();
+		return projectData["last_modified_date"];
 	}
 	
 	string ProjectFile::GetProjectDescription()
 	{
-		return std::string();
+		return projectData["description"];
 	}
 	
 	string ProjectFile::GetProjectAuthor()
 	{
-		return std::string();
+		return projectData["author"];
 	}
 	
 	string ProjectFile::GetProjectVersion()
 	{
-		return std::string();
+		return projectData["version"];
 	}
 	
 	string ProjectFile::GetProjectLicense()
 	{
-		return std::string();
+		return projectData["license"];
 	}
 	
 	string ProjectFile::GetProjectWebsite()
 	{
-		return std::string();
+		return projectData["website"];
 	}
 	
 	string ProjectFile::GetProjectEmail()
 	{
-		return string();
+		return projectData["email"];
 	}
 	string ProjectFile::GetProjectPhone()
 	{
-		return string();
+		return projectData["phone"];
 	}
 	
 	string ProjectFile::GetProjectType()
 	{
-		return string();
+		return projectData["type"];
 	}
 }
