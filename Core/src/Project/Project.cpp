@@ -56,6 +56,9 @@ namespace Core
                 return;
             }
 
+			// set the updated paramters to the project file
+			m_ProjectFile.SetProjectName(m_Name);
+
 			// if the project is not saved
 			// save the project file
 			m_ProjectFile.Save();
@@ -82,6 +85,7 @@ namespace Core
 		
         void Project::SetName(std::string name)
         {
+			m_Name = name;
         }
 		
         void Project::SetDescription(std::string description)

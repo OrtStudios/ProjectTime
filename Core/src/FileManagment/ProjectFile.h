@@ -1,6 +1,7 @@
 #pragma once
 
 #include "src/Base/FileManagment/Basic_File.h"
+#include "src/Base/Time/Time.h"
 #include <string>                                                                      
 #include <map>
 
@@ -29,6 +30,20 @@ namespace Core
 		std::string GetProjectEmail();
 		std::string GetProjectPhone();
 		std::string GetProjectType();
+		
+		std::string SetProjectName(std::string name);
+		std::string SetProjectPath(std::string path);
+		std::string SetProjectFilePath(std::string path);
+		std::string SetCreationDate(Time::Date date);
+		std::string SetLastModifiedDate(Time::Date date);
+		std::string SetProjectDescription(std::string);
+		std::string SetProjectAuthor(std::string);
+		std::string SetProjectVersion(std::string);
+		std::string SetProjectLicense();
+		std::string SetProjectWebsite();
+		std::string SetProjectEmail(std::string);
+		std::string SetProjectPhone(std::string);
+		std::string SetProjectType(Project::ProjectType);
 	
 	private:
 		std::map<std::string, std::string> projectData;

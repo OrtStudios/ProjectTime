@@ -64,5 +64,22 @@ namespace Core
 
 			return buffer;
 		}
+
+		class Date
+		{
+		public:
+			Date();
+			Date(std::string DateString);
+			~Date();
+
+			std::string GetDate();
+
+			void SetDate(std::string DateString);
+			
+		private:
+			int m_year;
+			int m_month;
+			int m_day;
+		};
 	}
 }
