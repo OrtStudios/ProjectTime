@@ -39,8 +39,8 @@ namespace Core
 		std::string SetProjectDescription(std::string);
 		std::string SetProjectAuthor(std::string);
 		std::string SetProjectVersion(std::string);
-		std::string SetProjectLicense();
-		std::string SetProjectWebsite();
+		std::string SetProjectLicense(File licence);
+		std::string SetProjectWebsite(Url website);
 		std::string SetProjectEmail(std::string);
 		std::string SetProjectPhone(std::string);
 		std::string SetProjectType(Project::ProjectType);
