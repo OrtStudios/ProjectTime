@@ -57,7 +57,7 @@ namespace Core
             }
 
 			// set the updated paramters to the project file
-			m_ProjectFile.SetProjectName(m_Name);
+			m_ProjectFile.GetLastModifiedDate
 
 			// if the project is not saved
 			// save the project file

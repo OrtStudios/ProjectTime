@@ -1,6 +1,6 @@
 #include "Time.h"
 #include "src/Base/Logger.h"
-#include "src/Base/String/StringFunc.h"
+#include "src/Base/Types/StringFunc.h"
 
 #include <string>
 
