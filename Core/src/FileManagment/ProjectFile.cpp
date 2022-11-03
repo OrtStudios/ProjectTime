@@ -140,4 +140,65 @@ namespace Core
 	{
 		return projectData["type"];
 	}
+
+	// Setters
+	void ProjectFile::SetProjectName(string name)
+	{
+		projectData["name"] = name;
+	}
+
+	void ProjectFile::SetProjectPath(string path)
+	{
+		projectData["path"] = path;
+	}
+
+	void ProjectFile::SetProjectFilePath(string file_path)
+	{
+		projectData["file_path"] = file_path;
+	}
+
+	void ProjectFile::SetCreationDate(Date creation_date)
+	{
+		projectData["creation_date"] = creation_date;
+	}
+
+	void ProjectFile::SetLastModifiedDate(Date last_modified_date)
+	{
+		projectData["last_modified_date"] = last_modified_date;
+	}
+
+	void ProjectFile::SetProjectDescription(string description)
+	{
+		projectData["description"] = description;
+	}
+
+	void ProjectFile::SetProjectAuthor(string author)
+	{
+		projectData["author"] = author;
+	}
+
+	void ProjectFile::SetProjectVersion(string version)
+	{
+		projectData["version"] = version;
+	}
+
+	void ProjectFile::SetProjectLicense(File license)
+	{
+		projectData["license"] = license;
+	}
+
+	void ProjectFile::SetProjectWebsite(Url website)
+	{
+		projectData["website"] = website;
+	}
+
+	void ProjectFile::SetProjectEmail(string email)
+	{
+		projectData["email"] = email;
+	}
+
+	void ProjectFile::SetProjectType(ProjectType type)
+	{
+		projectData["type"] = type;
+	}
 }

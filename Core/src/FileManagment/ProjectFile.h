@@ -42,7 +42,6 @@ namespace Core
 		std::string SetProjectLicense(File licence);
 		std::string SetProjectWebsite(Url website);
 		std::string SetProjectEmail(std::string);
-		std::string SetProjectPhone(std::string);
 		std::string SetProjectType(Project::ProjectType);
 	
 	private:
