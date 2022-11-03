@@ -40,29 +40,6 @@ CRaper void LogMaster(const std::string message)
 
 CRaper void SetLogLevel(Core::Logger::LogType logLevel)
 {
-	if (logLevel == Core::Logger::LogType::DEBUG)
-	{
-		Core::Logger::SetLogLevel(Core::Logger::LogType::DEBUG);
-	}
-	else if (logLevel == Core::Logger::LogType::INFO)
-	{
-		Core::Logger::SetLogLevel(Core::Logger::LogType::INFO);
-	}
-	else if (logLevel == Core::Logger::LogType::WARNING)
-	{
-		Core::Logger::SetLogLevel(Core::Logger::LogType::WARNING);
-	}
-	else if (logLevel == Core::Logger::LogType::ERROR)
-	{
-		Core::Logger::SetLogLevel(Core::Logger::LogType::ERROR);
-	}
-	else if (logLevel == Core::Logger::LogType::FATAL)
-	{
-		Core::Logger::SetLogLevel(Core::Logger::LogType::FATAL);
-	}
-	else
-	{
-		Core::Logger::SetLogLevel(Core::Logger::LogType::MASTER);
-	}
+	Core::Logger::SetLogLevel(logLevel);
 }
 //--------------------------------------------//
