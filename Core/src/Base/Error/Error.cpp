@@ -1,4 +1,4 @@
-#include "ErrorBase.h"
+#include "Error.h"
 
 #include "src/Base/Logger.h"
 #include "rang.hpp"

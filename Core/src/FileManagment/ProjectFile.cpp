@@ -26,6 +26,9 @@ namespace Core
 	
 		// get file data
 		string fileData = Read();
+
+		// close file
+		Close();
 	
 		// split file data
 		std::vector<string> fileDataSplitted = StringFunc::Split(fileData, '\n');
@@ -41,24 +44,31 @@ namespace Core
 			{
 				// add line data to map
 				projectData[lineData[0]] = lineData[1];
+				Logger::Log("Loaded: " + lineData[0] + " = " + lineData[1], Logger::LogType::DEBUG);
 			}
 		}
 		
 		// Log the project data
-		Logger::Log("Project file loaded", Logger::LogType::INFO);
+		Logger::Log("Loading project data", Logger::LogType::INFO);
 		for (auto const& x : projectData)
 		{
 			Logger::Log(x.first + " = " + x.second, Logger::LogType::DEBUG);
 		}
+
+		// set loaded
+		loaded = true;
+		Logger::Log("Project file loaded", Logger::LogType::INFO);
 	}
 	
 	void ProjectFile::Reload()
 	{
 		// clear map
 		projectData.clear();
+		Logger::Log("Project file cleared", Logger::LogType::DEBUG);
 	
 		// reload file
 		Load();
+		Logger::Log("Project file reloaded", Logger::LogType::INFO);
 	}
 	
 	void ProjectFile::Save()
@@ -68,12 +78,15 @@ namespace Core
 		for (auto const& x : projectData)
 		{
 			fileData += x.first + "=" + x.second + "\n";
+			Logger::Log(x.first + " = " + x.second + "|Loaded", Logger::LogType::DEBUG);
 		}
 
 		// clear the file and write the data to it
 		Open();
 		Clear();
 		Write(fileData);
+		Close();
+		Logger::Log("Project file saved", Logger::LogType::INFO);
 	}
 
 	// Getters
@@ -145,60 +158,72 @@ namespace Core
 	void ProjectFile::SetProjectName(string name)
 	{
 		projectData["name"] = name;
+		Logger::Log("Project name set to " + name, Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetProjectPath(string path)
 	{
 		projectData["path"] = path;
+		Logger::Log("Project path set to " + path, Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetProjectFilePath(string file_path)
 	{
 		projectData["file_path"] = file_path;
+		Logger::Log("Project file path set to " + file_path, Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetCreationDate(Date creation_date)
 	{
 		projectData["creation_date"] = creation_date;
+		Logger::Log("Project creation date set to " + creation_date, Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetLastModifiedDate(Date last_modified_date)
 	{
 		projectData["last_modified_date"] = last_modified_date;
+		Logger::Log("Project last modified date set to " + last_modified_date, Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetProjectDescription(string description)
 	{
 		projectData["description"] = description;
+		Logger::Log("Project description set to " + description, Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetProjectAuthor(string author)
 	{
 		projectData["author"] = author;
+		Logger::Log("Project author set to " + author, Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetProjectVersion(string version)
 	{
 		projectData["version"] = version;
+		Logger::Log("Project version set to " + version, Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetProjectLicense(File license)
 	{
 		projectData["license"] = license;
+		Logger::Log("Project license set to " + license, Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetProjectWebsite(Url website)
 	{
 		projectData["website"] = website;
+		Logger::Log("Project website set to " + website, Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetProjectEmail(string email)
 	{
 		projectData["email"] = email;
+		Logger::Log("Project email set to " + email, Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetProjectType(ProjectType type)
 	{
 		projectData["type"] = type;
+		Logger::Log("Project type set to " + type, Logger::LogType::DEBUG);
 	}
 }
