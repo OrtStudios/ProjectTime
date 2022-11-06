@@ -20,10 +20,12 @@ namespace Core
 			{
 				if (UserFormat == "M.D")
 				{
+					Logger::Log("format: %m.%d.%Y %H:%M:%S", Logger::LogType::INFO);
 					return "%m.%d.%Y %H:%M:%S";
 				}
 				else
 				{
+					Logger::Log("format: %d.%m.%Y %H:%M:%S", Logger::LogType::INFO);
 					return "%d.%m.%Y %H:%M:%S";
 				}
 			}
@@ -31,10 +33,12 @@ namespace Core
 			{
 				if (UserFormat == "M.D")
 				{
+					Logger::Log("format: %m.%d.%Y", Logger::LogType::INFO);
 					return "%m.%d.%Y";
 				}
 				else
 				{
+					Logger::Log("format: %d.%m.%Y", Logger::LogType::INFO);
 					return "%d.%m.%Y";
 				}
 			}
@@ -49,18 +53,23 @@ namespace Core
 			/// <param name="TimeInTheDay"> if the time is in the day or not </param>
 			/// <returns> the time in the given format </returns>
 			std::time_t now = std::time(NULL);
+			Logger::Log("Getting the time", Logger::LogType::DEBUG);
 
 			// convert to local time
 			std::tm* ptm = std::localtime(&now);
+			Logger::Log("Converting to local time", Logger::LogType::DEBUG);
 
 			// the buffer
 			char buffer[32];
+			Logger::Log("Creating the buffer", Logger::LogType::DEBUG);
 
 			// phrase the format
 			std::string format = PhraseFormat(UserFormat, TimeInTheDay);
+			Logger::Log("Phrasing the format", Logger::LogType::DEBUG);
 
 			// convert to string to be stored in the buffer
 			std::strftime(buffer, 32, format.c_str(), ptm);
+			Logger::Log("Converting to string", Logger::LogType::DEBUG);
 
 			return buffer;
 		}
