@@ -39,8 +39,10 @@ namespace Core
 
 		string Date::GetDate()
 		{
-			// Create the date string
-			// string dateString = std::to_string(m_year) + "." + std::to_string(m_month) + "." + std::to_string(m_day);
+			/// <summary>
+			/// Get the date as a string
+			/// </summary>
+			/// <returns> The date as a string </returns>
 			if (m_format == "M.D")
 			{
 				Logger::Log("format: %m.%d.%Y", Logger::LogType::INFO);
@@ -55,11 +57,20 @@ namespace Core
 
 		string Date::GetFormat()
 		{
+			/// <summary>
+			/// Get the date format
+			/// </summary>
+			/// <returns> The date format </returns>
 			return m_format;
 		}
 
 		void Date::SetDate(std::string DateString)
 		{
+			/// <summary>
+			/// Set the date
+			/// </summary>
+			/// <param name="DateString"> The date as a string </param>
+
 			// Split the date string
 			std::vector<std::string> dateParts = StringFunc::Split(DateString, '.');
 
@@ -71,6 +82,11 @@ namespace Core
 		
 		void Date::SetFormat(std::string Format)
 		{
+			/// <summary>
+			/// Set the date format
+			/// </summary>
+			/// <param name="Format"> The date format </param>
+			m_format = Format;
 		}
 	}
 }
