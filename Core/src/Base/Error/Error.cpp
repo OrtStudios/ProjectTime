@@ -97,7 +97,8 @@ namespace Core
                 << rang::fgB::gray << rang::style::italic << format("'{}'", m_ErrorLogFilePath)
                 << std::endl;
             
-            //TODO: set it to the log file
+            //set it to the log file
+            m_ErrorLogFile.Write(FullString());
 
             return ToString();
 ;        }
