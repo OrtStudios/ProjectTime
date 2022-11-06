@@ -82,13 +82,16 @@ namespace Core
 			~Date();
 
 			std::string GetDate();
+			std::string GetFormat();
 
 			void SetDate(std::string DateString);
+			void SetFormat(std::string Format);
 			
 		private:
 			int m_year;
 			int m_month;
 			int m_day;
+			std::string m_format;
 		};
 	}
 }
