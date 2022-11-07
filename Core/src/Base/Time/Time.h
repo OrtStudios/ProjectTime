@@ -1,5 +1,7 @@
 #pragma once
 
+#include "src/Base/Logger.h"
+
 #include <chrono>
 #include <string>
 

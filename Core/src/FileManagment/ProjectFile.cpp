@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 #include <src/Base/Logger.h>
-#include <src/Base/String/StringFunc.h>
+#include <src/Base/Types/StringFunc.h>
 
 using std::string;
 
@@ -54,10 +54,6 @@ namespace Core
 		{
 			Logger::Log(x.first + " = " + x.second, Logger::LogType::DEBUG);
 		}
-
-		// set loaded
-		loaded = true;
-		Logger::Log("Project file loaded", Logger::LogType::INFO);
 	}
 	
 	void ProjectFile::Reload()
@@ -173,16 +169,16 @@ namespace Core
 		Logger::Log("Project file path set to " + file_path, Logger::LogType::DEBUG);
 	}
 
-	void ProjectFile::SetCreationDate(Date creation_date)
+	void ProjectFile::SetCreationDate(Time::Date creation_date)
 	{
 		projectData["creation_date"] = creation_date;
-		Logger::Log("Project creation date set to " + creation_date, Logger::LogType::DEBUG);
+		Logger::Log("Project creation date set to " + creation_date.GetDate(), Logger::LogType::DEBUG);
 	}
 
-	void ProjectFile::SetLastModifiedDate(Date last_modified_date)
+	void ProjectFile::SetLastModifiedDate(Time::Date last_modified_date)
 	{
 		projectData["last_modified_date"] = last_modified_date;
-		Logger::Log("Project last modified date set to " + last_modified_date, Logger::LogType::DEBUG);
+		Logger::Log("Project last modified date set to " + last_modified_date.GetDate(), Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetProjectDescription(string description)
@@ -205,14 +201,14 @@ namespace Core
 
 	void ProjectFile::SetProjectLicense(File license)
 	{
-		projectData["license"] = license;
-		Logger::Log("Project license set to " + license, Logger::LogType::DEBUG);
+		projectData["license"] = license.GetPath();
+		Logger::Log("Project license set to " + license.GetName(), Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetProjectWebsite(Url website)
 	{
 		projectData["website"] = website;
-		Logger::Log("Project website set to " + website, Logger::LogType::DEBUG);
+		Logger::Log("Project website set to " + website.GetDomain(), Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetProjectEmail(string email)
@@ -221,7 +217,7 @@ namespace Core
 		Logger::Log("Project email set to " + email, Logger::LogType::DEBUG);
 	}
 
-	void ProjectFile::SetProjectType(ProjectType type)
+	void ProjectFile::SetProjectType(ProjectNS::ProjectType type)
 	{
 		projectData["type"] = type;
 		Logger::Log("Project type set to " + type, Logger::LogType::DEBUG);

@@ -48,6 +48,9 @@
     <ClInclude Include="src\Base\Error\SyntaxError.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Base\Types\Url.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core.cpp">
@@ -68,7 +71,13 @@
     <ClCompile Include="src\Base\FileManagment\Basic_File.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Base\String\StringFunc.h">
+    <ClCompile Include="src\Base\Types\StringFunc.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Base\Time\Time.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Base\Types\Url.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

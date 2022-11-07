@@ -179,6 +179,7 @@
     <ClInclude Include="src\Base\FileManagment\Basic_File.h" />
     <ClInclude Include="src\Base\Logger.h" />
     <ClInclude Include="src\Base\Time\Time.h" />
+    <ClInclude Include="src\Base\Types\Url.h" />
     <ClInclude Include="src\FileManagment\ProjectFile.h" />
     <ClInclude Include="src\Project\Project.h" />
     <ClInclude Include="src\Project\ProjectType.h" />
@@ -188,7 +189,9 @@
     <ClCompile Include="src\Base\Error\ErrorBase.cpp" />
     <ClCompile Include="src\Base\FileManagment\Basic_File.cpp" />
     <ClCompile Include="src\Base\Logger.cpp" />
-    <ClCompile Include="src\Base\String\StringFunc.h" />
+    <ClCompile Include="src\Base\Types\StringFunc.h" />
+    <ClCompile Include="src\Base\Time\Time.cpp" />
+    <ClCompile Include="src\Base\Types\Url.cpp" />
     <ClCompile Include="src\FileManagment\ProjectFile.cpp" />
     <ClCompile Include="src\Project\Project.cpp" />
   </ItemGroup>

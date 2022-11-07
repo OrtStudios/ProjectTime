@@ -8,7 +8,7 @@ using std::string;
 
 namespace Core
 {
-    namespace Project
+    namespace ProjectNS
     {
         Project::Project(std::string name, std::string description, ProjectType projectType) :
             m_ProjectFile("src/Project/" + name + ".project")

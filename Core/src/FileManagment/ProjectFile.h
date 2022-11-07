@@ -1,9 +1,12 @@
 #pragma once
 
 #include "src/Base/FileManagment/Basic_File.h"
+#include "src/Project/ProjectType.h"
 #include "src/Base/Time/Time.h"
+#include "src/Base/Types/Url.h"
 #include <string>                                                                      
 #include <map>
+#include <any>
 
 namespace Core
 {
@@ -31,20 +34,20 @@ namespace Core
 		std::string GetProjectPhone();
 		std::string GetProjectType();
 		
-		std::string SetProjectName(std::string name);
-		std::string SetProjectPath(std::string path);
-		std::string SetProjectFilePath(std::string path);
-		std::string SetCreationDate(Time::Date date);
-		std::string SetLastModifiedDate(Time::Date date);
-		std::string SetProjectDescription(std::string);
-		std::string SetProjectAuthor(std::string);
-		std::string SetProjectVersion(std::string);
-		std::string SetProjectLicense(File licence);
-		std::string SetProjectWebsite(Url website);
-		std::string SetProjectEmail(std::string);
-		std::string SetProjectType(Project::ProjectType);
+		void SetProjectName(std::string name);
+		void SetProjectPath(std::string path);
+		void SetProjectFilePath(std::string path);
+		void SetCreationDate(Time::Date date);
+		void SetLastModifiedDate(Time::Date date);
+		void SetProjectDescription(std::string);
+		void SetProjectAuthor(std::string);
+		void SetProjectVersion(std::string);
+		void SetProjectLicense(File licence);
+		void SetProjectWebsite(Url website);
+		void SetProjectEmail(std::string);
+		void SetProjectType(ProjectNS::ProjectType);
 	
 	private:
-		std::map<std::string, std::string> projectData;
+		std::map<std::string, std::any> projectData;
 	};
 }

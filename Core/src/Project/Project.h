@@ -7,7 +7,7 @@
 
 namespace Core
 {
-	namespace Project
+	namespace ProjectNS
 	{
 		class Project
 		{
