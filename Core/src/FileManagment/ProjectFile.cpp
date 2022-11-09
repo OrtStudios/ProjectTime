@@ -6,6 +6,7 @@
 #include <src/Base/Types/StringFunc.h>
 
 using std::string;
+using std::any;
 
 namespace Core
 {
@@ -86,66 +87,67 @@ namespace Core
 	}
 
 	// Getters
-	string ProjectFile::GetProjectName()
+	any ProjectFile::GetProjectName()
 	{
 		return projectData["name"];
 	}
 	
-	string ProjectFile::GetProjectPath()
+	any ProjectFile::GetProjectPath()
 	{
 		return projectData["path"];
 	}
 	
-	string ProjectFile::GetProjectFilePath()
+	any ProjectFile::GetProjectFilePath()
 	{
 		return projectData["file_path"];
 	}
 	
-	string ProjectFile::GetCreationDate()
+	any ProjectFile::GetCreationDate()
 	{
 		return projectData["creation_date"];
 	}
 	
-	string ProjectFile::GetLastModifiedDate()
+	any ProjectFile::GetLastModifiedDate()
 	{
 		return projectData["last_modified_date"];
 	}
 	
-	string ProjectFile::GetProjectDescription()
+	any ProjectFile::GetProjectDescription()
 	{
 		return projectData["description"];
 	}
 	
-	string ProjectFile::GetProjectAuthor()
+	any ProjectFile::GetProjectAuthor()
 	{
 		return projectData["author"];
 	}
 	
-	string ProjectFile::GetProjectVersion()
+	any ProjectFile::GetProjectVersion()
 	{
 		return projectData["version"];
 	}
 	
-	string ProjectFile::GetProjectLicense()
+	any ProjectFile::GetProjectLicense()
 	{
 		return projectData["license"];
 	}
 	
-	string ProjectFile::GetProjectWebsite()
+	any ProjectFile::GetProjectWebsite()
 	{
 		return projectData["website"];
 	}
 	
-	string ProjectFile::GetProjectEmail()
+	any ProjectFile::GetProjectEmail()
 	{
 		return projectData["email"];
 	}
-	string ProjectFile::GetProjectPhone()
+	
+	any ProjectFile::GetProjectPhone()
 	{
 		return projectData["phone"];
 	}
 	
-	string ProjectFile::GetProjectType()
+	any ProjectFile::GetProjectType()
 	{
 		return projectData["type"];
 	}
