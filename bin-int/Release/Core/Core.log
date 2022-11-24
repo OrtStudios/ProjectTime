@@ -1,398 +1,205 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Preview\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(519,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
-C:\Program Files\Microsoft Visual Studio\2022\Preview\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(520,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(502,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(503,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
   Scanning sources for module dependencies...
-  Error.cpp
   ErrorBase.cpp
 c1xx : fatal  error C1083: Cannot open source file: 'src\Base\Error\ErrorBase.cpp': No such file or directory
   ProjectFile.cpp
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(56,42): error C2676: binary '+': 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' does not define this operator or a conversion to a type acceptable to the predefined operator
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xutility(1450,50): message : could be 'std::reverse_iterator<_BidIt> std::operator +(reverse_iterator<_BidIt>::difference_type,const std::reverse_iterator<_BidIt> &)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(56,24): message : 'std::reverse_iterator<_BidIt> std::operator +(reverse_iterator<_BidIt>::difference_type,const std::reverse_iterator<_BidIt> &)': could not deduce template argument for 'const std::reverse_iterator<_BidIt> &' from 'const _Ty2'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,32): error C2676: binary '+': 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' does not define this operator or a conversion to a type acceptable to the predefined operator
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(1490,50): message : could be 'std::reverse_iterator<_BidIt> std::operator +(reverse_iterator<_BidIt>::difference_type,const std::reverse_iterator<_BidIt> &) noexcept(<expr>)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::reverse_iterator<_BidIt> std::operator +(reverse_iterator<_BidIt>::difference_type,const std::reverse_iterator<_BidIt> &) noexcept(<expr>)': could not deduce template argument for 'const std::reverse_iterator<_BidIt> &' from 'const _Ty2'
           with
           [
               _Ty2=std::any
           ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xutility(1450): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xutility(3501,46): message : or       'std::move_iterator<_Iter> std::operator +(move_iterator<_Iter>::difference_type,const std::move_iterator<_Iter> &)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(56,24): message : 'std::move_iterator<_Iter> std::operator +(move_iterator<_Iter>::difference_type,const std::move_iterator<_Iter> &)': could not deduce template argument for 'const std::move_iterator<_Iter> &' from 'const _Ty2'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(3657,5): message : or       'std::move_iterator<_Iter> std::operator +(move_iterator<_Iter>::difference_type,const std::move_iterator<_Iter> &) noexcept(<expr>)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::move_iterator<_Iter> std::operator +(move_iterator<_Iter>::difference_type,const std::move_iterator<_Iter> &) noexcept(<expr>)': could not deduce template argument for 'const std::move_iterator<_Iter> &' from 'const _Ty2'
           with
           [
               _Ty2=std::any
           ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xutility(3501): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4893,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(56,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'const _Ty2'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5074,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'const _Ty2'
           with
           [
               _Ty2=std::any
           ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4893): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4905,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(56,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const _Elem *const ' from 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4905): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4918,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,const std::basic_string<_Elem,_Traits,_Alloc> &)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(56,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'const _Ty2'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5086,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const _Elem *const ' from 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5099,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,const std::basic_string<_Elem,_Traits,_Alloc> &)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'const _Ty2'
           with
           [
               _Ty2=std::any
           ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4918): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4929,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const )'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(56,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const )': could not deduce template argument for 'const _Elem *const ' from 'const _Ty2'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5110,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const )'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const )': could not deduce template argument for 'const _Elem *const ' from 'const _Ty2'
           with
           [
               _Ty2=std::any
           ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4929): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4942,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(56,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': template parameter '_Elem' is ambiguous
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4942): message : see declaration of 'std::operator +'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(56,42): message : could be '_Ty2'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5123,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': template parameter '_Elem' is ambiguous
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : could be '_Ty2'
           with
           [
               _Ty2=std::any
           ]
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(56,42): message : or       'char'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(56,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': could not deduce template argument for 'const _Elem' from 'const _Ty2'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : or       'char'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': could not deduce template argument for 'const _Elem' from 'const _Ty2'
           with
           [
               _Ty2=std::any
           ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4942): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4953,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,std::basic_string<_Elem,_Traits,_Alloc> &&)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(56,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'const _Ty2'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5134,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,std::basic_string<_Elem,_Traits,_Alloc> &&)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'const _Ty2'
           with
           [
               _Ty2=std::any
           ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4953): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4959,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const std::basic_string<_Elem,_Traits,_Alloc> &)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(56,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'const _Ty2'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5140,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const std::basic_string<_Elem,_Traits,_Alloc> &)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'const _Ty2'
           with
           [
               _Ty2=std::any
           ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4959): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4965,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,std::basic_string<_Elem,_Traits,_Alloc> &&)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(56,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'const _Ty2'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5146,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,std::basic_string<_Elem,_Traits,_Alloc> &&)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'const _Ty2'
           with
           [
               _Ty2=std::any
           ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4965): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4978,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,std::basic_string<_Elem,_Traits,_Alloc> &&)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(56,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'const _Elem *const ' from 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4978): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4984,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,std::basic_string<_Elem,_Traits,_Alloc> &&)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(56,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'const _Ty2'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5159,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,std::basic_string<_Elem,_Traits,_Alloc> &&)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'const _Elem *const ' from 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5165,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,std::basic_string<_Elem,_Traits,_Alloc> &&)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'const _Ty2'
           with
           [
               _Ty2=std::any
           ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4984): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4990,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem *const )'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(56,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem *const )': could not deduce template argument for 'const _Elem *const ' from 'const _Ty2'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5171,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem *const )'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem *const )': could not deduce template argument for 'const _Elem *const ' from 'const _Ty2'
           with
           [
               _Ty2=std::any
           ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4990): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4996,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(56,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem)': template parameter '_Elem' is ambiguous
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4996): message : see declaration of 'std::operator +'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(56,42): message : could be '_Ty2'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5177,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem)': template parameter '_Elem' is ambiguous
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : could be '_Ty2'
           with
           [
               _Ty2=std::any
           ]
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(56,42): message : or       'char'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(56,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem)': could not deduce template argument for 'const _Elem' from 'const _Ty2'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : or       'char'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem)': could not deduce template argument for 'const _Elem' from 'const _Ty2'
           with
           [
               _Ty2=std::any
           ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4996): message : see declaration of 'std::operator +'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(77,41): error C2676: binary '+': 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' does not define this operator or a conversion to a type acceptable to the predefined operator
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xutility(1450,50): message : could be 'std::reverse_iterator<_BidIt> std::operator +(reverse_iterator<_BidIt>::difference_type,const std::reverse_iterator<_BidIt> &)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(77,24): message : 'std::reverse_iterator<_BidIt> std::operator +(reverse_iterator<_BidIt>::difference_type,const std::reverse_iterator<_BidIt> &)': could not deduce template argument for 'const std::reverse_iterator<_BidIt> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xutility(1450): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xutility(3501,46): message : or       'std::move_iterator<_Iter> std::operator +(move_iterator<_Iter>::difference_type,const std::move_iterator<_Iter> &)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(77,24): message : 'std::move_iterator<_Iter> std::operator +(move_iterator<_Iter>::difference_type,const std::move_iterator<_Iter> &)': could not deduce template argument for 'const std::move_iterator<_Iter> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xutility(3501): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4893,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(77,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4893): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4905,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(77,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const _Elem *const ' from 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4905): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4918,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,const std::basic_string<_Elem,_Traits,_Alloc> &)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(77,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4918): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4929,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const )'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(77,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const )': could not deduce template argument for 'const _Elem *const ' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4929): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4942,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(77,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': template parameter '_Elem' is ambiguous
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4942): message : see declaration of 'std::operator +'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(77,41): message : could be '_Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(77,41): message : or       'char'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(77,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': could not deduce template argument for 'const _Elem' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4942): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4953,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,std::basic_string<_Elem,_Traits,_Alloc> &&)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(77,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4953): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4959,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const std::basic_string<_Elem,_Traits,_Alloc> &)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(77,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4959): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4965,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,std::basic_string<_Elem,_Traits,_Alloc> &&)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(77,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4965): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4978,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,std::basic_string<_Elem,_Traits,_Alloc> &&)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(77,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'const _Elem *const ' from 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4978): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4984,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,std::basic_string<_Elem,_Traits,_Alloc> &&)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(77,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4984): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4990,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem *const )'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(77,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem *const )': could not deduce template argument for 'const _Elem *const ' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4990): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4996,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(77,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem)': template parameter '_Elem' is ambiguous
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4996): message : see declaration of 'std::operator +'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(77,41): message : could be '_Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(77,41): message : or       'char'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(77,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem)': could not deduce template argument for 'const _Elem' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4996): message : see declaration of 'std::operator +'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(78,43): error C2676: binary '+': 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' does not define this operator or a conversion to a type acceptable to the predefined operator
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xutility(1450,50): message : could be 'std::reverse_iterator<_BidIt> std::operator +(reverse_iterator<_BidIt>::difference_type,const std::reverse_iterator<_BidIt> &)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(78,24): message : 'std::reverse_iterator<_BidIt> std::operator +(reverse_iterator<_BidIt>::difference_type,const std::reverse_iterator<_BidIt> &)': could not deduce template argument for 'const std::reverse_iterator<_BidIt> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xutility(1450): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xutility(3501,46): message : or       'std::move_iterator<_Iter> std::operator +(move_iterator<_Iter>::difference_type,const std::move_iterator<_Iter> &)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(78,24): message : 'std::move_iterator<_Iter> std::operator +(move_iterator<_Iter>::difference_type,const std::move_iterator<_Iter> &)': could not deduce template argument for 'const std::move_iterator<_Iter> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xutility(3501): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4893,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(78,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4893): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4905,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(78,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const _Elem *const ' from 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4905): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4918,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,const std::basic_string<_Elem,_Traits,_Alloc> &)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(78,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4918): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4929,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const )'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(78,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const )': could not deduce template argument for 'const _Elem *const ' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4929): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4942,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(78,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': template parameter '_Elem' is ambiguous
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4942): message : see declaration of 'std::operator +'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(78,43): message : could be '_Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(78,43): message : or       'char'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(78,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': could not deduce template argument for 'const _Elem' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4942): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4953,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,std::basic_string<_Elem,_Traits,_Alloc> &&)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(78,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4953): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4959,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const std::basic_string<_Elem,_Traits,_Alloc> &)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(78,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4959): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4965,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,std::basic_string<_Elem,_Traits,_Alloc> &&)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(78,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4965): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4978,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,std::basic_string<_Elem,_Traits,_Alloc> &&)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(78,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'const _Elem *const ' from 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4978): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4984,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,std::basic_string<_Elem,_Traits,_Alloc> &&)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(78,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4984): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4990,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem *const )'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(78,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem *const )': could not deduce template argument for 'const _Elem *const ' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4990): message : see declaration of 'std::operator +'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4996,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(78,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem)': template parameter '_Elem' is ambiguous
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4996): message : see declaration of 'std::operator +'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(78,43): message : could be '_Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(78,43): message : or       'char'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(78,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem)': could not deduce template argument for 'const _Elem' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(4996): message : see declaration of 'std::operator +'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(225,44): error C2677: binary '+': no global operator found which takes type 'Core::ProjectNS::ProjectType' (or there is no acceptable conversion)
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(86,20): error C2511: 'void Core::ProjectFile::SaveMap(std::string &,std::map<std::string,std::any,std::less<std::string>,std::allocator<std::pair<const std::string,std::any>>>)': overloaded member function not found in 'Core::ProjectFile'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(13,8): message : see declaration of 'Core::ProjectFile'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(89,12): error C2597: illegal reference to non-static member 'Core::ProjectFile::projectData'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(53,35): message : see declaration of 'Core::ProjectFile::projectData'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): error C2597: illegal reference to non-static member 'Core::ProjectFile::projectData'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(53,35): message : see declaration of 'Core::ProjectFile::projectData'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): error C3535: cannot deduce type for 'auto &&' from 'unknown'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): error C2440: 'initializing': cannot convert from 'unknown' to 'int &&'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : Reason: cannot convert from 'unknown' to 'int'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : There is no context in which this conversion is possible
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): error C2672: 'begin': no matching overloaded function found
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(1534,27): message : could be '_Ty *std::begin(_Ty (&)[_Size]) noexcept'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : '_Ty *std::begin(_Ty (&)[_Size]) noexcept': could not deduce template argument for '_Ty (&)[_Size]' from 'int'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(1516,30): message : or       'unknown-type std::begin(const _Container &) noexcept(<expr>)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : Failed to specialize function template 'unknown-type std::begin(const _Container &) noexcept(<expr>)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : With the following template arguments:
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : '_Container=int'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(1510,30): message : or       'unknown-type std::begin(_Container &) noexcept(<expr>)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : Failed to specialize function template 'unknown-type std::begin(_Container &) noexcept(<expr>)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : With the following template arguments:
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : '_Container=int'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\initializer_list(55,35): message : or       'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : 'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): error C2672: 'end': no matching overloaded function found
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(1539,27): message : could be '_Ty *std::end(_Ty (&)[_Size]) noexcept'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : '_Ty *std::end(_Ty (&)[_Size]) noexcept': could not deduce template argument for '_Ty (&)[_Size]' from 'int'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(1528,30): message : or       'unknown-type std::end(const _Container &) noexcept(<expr>)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : Failed to specialize function template 'unknown-type std::end(const _Container &) noexcept(<expr>)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : With the following template arguments:
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : '_Container=int'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(1522,30): message : or       'unknown-type std::end(_Container &) noexcept(<expr>)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : Failed to specialize function template 'unknown-type std::end(_Container &) noexcept(<expr>)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : With the following template arguments:
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : '_Container=int'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\initializer_list(60,35): message : or       'const _Elem *std::end(std::initializer_list<_Elem>) noexcept'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : 'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(92,3): error C3536: '<begin>$L0': cannot be used before it is initialized
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(92,3): error C3536: '<end>$L0': cannot be used before it is initialized
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,35): error C2100: illegal indirection
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(100,5): error C2352: 'Core::ProjectFile::SaveMap': a call of a non-static member function requires an object
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(23,8): message : see declaration of 'Core::ProjectFile::SaveMap'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(242,38): error C2677: binary '+': no global operator found which takes type 'Core::ProjectNS::ProjectType' (or there is no acceptable conversion)
   Project.cpp
-C:\Dev\ProjectTime\Core\src\Project\Project.cpp(41,43): error C2679: binary '=': no operator found which takes a right-hand operand of type 'std::any' (or there is no acceptable conversion)
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(3273,32): message : could be 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem)'
+C:\Dev\ProjectTime\Core\src\Project\Project.cpp(41,4): error C2679: binary '=': no operator found which takes a right-hand operand of type 'std::any' (or there is no acceptable conversion)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(3362,32): message : could be 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem)'
           with
           [
               _Elem=char
           ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(3265,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem *const )'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(3354,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem *const )'
           with
           [
               _Elem=char
           ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(3213,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(3141,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::initializer_list<_Elem>)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(3302,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(3230,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::initializer_list<_Elem>)'
           with
           [
               _Elem=char
           ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(3030,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&) noexcept(<expr>)'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(3260,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _StringViewIsh &)'
-C:\Dev\ProjectTime\Core\src\Project\Project.cpp(41): message : 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _StringViewIsh &)': could not deduce template argument for '__formal'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(3260): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator ='
-C:\Dev\ProjectTime\Core\src\Project\Project.cpp(41,43): message : while trying to match the argument list '(std::string, std::any)'
-C:\Dev\ProjectTime\Core\src\Project\Project.cpp(42,57): error C2679: binary '=': no operator found which takes a right-hand operand of type 'std::any' (or there is no acceptable conversion)
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(3273,32): message : could be 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(3097,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&) noexcept(<expr>)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(3349,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _StringViewIsh &)'
+C:\Dev\ProjectTime\Core\src\Project\Project.cpp(41,43): message : 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _StringViewIsh &)': could not deduce template argument for '__formal'
+C:\Dev\ProjectTime\Core\src\Project\Project.cpp(41,4): message : while trying to match the argument list '(std::string, std::any)'
+C:\Dev\ProjectTime\Core\src\Project\Project.cpp(42,4): error C2679: binary '=': no operator found which takes a right-hand operand of type 'std::any' (or there is no acceptable conversion)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(3362,32): message : could be 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem)'
           with
           [
               _Elem=char
           ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(3265,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem *const )'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(3354,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem *const )'
           with
           [
               _Elem=char
           ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(3213,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(3141,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::initializer_list<_Elem>)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(3302,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(3230,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::initializer_list<_Elem>)'
           with
           [
               _Elem=char
           ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(3030,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&) noexcept(<expr>)'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(3260,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _StringViewIsh &)'
-C:\Dev\ProjectTime\Core\src\Project\Project.cpp(42): message : 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _StringViewIsh &)': could not deduce template argument for '__formal'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(3260): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator ='
-C:\Dev\ProjectTime\Core\src\Project\Project.cpp(42,57): message : while trying to match the argument list '(std::string, std::any)'
-C:\Dev\ProjectTime\Core\src\Project\Project.cpp(43,43): error C2679: binary '=': no operator found which takes a right-hand operand of type 'std::any' (or there is no acceptable conversion)
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(3273,32): message : could be 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(3097,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&) noexcept(<expr>)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(3349,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _StringViewIsh &)'
+C:\Dev\ProjectTime\Core\src\Project\Project.cpp(42,57): message : 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _StringViewIsh &)': could not deduce template argument for '__formal'
+C:\Dev\ProjectTime\Core\src\Project\Project.cpp(42,4): message : while trying to match the argument list '(std::string, std::any)'
+C:\Dev\ProjectTime\Core\src\Project\Project.cpp(43,4): error C2679: binary '=': no operator found which takes a right-hand operand of type 'std::any' (or there is no acceptable conversion)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(3362,32): message : could be 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem)'
           with
           [
               _Elem=char
           ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(3265,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem *const )'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(3354,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem *const )'
           with
           [
               _Elem=char
           ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(3213,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(3141,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::initializer_list<_Elem>)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(3302,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(3230,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::initializer_list<_Elem>)'
           with
           [
               _Elem=char
           ]
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(3030,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&) noexcept(<expr>)'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(3260,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _StringViewIsh &)'
-C:\Dev\ProjectTime\Core\src\Project\Project.cpp(43): message : 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _StringViewIsh &)': could not deduce template argument for '__formal'
-C:\Program Files\Microsoft Visual Studio\2022\Preview\VC\Tools\MSVC\14.34.31823\include\xstring(3260): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator ='
-C:\Dev\ProjectTime\Core\src\Project\Project.cpp(43,43): message : while trying to match the argument list '(std::string, std::any)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(3097,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&) noexcept(<expr>)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(3349,32): message : or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _StringViewIsh &)'
+C:\Dev\ProjectTime\Core\src\Project\Project.cpp(43,43): message : 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _StringViewIsh &)': could not deduce template argument for '__formal'
+C:\Dev\ProjectTime\Core\src\Project\Project.cpp(43,4): message : while trying to match the argument list '(std::string, std::any)'
 C:\Dev\ProjectTime\Core\src\Project\Project.cpp(64,4): error C2146: syntax error: missing ';' before identifier 'm_ProjectFile'
 C:\Dev\ProjectTime\Core\src\Project\Project.cpp(64,17): error C3867: 'Core::ProjectFile::GetLastModifiedDate': non-standard syntax; use '&' to create a pointer to member
