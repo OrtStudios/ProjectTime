@@ -4,23 +4,23 @@
     "includedFrameworks": [
       {
         "name": "Microsoft.NETCore.App",
-        "version": "6.0.8"
+        "version": "6.0.9"
       },
       {
         "name": "Microsoft.Maui.Core",
-        "version": "**FromWorkload**"
+        "version": "6.0.540"
       },
       {
         "name": "Microsoft.Maui.Controls",
-        "version": "**FromWorkload**"
+        "version": "6.0.540"
       },
       {
         "name": "Microsoft.Maui.Essentials",
-        "version": "**FromWorkload**"
+        "version": "6.0.540"
       },
       {
         "name": "Microsoft.MacCatalyst",
-        "version": "**FromWorkload**"
+        "version": "15.4.454"
       }
     ],
     "configProperties": {

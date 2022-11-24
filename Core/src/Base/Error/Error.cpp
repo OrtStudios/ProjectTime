@@ -1,10 +1,11 @@
 #include "Error.h"
-
 #include "src/Base/Logger.h"
-#include "rang.hpp"
 
 #include <format>
+#include <string>
 #include <iostream>
+
+#include "rang.hpp"
 
 using std::string;
 using std::cout;
@@ -17,17 +18,15 @@ namespace Core
         Base::Base(
             string Error,
             string Description,
-            string FullDescription, 
-            string ErrorLogFilePath)
+            string FullDescription,
+            string ErrorLogFilePath) :
+            m_ErrorLogFile(ErrorLogFilePath)
         {
             // set vars
             m_Error = Error;
             m_Description = Description;
             m_FullDescription = FullDescription;
             m_ErrorLogFilePath = ErrorLogFilePath;
-
-            // create the log file
-            //m_ErrorLogFile = File(m_ErrorLogFilePath);
         }
 
         Base::~Base()
@@ -35,7 +34,7 @@ namespace Core
             //delete &m_ErrorLogFile;
         }
 
-        string Base::ToString()
+        std::string Base::ToString()
         {
             // get file
             m_FilePath = __FILE__;
@@ -101,6 +100,6 @@ namespace Core
             m_ErrorLogFile.Write(FullString());
 
             return ToString();
-;        }
+        }
     }
 }

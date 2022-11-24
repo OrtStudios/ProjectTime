@@ -11,6 +11,7 @@ namespace Core
     {
         class Base : public std::exception
         {
+        public:
             // (Con/De)structors
             Base(
                 std::string Error,
@@ -20,14 +21,13 @@ namespace Core
             );
             ~Base();
 
-        public:
             std::string ToString();
             std::string FullString();
 
             std::string what();
 
         private:
-            //File m_ErrorLogFile;
+            File m_ErrorLogFile;
 
         public:
             std::string m_Error;
@@ -47,9 +47,9 @@ namespace Core
             // Constructor
             SyntaxError() : Base("SyntaxError", "Wrong") {}
         };
-
         class FileError : public Base
         {
+        public:
             // Constructor
             FileError() : Base("FileError", "Wrong") {}
         };
@@ -113,4 +113,5 @@ namespace Core
             // Constructor
             FileNotCopied() : FileError() {}
         };
-}
+    }
+} 

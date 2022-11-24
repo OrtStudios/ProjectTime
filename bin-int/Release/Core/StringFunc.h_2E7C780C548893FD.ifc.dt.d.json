@@ -83,9 +83,7 @@
             "c:\\program files\\microsoft visual studio\\2022\\preview\\vc\\tools\\msvc\\14.34.31823\\include\\xpolymorphic_allocator.h",
             "c:\\program files\\microsoft visual studio\\2022\\preview\\vc\\tools\\msvc\\14.34.31823\\include\\cctype",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.20348.0\\ucrt\\ctype.h",
-            "c:\\program files\\microsoft visual studio\\2022\\preview\\vc\\tools\\msvc\\14.34.31823\\include\\map",
-            "c:\\program files\\microsoft visual studio\\2022\\preview\\vc\\tools\\msvc\\14.34.31823\\include\\xtree",
-            "c:\\program files\\microsoft visual studio\\2022\\preview\\vc\\tools\\msvc\\14.34.31823\\include\\xnode_handle.h"
+            "c:\\program files\\microsoft visual studio\\2022\\preview\\vc\\tools\\msvc\\14.34.31823\\include\\vector"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

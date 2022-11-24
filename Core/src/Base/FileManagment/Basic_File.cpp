@@ -26,14 +26,10 @@ namespace Core
 		size_t lastSlash = path.find_last_of("/");
 
 		if (lastSlash == std::string::npos)
-		{
 			lastSlash = path.find_last_of("\\");
-		}
 		
 		if (lastSlash == std::string::npos) 
-		{
 			throw std::invalid_argument(std::format("Error:\n    the file path: '{}' is invalid", path));
-		}
 
 		result[0] = path.substr(lastSlash);
 		
@@ -41,9 +37,7 @@ namespace Core
 		size_t lastDot = path.find_last_of(".");
 
 		if (lastDot == std::string::npos)
-		{
 			throw std::invalid_argument(std::format("Error:\n    the file path: '{}' is invalid", path));
-		}
 
 		result[1] = path.substr(lastDot);
 
@@ -693,6 +687,7 @@ namespace Core
 		/// <returns></returns>
 		
 		Logger::Log("Deleting the file", Logger::LogType::INFO);
+		
 		try
 		{
 			remove(m_path.c_str());

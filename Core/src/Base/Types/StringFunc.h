@@ -1,11 +1,11 @@
 #include <string>
-#include <map>
+#include <vector>
 
 namespace Core
 {
 	namespace StringFunc
 	{
-		std::map<std::string, std::string> Split(std::string str, char splitChar)
+		std::vector<std::string> Split(std::string str, char splitChar)
 		{
 			/// <summery>
 			/// Split a string by a char

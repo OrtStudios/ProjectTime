@@ -2,6 +2,7 @@
 
 #include <string>
 #include <vector>
+#include <typeinfo>
 #include <src/Base/Logger.h>
 #include <src/Base/Types/StringFunc.h>
 
@@ -72,11 +73,7 @@ namespace Core
 	{
 		// get the file data and create a string from it
 		string fileData = "";
-		for (auto const& x : projectData)
-		{
-			fileData += x.first + "=" + x.second + "\n";
-			Logger::Log(x.first + " = " + x.second + "|Loaded", Logger::LogType::DEBUG);
-		}
+		SaveMap(fileData);
 
 		// clear the file and write the data to it
 		Open();
@@ -84,6 +81,26 @@ namespace Core
 		Write(fileData);
 		Close();
 		Logger::Log("Project file saved", Logger::LogType::INFO);
+	}
+
+	void ProjectFile::SaveMap(std::string& fileData, std::map<string, any> data = {})
+	{
+		if (data.empty())
+			data == projectData;
+
+		for (auto const& x : projectData)
+		{
+			if (typeid(x.second) == typeid(string))
+			{
+				fileData += x.first + "=" + std::any_cast<string>(x.second) + "\n";
+				Logger::Log(x.first + " = " + std::any_cast<string>(x.second) + "|Loaded", Logger::LogType::DEBUG);
+			}
+			else if (typeid(x.second) == typeid(std::map<string, any>))
+			{
+				SaveMap(fileData, std::any_cast<std::map<string, any>>(x.second));
+			}
+
+		}
 	}
 
 	// Getters
