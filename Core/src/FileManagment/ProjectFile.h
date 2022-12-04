@@ -20,7 +20,7 @@ namespace Core
 		void Reload();
 		void Save();
 
-		void SaveMap(std::string& fileData);
+		void SaveMap(std::string& fileData, std::map<string, any> data = {});
 
 		std::any GetProjectName();
 		std::any GetProjectPath();

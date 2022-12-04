@@ -4,140 +4,70 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v17
   ErrorBase.cpp
 c1xx : fatal  error C1083: Cannot open source file: 'src\Base\Error\ErrorBase.cpp': No such file or directory
   ProjectFile.cpp
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,32): error C2676: binary '+': 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' does not define this operator or a conversion to a type acceptable to the predefined operator
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(1490,50): message : could be 'std::reverse_iterator<_BidIt> std::operator +(reverse_iterator<_BidIt>::difference_type,const std::reverse_iterator<_BidIt> &) noexcept(<expr>)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::reverse_iterator<_BidIt> std::operator +(reverse_iterator<_BidIt>::difference_type,const std::reverse_iterator<_BidIt> &) noexcept(<expr>)': could not deduce template argument for 'const std::reverse_iterator<_BidIt> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(3657,5): message : or       'std::move_iterator<_Iter> std::operator +(move_iterator<_Iter>::difference_type,const std::move_iterator<_Iter> &) noexcept(<expr>)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::move_iterator<_Iter> std::operator +(move_iterator<_Iter>::difference_type,const std::move_iterator<_Iter> &) noexcept(<expr>)': could not deduce template argument for 'const std::move_iterator<_Iter> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5074,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5086,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const _Elem *const ' from 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5099,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,const std::basic_string<_Elem,_Traits,_Alloc> &)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5110,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const )'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *const )': could not deduce template argument for 'const _Elem *const ' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5123,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': template parameter '_Elem' is ambiguous
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : could be '_Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : or       'char'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': could not deduce template argument for 'const _Elem' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5134,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,std::basic_string<_Elem,_Traits,_Alloc> &&)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const std::basic_string<_Elem,_Traits,_Alloc> &,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5140,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const std::basic_string<_Elem,_Traits,_Alloc> &)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5146,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,std::basic_string<_Elem,_Traits,_Alloc> &&)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5159,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,std::basic_string<_Elem,_Traits,_Alloc> &&)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem *const ,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'const _Elem *const ' from 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5165,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,std::basic_string<_Elem,_Traits,_Alloc> &&)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(const _Elem,std::basic_string<_Elem,_Traits,_Alloc> &&)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &&' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5171,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem *const )'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem *const )': could not deduce template argument for 'const _Elem *const ' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(5177,62): message : or       'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem)': template parameter '_Elem' is ambiguous
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : could be '_Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : or       'char'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(57,24): message : 'std::basic_string<_Elem,_Traits,_Alloc> std::operator +(std::basic_string<_Elem,_Traits,_Alloc> &&,const _Elem)': could not deduce template argument for 'const _Elem' from 'const _Ty2'
-          with
-          [
-              _Ty2=std::any
-          ]
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(86,20): error C2511: 'void Core::ProjectFile::SaveMap(std::string &,std::map<std::string,std::any,std::less<std::string>,std::allocator<std::pair<const std::string,std::any>>>)': overloaded member function not found in 'Core::ProjectFile'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(23,48): error C2065: 'string': undeclared identifier
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(23,56): error C2065: 'any': undeclared identifier
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(23,44): error C2923: 'std::map': 'string' is not a valid template type argument for parameter '_Kty'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(23,48): message : see declaration of 'string'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(23,44): error C2923: 'std::map': 'any' is not a valid template type argument for parameter '_Ty'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(23,56): message : see declaration of 'any'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(23,44): error C2976: 'std::map': too few template arguments
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\map(73,1): message : see declaration of 'std::map'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(23,61): error C2955: 'std::map': use of class template requires template argument list
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\map(73,1): message : see declaration of 'std::map'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(88,20): error C2511: 'void Core::ProjectFile::SaveMap(std::string &,std::map<std::string,std::any,std::less<std::string>,std::allocator<std::pair<const std::string,std::any>>>)': overloaded member function not found in 'Core::ProjectFile'
 C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(13,8): message : see declaration of 'Core::ProjectFile'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(89,12): error C2597: illegal reference to non-static member 'Core::ProjectFile::projectData'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(92,12): error C2597: illegal reference to non-static member 'Core::ProjectFile::projectData'
 C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(53,35): message : see declaration of 'Core::ProjectFile::projectData'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): error C2597: illegal reference to non-static member 'Core::ProjectFile::projectData'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): error C2597: illegal reference to non-static member 'Core::ProjectFile::projectData'
 C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(53,35): message : see declaration of 'Core::ProjectFile::projectData'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): error C3535: cannot deduce type for 'auto &&' from 'unknown'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): error C2440: 'initializing': cannot convert from 'unknown' to 'int &&'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : Reason: cannot convert from 'unknown' to 'int'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : There is no context in which this conversion is possible
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): error C2672: 'begin': no matching overloaded function found
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): error C3535: cannot deduce type for 'auto &&' from 'unknown'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): error C2440: 'initializing': cannot convert from 'unknown' to 'int &&'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): message : Reason: cannot convert from 'unknown' to 'int'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): message : There is no context in which this conversion is possible
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): error C2672: 'begin': no matching overloaded function found
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(1534,27): message : could be '_Ty *std::begin(_Ty (&)[_Size]) noexcept'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : '_Ty *std::begin(_Ty (&)[_Size]) noexcept': could not deduce template argument for '_Ty (&)[_Size]' from 'int'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): message : '_Ty *std::begin(_Ty (&)[_Size]) noexcept': could not deduce template argument for '_Ty (&)[_Size]' from 'int'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(1516,30): message : or       'unknown-type std::begin(const _Container &) noexcept(<expr>)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : Failed to specialize function template 'unknown-type std::begin(const _Container &) noexcept(<expr>)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : With the following template arguments:
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : '_Container=int'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): message : Failed to specialize function template 'unknown-type std::begin(const _Container &) noexcept(<expr>)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): message : With the following template arguments:
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): message : '_Container=int'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(1510,30): message : or       'unknown-type std::begin(_Container &) noexcept(<expr>)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : Failed to specialize function template 'unknown-type std::begin(_Container &) noexcept(<expr>)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : With the following template arguments:
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : '_Container=int'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): message : Failed to specialize function template 'unknown-type std::begin(_Container &) noexcept(<expr>)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): message : With the following template arguments:
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): message : '_Container=int'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\initializer_list(55,35): message : or       'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : 'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): error C2672: 'end': no matching overloaded function found
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): message : 'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): error C2672: 'end': no matching overloaded function found
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(1539,27): message : could be '_Ty *std::end(_Ty (&)[_Size]) noexcept'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : '_Ty *std::end(_Ty (&)[_Size]) noexcept': could not deduce template argument for '_Ty (&)[_Size]' from 'int'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): message : '_Ty *std::end(_Ty (&)[_Size]) noexcept': could not deduce template argument for '_Ty (&)[_Size]' from 'int'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(1528,30): message : or       'unknown-type std::end(const _Container &) noexcept(<expr>)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : Failed to specialize function template 'unknown-type std::end(const _Container &) noexcept(<expr>)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : With the following template arguments:
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : '_Container=int'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): message : Failed to specialize function template 'unknown-type std::end(const _Container &) noexcept(<expr>)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): message : With the following template arguments:
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): message : '_Container=int'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(1522,30): message : or       'unknown-type std::end(_Container &) noexcept(<expr>)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : Failed to specialize function template 'unknown-type std::end(_Container &) noexcept(<expr>)'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : With the following template arguments:
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : '_Container=int'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): message : Failed to specialize function template 'unknown-type std::end(_Container &) noexcept(<expr>)'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): message : With the following template arguments:
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): message : '_Container=int'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\initializer_list(60,35): message : or       'const _Elem *std::end(std::initializer_list<_Elem>) noexcept'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,24): message : 'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(92,3): error C3536: '<begin>$L0': cannot be used before it is initialized
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(92,3): error C3536: '<end>$L0': cannot be used before it is initialized
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(91,35): error C2100: illegal indirection
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(100,5): error C2352: 'Core::ProjectFile::SaveMap': a call of a non-static member function requires an object
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,24): message : 'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(96,3): error C3536: '<begin>$L0': cannot be used before it is initialized
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(96,3): error C3536: '<end>$L0': cannot be used before it is initialized
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(95,35): error C2100: illegal indirection
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(105,5): error C2352: 'Core::ProjectFile::SaveMap': a call of a non-static member function requires an object
 C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(23,8): message : see declaration of 'Core::ProjectFile::SaveMap'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(242,38): error C2677: binary '+': no global operator found which takes type 'Core::ProjectNS::ProjectType' (or there is no acceptable conversion)
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(247,45): error C2039: 'toString': is not a member of 'Core::ProjectNS::ProjectType'
+C:\Dev\ProjectTime\Core\src\Project\ProjectType.h(7,9): message : see declaration of 'Core::ProjectNS::ProjectType'
   Project.cpp
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(23,48): error C2065: 'string': undeclared identifier
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(23,56): error C2065: 'any': undeclared identifier
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(23,44): error C2923: 'std::map': 'string' is not a valid template type argument for parameter '_Kty'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(23,48): message : see declaration of 'string'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(23,44): error C2923: 'std::map': 'any' is not a valid template type argument for parameter '_Ty'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(23,56): message : see declaration of 'any'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(23,44): error C2976: 'std::map': too few template arguments
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\map(73,1): message : see declaration of 'std::map'
+C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(23,61): error C2955: 'std::map': use of class template requires template argument list
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\map(73,1): message : see declaration of 'std::map'
 C:\Dev\ProjectTime\Core\src\Project\Project.cpp(41,4): error C2679: binary '=': no operator found which takes a right-hand operand of type 'std::any' (or there is no acceptable conversion)
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xstring(3362,32): message : could be 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem)'
           with

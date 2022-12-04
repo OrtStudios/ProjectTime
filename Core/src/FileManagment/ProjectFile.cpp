@@ -54,7 +54,9 @@ namespace Core
 		Logger::Log("Loading project data", Logger::LogType::INFO);
 		for (auto const& x : projectData)
 		{
-			Logger::Log(x.first + " = " + x.second, Logger::LogType::DEBUG);
+			if (typeid(x.second) == typeid(string))
+				Logger::Log(x.first + " = " + std::any_cast<string>(x.second), Logger::LogType::DEBUG);
+
 		}
 	}
 	
@@ -86,7 +88,9 @@ namespace Core
 	void ProjectFile::SaveMap(std::string& fileData, std::map<string, any> data = {})
 	{
 		if (data.empty())
+		{
 			data == projectData;
+		}
 
 		for (auto const& x : projectData)
 		{
@@ -97,6 +101,7 @@ namespace Core
 			}
 			else if (typeid(x.second) == typeid(std::map<string, any>))
 			{
+				
 				SaveMap(fileData, std::any_cast<std::map<string, any>>(x.second));
 			}
 
@@ -239,6 +244,6 @@ namespace Core
 	void ProjectFile::SetProjectType(ProjectNS::ProjectType type)
 	{
 		projectData["type"] = type;
-		Logger::Log("Project type set to " + type, Logger::LogType::DEBUG);
+		Logger::Log("Project type set to " + type.toString(), Logger::LogType::DEBUG);
 	}
 }

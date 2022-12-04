@@ -66,12 +66,14 @@
         "list": "cpp",
         "mutex": "cpp",
         "stop_token": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "any": "cpp"
     },
     "cSpell.words": [
         "fout",
         "Inkscape",
         "Kivy",
+        "Krita",
         "msclr"
     ],
     "C_Cpp.errorSquiggles": "Disabled"
