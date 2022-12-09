@@ -3,6 +3,7 @@
 #include "src/Base/Types/StringFunc.h"
 
 #include <string>
+#include <format>
 
 using std::string;
 
@@ -87,6 +88,76 @@ namespace Core
 			/// </summary>
 			/// <param name="Format"> The date format </param>
 			m_format = Format;
+		}
+		
+		// Time class
+		Time::Time()
+		{
+			// Get the current time
+			time_t currentTime = time(0);
+
+			// Convert the current time to a tm struct
+			tm* localTime = localtime(&currentTime);
+
+			// Set the time
+			hours = localTime->tm_hour;
+			minutes = localTime->tm_min;
+			seconds = localTime->tm_sec;
+		}
+
+		Time::Time(int h, int m, int s)
+		{
+			setTime(h, m, s);
+		}
+
+		int Time::getHours()
+		{
+			return hours;
+		}
+
+		int Time::getMinutes()
+		{
+			return minutes;
+		}
+
+		int Time::getSeconds()
+		{
+			return seconds;
+		}
+
+		void Time::setHours(int h)
+		{
+			hours = h;
+		}
+
+		void Time::setMinutes(int m)
+		{
+			minutes = m;
+		}
+
+		void Time::setSeconds(int s)
+		{
+			seconds = s;
+		}
+
+		void Time::setTime(int h, int m, int s)
+		{
+			setHours(h);
+			setMinutes(m);
+			setSeconds(s);
+		}
+
+		void Time::logTime()
+		{
+			Logger::Log(
+				std::format(
+					"Time: {}:{}:{}",
+					getHours(),
+					getMinutes(),
+					getSeconds()
+				),
+				Logger::LogType::INFO
+			);
 		}
 	}
 }

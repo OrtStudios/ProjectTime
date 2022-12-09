@@ -51,12 +51,12 @@
     <ClInclude Include="src\Base\Types\Url.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Base\Error\Error.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Base\Error\ErrorBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Project\Project.cpp">
@@ -78,6 +78,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Base\Types\Url.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Base\Error\Error.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

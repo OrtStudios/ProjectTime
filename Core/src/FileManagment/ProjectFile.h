@@ -20,21 +20,21 @@ namespace Core
 		void Reload();
 		void Save();
 
-		void SaveMap(std::string& fileData, std::map<string, any> data = {});
+		void SaveMap(std::string fileData, std::map<std::string, std::any> data = {});
 
-		std::any GetProjectName();
-		std::any GetProjectPath();
-		std::any GetProjectFilePath();
-		std::any GetCreationDate();
-		std::any GetLastModifiedDate();
-		std::any GetProjectDescription();
-		std::any GetProjectAuthor();
-		std::any GetProjectVersion();
-		std::any GetProjectLicense();
-		std::any GetProjectWebsite();
-		std::any GetProjectEmail();
-		std::any GetProjectPhone();
-		std::any GetProjectType();
+		std::string GetProjectName();
+		std::string GetProjectPath();
+		std::string GetProjectFilePath();
+		std::string GetCreationDate();
+		std::string GetLastModifiedDate();
+		std::string GetProjectDescription();
+		std::string GetProjectAuthor();
+		std::string GetProjectVersion();
+		std::string GetProjectLicense();
+		std::string GetProjectWebsite();
+		std::string GetProjectEmail();
+		std::string GetProjectPhone();
+		std::string GetProjectType();
 		
 		void SetProjectName(std::string name);
 		void SetProjectPath(std::string path);

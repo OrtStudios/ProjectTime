@@ -95,5 +95,30 @@ namespace Core
 			int m_day;
 			std::string m_format;
 		};
+
+		class Time
+		{
+		public:
+			//constructors
+			Time();
+			Time(int h, int m, int s);
+
+			//getters and setters
+			int getHours();
+			int getMinutes();
+			int getSeconds();
+			void setHours(int h);
+			void setMinutes(int m);
+			void setSeconds(int s);
+			void setTime(int h, int m, int s);
+
+			//utility functions
+			void logTime();
+
+		private:
+			int hours;
+			int minutes;
+			int seconds;
+		};
 	}
 }

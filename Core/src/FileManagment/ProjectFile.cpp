@@ -85,7 +85,7 @@ namespace Core
 		Logger::Log("Project file saved", Logger::LogType::INFO);
 	}
 
-	void ProjectFile::SaveMap(std::string& fileData, std::map<string, any> data = {})
+	void ProjectFile::SaveMap(std::string fileData, std::map<string, any> data)
 	{
 		if (data.empty())
 		{
@@ -109,69 +109,69 @@ namespace Core
 	}
 
 	// Getters
-	any ProjectFile::GetProjectName()
+	string ProjectFile::GetProjectName()
 	{
-		return projectData["name"];
+		return std::any_cast<string>(projectData["name"]);
 	}
 	
-	any ProjectFile::GetProjectPath()
+	string ProjectFile::GetProjectPath()
 	{
-		return projectData["path"];
+		return std::any_cast<string>(projectData["path"]);
 	}
 	
-	any ProjectFile::GetProjectFilePath()
+	string ProjectFile::GetProjectFilePath()
 	{
-		return projectData["file_path"];
+		return std::any_cast<string>(projectData["file_path"]);
 	}
 	
-	any ProjectFile::GetCreationDate()
+	string ProjectFile::GetCreationDate()
 	{
-		return projectData["creation_date"];
+		return std::any_cast<string>(projectData["creation_date"]);
 	}
 	
-	any ProjectFile::GetLastModifiedDate()
+	string ProjectFile::GetLastModifiedDate()
 	{
-		return projectData["last_modified_date"];
+		return std::any_cast<string>(projectData["last_modified_date"]);
 	}
 	
-	any ProjectFile::GetProjectDescription()
+	string ProjectFile::GetProjectDescription()
 	{
-		return projectData["description"];
+		return std::any_cast<string>(projectData["description"]);
 	}
 	
-	any ProjectFile::GetProjectAuthor()
+	string ProjectFile::GetProjectAuthor()
 	{
-		return projectData["author"];
+		return std::any_cast<string>(projectData["author"]);
 	}
 	
-	any ProjectFile::GetProjectVersion()
+	string ProjectFile::GetProjectVersion()
 	{
-		return projectData["version"];
+		return std::any_cast<string>(projectData["version"]);
 	}
 	
-	any ProjectFile::GetProjectLicense()
+	string ProjectFile::GetProjectLicense()
 	{
-		return projectData["license"];
+		return std::any_cast<string>(projectData["license"]);
 	}
 	
-	any ProjectFile::GetProjectWebsite()
+	string ProjectFile::GetProjectWebsite()
 	{
-		return projectData["website"];
+		return std::any_cast<string>(projectData["website"]);
 	}
 	
-	any ProjectFile::GetProjectEmail()
+	string ProjectFile::GetProjectEmail()
 	{
-		return projectData["email"];
+		return std::any_cast<string>(projectData["email"]);
 	}
 	
-	any ProjectFile::GetProjectPhone()
+	string ProjectFile::GetProjectPhone()
 	{
-		return projectData["phone"];
+		return std::any_cast<string>(projectData["phone"]);
 	}
 	
-	any ProjectFile::GetProjectType()
+	string ProjectFile::GetProjectType()
 	{
-		return projectData["type"];
+		return std::any_cast<string>(projectData["type"]);
 	}
 
 	// Setters
@@ -244,6 +244,6 @@ namespace Core
 	void ProjectFile::SetProjectType(ProjectNS::ProjectType type)
 	{
 		projectData["type"] = type;
-		Logger::Log("Project type set to " + type.toString(), Logger::LogType::DEBUG);
+		Logger::Log("Project type set to " + type.ToString(), Logger::LogType::DEBUG);
 	}
 }

@@ -188,7 +188,6 @@
   <ItemGroup>
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="src\Base\Error\Error.cpp" />
-    <ClCompile Include="src\Base\Error\ErrorBase.cpp" />
     <ClCompile Include="src\Base\FileManagment\Basic_File.cpp" />
     <ClCompile Include="src\Base\Logger.cpp" />
     <ClCompile Include="src\Base\Types\StringFunc.h" />
