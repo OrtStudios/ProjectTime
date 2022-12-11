@@ -64,4 +64,4 @@ if you steel don't understand, you can watch [this](https://youtube.com/NotExsis
 
 ## How to tweak this project for your own uses
 
-TODO
+TODO: make the explainer

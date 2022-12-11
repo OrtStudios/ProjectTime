@@ -42,6 +42,7 @@ namespace Core
             int m_Line;
         };
 
+        //FIXME: set the right error messages and fix the errors
         class SyntaxError : public Base
         {
             // Constructor
