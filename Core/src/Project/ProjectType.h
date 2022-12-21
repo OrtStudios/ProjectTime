@@ -117,6 +117,11 @@ namespace Core
 					public:
 						std::string ToString() const { return "Py_PySimpleGUI"; }
 					};
+
+					class Tkinter : Python {
+					public:
+						std::string ToString() const { return "Py_Tkinter"; }
+					};
 					
 					class Kivy : Python {
 					public:

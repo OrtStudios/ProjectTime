@@ -75,6 +75,5 @@
         "Kivy",
         "Krita",
         "msclr"
-    ],
-    "C_Cpp.errorSquiggles": "Disabled"
+    ]
 }
