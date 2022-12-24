@@ -120,7 +120,7 @@ namespace Core
 
 					class Tkinter : Python {
 					public:
-						std::string ToString() const { return "Py_Tkinter"; }
+						std::string ToString() const { return "Py_Tkinter"; } 
 					};
 					
 					class Kivy : Python {

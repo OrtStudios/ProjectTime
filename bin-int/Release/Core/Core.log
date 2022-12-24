@@ -1,9 +1,6 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(502,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
 C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(503,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
   Scanning sources for module dependencies...
-  Core.cpp
-  Error.cpp
-  Url.cpp
   ProjectFile.cpp
 C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(92,9): warning C4834: discarding return value of function with 'nodiscard' attribute
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\utility(366,48): error C2678: binary '==': no operator found which takes a left-hand operand of type 'const _Ty2' (or there is no acceptable conversion)
@@ -321,3 +318,4 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.3193
               _InIt2=std::_Tree_unchecked_const_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const std::string,std::any>>>,std::_Iterator_base0>
           ]
 C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.cpp(92,23): message : see reference to function template instantiation 'bool std::operator ==<std::string,std::any,std::less<std::string>,std::allocator<std::pair<const std::string,std::any>>>(const std::map<std::string,std::any,std::less<std::string>,std::allocator<std::pair<const std::string,std::any>>> &,const std::map<std::string,std::any,std::less<std::string>,std::allocator<std::pair<const std::string,std::any>>> &)' being compiled
+  Project.cpp
