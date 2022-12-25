@@ -2,7 +2,11 @@
 
 #include <string>
 
-#define CRaper _declspec(dllexport)
+#ifdef _WIN32
+	#define CRaper _declspec(dllexport)
+#else
+	#define CRaper extern "C" __attribute__((visibility("default"))) __attribute__((used))
+#endif
 
 extern "C"
 {
