@@ -5,7 +5,7 @@ namespace Core
 {
 	namespace StringFunc
 	{
-		std::vector<std::string> Split(std::string str, char splitChar)
+		inline std::vector<std::string> Split(std::string str, char splitChar)
 		{
 			/// <summery>
 			/// Split a string by a char

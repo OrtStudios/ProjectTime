@@ -27,6 +27,9 @@ namespace Core
 		//* Main Log Function
 		static void Log(const std::string message, LogType level);
 
+		template <typename T>
+		Logger& operator<<(const T message);
+
 		//* Log File
 		static void SetLogFile(const std::string directoryPath);
 
@@ -55,6 +58,7 @@ namespace Core
 
 	private:
 		static std::string m_dateFormat;
+		static LogType m_currentLogType;
 		static LogType m_logLevel;
 		static bool m_logToConsole;
 		static bool m_logToFile;

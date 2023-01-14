@@ -100,6 +100,76 @@ namespace Core
 		return;
 	}
 
+	template <>
+	Logger& Logger::operator<<(const string& message)
+	{
+		/// <summary>
+		/// log message to the console and to the log file
+		/// </summary>
+		/// <param name="message">message to log</param>
+		/// <param name="level">the log level of the message</param>
+
+		// Check if the level is lower than the current log level
+		if (m_currentLogType < m_logLevel)
+			return *this;
+
+		string type = m_logTypeString.at(m_currentLogType);
+
+		// Get the time
+		string theTime = Time::GetTime(m_dateFormat, true);
+
+		// Log the message to the console
+		if (m_logToConsole)
+			std::cout << m_logColors.at(m_currentLogType) << std::format(
+				"{}: {} >> {}", type, theTime, message
+			) << rang::style::reset << std::endl;
+
+		// Log the message to the log file
+		if (m_logToFile)
+			if (loggerLogFile->IsOpen())
+				loggerLogFile->Write(
+					std::format(
+						"{}: {} >> {}\n", type, theTime, message
+					)
+				);
+			else
+			{
+				loggerLogFile->Open();
+				loggerLogFile->Write(
+					std::format(
+						"{}: {} >> {}\n", type, theTime, message
+					)
+				);
+			}
+	
+		return *this;
+	}
+
+	// template specialization for the LogType
+	template <>
+	Logger& Logger::operator<<(const Logger::LogType message)
+	{
+		m_currentLogType = message;
+		return *this;
+	}
+
+	// template for not supported types
+	template <typename T>
+	Logger& Logger::operator<<(const T message)
+	{
+		try
+		{
+			const string messageAsString = std::to_string(message);
+			Logger::Log(messageAsString, m_currentLogType);
+		}
+		catch (std::exception& e)
+		{
+			Log("Logger: Unsupported type", Logger::LogType::ERROR);
+		}
+
+		return *this;
+	}
+
 	//* Log File
 	void Logger::SetLogFile(const string directoryPath)
 	{

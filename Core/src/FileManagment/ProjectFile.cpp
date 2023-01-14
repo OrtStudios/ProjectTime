@@ -89,7 +89,7 @@ namespace Core
 	{
 		if (data.empty())
 		{
-			data == projectData;
+			data = projectData;
 		}
 
 		for (auto const& x : projectData)

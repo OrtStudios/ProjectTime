@@ -70,6 +70,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Include="..\Core\src\FileManagment\ProjectFile.cpp" Link="ProjectFile.cpp" />
 	  <None Include="..\README.md">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
