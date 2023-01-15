@@ -39,7 +39,7 @@
     <ClInclude Include="src\Base\Error\ErrorBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Base\FileManagment\Basic_File.h">
+    <ClInclude Include="src\Base\FileManagment\BasicFile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Base\Time\Time.h">
@@ -68,7 +68,7 @@
     <ClCompile Include="src\Base\Logger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Base\FileManagment\Basic_File.cpp">
+    <ClCompile Include="src\Base\FileManagment\BasicFile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Base\Types\StringFunc.h">
