@@ -2,20 +2,8 @@
 C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(503,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
   Scanning sources for module dependencies...
   DataFile.cpp
-  DataFileStructure.cpp
   ProjectFile.cpp
   Project.cpp
-C:\Dev\ProjectTime\Core\src\Project\Project.cpp(38,23): error C2247: 'Core::DataFile::Load' not accessible because 'Core::ProjectFile' uses 'private' to inherit from 'Core::DataFile'
-C:\Dev\ProjectTime\Core\src\FileManagment\DataFile.h(16,14): message : see declaration of 'Core::DataFile::Load'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(13,8): message : see declaration of 'Core::ProjectFile'
-C:\Dev\ProjectTime\Core\src\FileManagment\DataFile.h(10,11): message : see declaration of 'Core::DataFile'
-C:\Dev\ProjectTime\Core\src\Project\Project.cpp(38,23): error C2248: 'Core::DataFile::Load': cannot access private member declared in class 'Core::ProjectFile'
-C:\Dev\ProjectTime\Core\src\FileManagment\DataFile.h(16,14): message : see declaration of 'Core::DataFile::Load'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(13,8): message : see declaration of 'Core::ProjectFile'
-C:\Dev\ProjectTime\Core\src\Project\Project.cpp(64,23): error C2247: 'Core::DataFile::Save' not accessible because 'Core::ProjectFile' uses 'private' to inherit from 'Core::DataFile'
-C:\Dev\ProjectTime\Core\src\FileManagment\DataFile.h(17,14): message : see declaration of 'Core::DataFile::Save'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(13,8): message : see declaration of 'Core::ProjectFile'
-C:\Dev\ProjectTime\Core\src\FileManagment\DataFile.h(10,11): message : see declaration of 'Core::DataFile'
-C:\Dev\ProjectTime\Core\src\Project\Project.cpp(64,23): error C2248: 'Core::DataFile::Save': cannot access private member declared in class 'Core::ProjectFile'
-C:\Dev\ProjectTime\Core\src\FileManagment\DataFile.h(17,14): message : see declaration of 'Core::DataFile::Save'
-C:\Dev\ProjectTime\Core\src\FileManagment\ProjectFile.h(13,8): message : see declaration of 'Core::ProjectFile'
+     Creating library C:\Dev\ProjectTime\bin\Release\Core\Core.lib and object C:\Dev\ProjectTime\bin\Release\Core\Core.exp
+Logger.obj : error LNK2001: unresolved external symbol "private: static enum Core::Logger::LogType Core::Logger::m_currentLogType" (?m_currentLogType@Logger@Core@@0W4LogType@12@A)
+C:\Dev\ProjectTime\bin\Release\Core\Core.dll : fatal error LNK1120: 1 unresolved externals
