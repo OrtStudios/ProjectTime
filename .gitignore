@@ -1,7 +1,3 @@
 # ignore the .vs folder
 .vs/*
 .vscode/*
-
-# ignore the github acton staff folder
-GithubActionsStaff/*
-ProjectTime/obj/*

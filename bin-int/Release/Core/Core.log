@@ -1,9 +1,0 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(502,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(503,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
-  Scanning sources for module dependencies...
-  DataFile.cpp
-  ProjectFile.cpp
-  Project.cpp
-     Creating library C:\Dev\ProjectTime\bin\Release\Core\Core.lib and object C:\Dev\ProjectTime\bin\Release\Core\Core.exp
-Logger.obj : error LNK2001: unresolved external symbol "private: static enum Core::Logger::LogType Core::Logger::m_currentLogType" (?m_currentLogType@Logger@Core@@0W4LogType@12@A)
-C:\Dev\ProjectTime\bin\Release\Core\Core.dll : fatal error LNK1120: 1 unresolved externals
