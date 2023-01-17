@@ -70,10 +70,13 @@
         "any": "cpp"
     },
     "cSpell.words": [
+        "bitsdojo",
         "fout",
+        "Frameless",
         "Inkscape",
         "Kivy",
         "Krita",
-        "msclr"
+        "msclr",
+        "vrouter"
     ]
 }
