@@ -1,0 +1,6 @@
+[submodule "PTCore"]
+	path = PTCore
+	url = https://github.com/OortStudios/PTCore
+[submodule "Core"]
+	path = Core
+	url = https://github.com/OortStudios/PTCore.git
