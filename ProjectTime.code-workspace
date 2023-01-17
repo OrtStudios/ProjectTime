@@ -73,7 +73,11 @@
 			"mutex": "cpp",
 			"stop_token": "cpp",
 			"thread": "cpp",
-			"any": "cpp"
+			"any": "cpp",
+			"deque": "cpp",
+			"ranges": "cpp",
+			"unordered_map": "cpp",
+			"xhash": "cpp"
 		},
 		"godot_tools.scene_file_config": "c:\\Dev\\ProjectTime\\Core",
 	}

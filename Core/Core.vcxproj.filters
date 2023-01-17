@@ -33,25 +33,31 @@
     <ClInclude Include="src\FileManagment\ProjectFile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Base\Logger.h">
+    <ClInclude Include="src\Logger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Base\Error\ErrorBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Base\FileManagment\BasicFile.h">
+    <ClInclude Include="src\FileManagment\BasicFile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Base\Time\Time.h">
+    <ClInclude Include="src\Time\Time.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Base\Error\SyntaxError.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Base\Types\Url.h">
+    <ClInclude Include="src\Types\Url.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Base\Error\Error.h">
+    <ClInclude Include="src\Error\Error.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FileManagment\DataStructures\DataFileStructure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FileManagment\DataFile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -65,27 +71,33 @@
     <ClCompile Include="src\FileManagment\ProjectFile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Base\Logger.cpp">
+    <ClCompile Include="src\Logger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Base\FileManagment\BasicFile.cpp">
+    <ClCompile Include="src\FileManagment\BasicFile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Base\Types\StringFunc.h">
+    <ClCompile Include="src\Types\StringFunc.h">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Base\Time\Time.cpp">
+    <ClCompile Include="src\Time\Time.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Base\Types\Url.cpp">
+    <ClCompile Include="src\Types\Url.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Base\Error\Error.cpp">
+    <ClCompile Include="src\Error\Error.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FileManagment\DataStructures\DataFileStructure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FileManagment\DataFile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="src\Base\Error\ErrorFormating.txt" />
+    <Text Include="src\Error\ErrorFormating.txt" />
     <Text Include="src\Project\ProjectStructure.txt" />
   </ItemGroup>
   <ItemGroup>

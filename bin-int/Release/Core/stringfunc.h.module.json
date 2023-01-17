@@ -1,7 +1,7 @@
 {
     "Version": "1.1",
     "Data": {
-        "Source": "c:\\dev\\projecttime\\core\\src\\base\\types\\stringfunc.h",
+        "Source": "c:\\dev\\projecttime\\core\\src\\types\\stringfunc.h",
         "ProvidedModule": "",
         "ImportedModules": [],
         "ImportedHeaderUnits": []

@@ -174,30 +174,34 @@
     <ClInclude Include="Core.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="include\rang.hpp" />
-    <ClInclude Include="src\Base\Error\Error.h" />
+    <ClInclude Include="src\Error\Error.h" />
     <ClInclude Include="src\Base\Error\ErrorBase.h" />
     <ClInclude Include="src\Base\Error\SyntaxError.h" />
-    <ClInclude Include="src\Base\FileManagment\BasicFile.h" />
-    <ClInclude Include="src\Base\Logger.h" />
-    <ClInclude Include="src\Base\Time\Time.h" />
-    <ClInclude Include="src\Base\Types\Url.h" />
+    <ClInclude Include="src\FileManagment\BasicFile.h" />
+    <ClInclude Include="src\FileManagment\DataFile.h" />
+    <ClInclude Include="src\FileManagment\DataStructures\DataFileStructure.h" />
+    <ClInclude Include="src\Logger.h" />
+    <ClInclude Include="src\Time\Time.h" />
+    <ClInclude Include="src\Types\Url.h" />
     <ClInclude Include="src\FileManagment\ProjectFile.h" />
     <ClInclude Include="src\Project\Project.h" />
     <ClInclude Include="src\Project\ProjectType.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core.cpp" />
-    <ClCompile Include="src\Base\Error\Error.cpp" />
-    <ClCompile Include="src\Base\FileManagment\BasicFile.cpp" />
-    <ClCompile Include="src\Base\Logger.cpp" />
-    <ClCompile Include="src\Base\Types\StringFunc.h" />
-    <ClCompile Include="src\Base\Time\Time.cpp" />
-    <ClCompile Include="src\Base\Types\Url.cpp" />
+    <ClCompile Include="src\Error\Error.cpp" />
+    <ClCompile Include="src\FileManagment\BasicFile.cpp" />
+    <ClCompile Include="src\FileManagment\DataFile.cpp" />
+    <ClCompile Include="src\FileManagment\DataStructures\DataFileStructure.cpp" />
+    <ClCompile Include="src\Logger.cpp" />
+    <ClCompile Include="src\Types\StringFunc.h" />
+    <ClCompile Include="src\Time\Time.cpp" />
+    <ClCompile Include="src\Types\Url.cpp" />
     <ClCompile Include="src\FileManagment\ProjectFile.cpp" />
     <ClCompile Include="src\Project\Project.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="src\Base\Error\ErrorFormating.txt" />
+    <Text Include="src\Error\ErrorFormating.txt" />
     <Text Include="src\Project\ProjectStructure.txt" />
   </ItemGroup>
   <ItemGroup>

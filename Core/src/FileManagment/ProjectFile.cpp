@@ -3,15 +3,16 @@
 #include <string>
 #include <vector>
 #include <typeinfo>
-#include <src/Base/Logger.h>
-#include <src/Base/Types/StringFunc.h>
+
+#include "src/Logger.h"
+#include "src/Types/StringFunc.h"
 
 using std::string;
 using std::any;
 
 namespace Core
 {
-	ProjectFile::ProjectFile(const string file_path) : File(file_path)
+	ProjectFile::ProjectFile(const string file_path) : DataFile(file_path)
 	{
 	}
 
@@ -20,230 +21,154 @@ namespace Core
 		Close();
 	}
 	
-	// Load & Reload
-	void ProjectFile::Load()
-	{
-		// load file
-		Open();
-	
-		// get file data
-		string fileData = Read();
-
-		// close file
-		Close();
-	
-		// split file data
-		std::vector<string> fileDataSplitted = StringFunc::Split(fileData, '\n');
-	
-		// iterate through file data
-		for (int i = 0; i < fileDataSplitted.size(); i++)
-		{
-			// split line
-			std::vector<string> lineData = StringFunc::Split(fileDataSplitted[i], '=');
-	
-			// check if line is valid
-			if (lineData.size() == 2)
-			{
-				// add line data to map
-				projectData[lineData[0]] = lineData[1];
-				Logger::Log("Loaded: " + lineData[0] + " = " + lineData[1], Logger::LogType::DEBUG);
-			}
-		}
-		
-		// Log the project data
-		Logger::Log("Loading project data", Logger::LogType::INFO);
-		for (auto const& x : projectData)
-		{
-			if (typeid(x.second) == typeid(string))
-				Logger::Log(x.first + " = " + std::any_cast<string>(x.second), Logger::LogType::DEBUG);
-
-		}
-	}
-	
 	void ProjectFile::Reload()
 	{
 		// clear map
-		projectData.clear();
+		GetData().clear();
 		Logger::Log("Project file cleared", Logger::LogType::DEBUG);
 	
 		// reload file
 		Load();
 		Logger::Log("Project file reloaded", Logger::LogType::INFO);
 	}
-	
-	void ProjectFile::Save()
-	{
-		// get the file data and create a string from it
-		string fileData = "";
-		SaveMap(fileData);
-
-		// clear the file and write the data to it
-		Open();
-		Clear();
-		Write(fileData);
-		Close();
-		Logger::Log("Project file saved", Logger::LogType::INFO);
-	}
-
-	void ProjectFile::SaveMap(std::string fileData, std::map<string, any> data)
-	{
-		if (data.empty())
-		{
-			data = projectData;
-		}
-
-		for (auto const& x : projectData)
-		{
-			if (typeid(x.second) == typeid(string))
-			{
-				fileData += x.first + "=" + std::any_cast<string>(x.second) + "\n";
-				Logger::Log(x.first + " = " + std::any_cast<string>(x.second) + "|Loaded", Logger::LogType::DEBUG);
-			}
-			else if (typeid(x.second) == typeid(std::map<string, any>))
-			{
-				
-				SaveMap(fileData, std::any_cast<std::map<string, any>>(x.second));
-			}
-
-		}
-	}
 
 	// Getters
 	string ProjectFile::GetProjectName()
 	{
-		return std::any_cast<string>(projectData["name"]);
+		return std::any_cast<string>(GetData()["name"]);
 	}
 	
 	string ProjectFile::GetProjectPath()
 	{
-		return std::any_cast<string>(projectData["path"]);
+		return std::any_cast<string>(GetData()["path"]);
 	}
 	
 	string ProjectFile::GetProjectFilePath()
 	{
-		return std::any_cast<string>(projectData["file_path"]);
+		return std::any_cast<string>(GetData()["file_path"]);
 	}
 	
 	string ProjectFile::GetCreationDate()
 	{
-		return std::any_cast<string>(projectData["creation_date"]);
+		return std::any_cast<string>(GetData()["creation_date"]);
 	}
 	
 	string ProjectFile::GetLastModifiedDate()
 	{
-		return std::any_cast<string>(projectData["last_modified_date"]);
+		return std::any_cast<string>(GetData()["last_modified_date"]);
 	}
 	
 	string ProjectFile::GetProjectDescription()
 	{
-		return std::any_cast<string>(projectData["description"]);
+		return std::any_cast<string>(GetData()["description"]);
 	}
 	
 	string ProjectFile::GetProjectAuthor()
 	{
-		return std::any_cast<string>(projectData["author"]);
+		return std::any_cast<string>(GetData()["author"]);
 	}
 	
 	string ProjectFile::GetProjectVersion()
 	{
-		return std::any_cast<string>(projectData["version"]);
+		return std::any_cast<string>(GetData()["version"]);
 	}
 	
 	string ProjectFile::GetProjectLicense()
 	{
-		return std::any_cast<string>(projectData["license"]);
+		return std::any_cast<string>(GetData()["license"]);
 	}
 	
 	string ProjectFile::GetProjectWebsite()
 	{
-		return std::any_cast<string>(projectData["website"]);
+		return std::any_cast<string>(GetData()["website"]);
 	}
 	
 	string ProjectFile::GetProjectEmail()
 	{
-		return std::any_cast<string>(projectData["email"]);
+		return std::any_cast<string>(GetData()["email"]);
 	}
 	
 	string ProjectFile::GetProjectPhone()
 	{
-		return std::any_cast<string>(projectData["phone"]);
+		return std::any_cast<string>(GetData()["phone"]);
 	}
 	
 	string ProjectFile::GetProjectType()
 	{
-		return std::any_cast<string>(projectData["type"]);
+		return std::any_cast<string>(GetData()["type"]);
 	}
 
 	// Setters
 	void ProjectFile::SetProjectName(string name)
 	{
-		projectData["name"] = name;
+		GetData()["name"].SetString(name);
 		Logger::Log("Project name set to " + name, Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetProjectPath(string path)
 	{
-		projectData["path"] = path;
+		GetData()["path"].SetString(path);
 		Logger::Log("Project path set to " + path, Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetProjectFilePath(string file_path)
 	{
-		projectData["file_path"] = file_path;
+		GetData()["file_path"].SetString(file_path);
 		Logger::Log("Project file path set to " + file_path, Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetCreationDate(Time::Date creation_date)
 	{
-		projectData["creation_date"] = creation_date;
+		GetData()["creation_date"].SetString(creation_date.GetDate());
 		Logger::Log("Project creation date set to " + creation_date.GetDate(), Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetLastModifiedDate(Time::Date last_modified_date)
 	{
-		projectData["last_modified_date"] = last_modified_date;
+		GetData()["last_modified_date"].SetString(last_modified_date.GetDate());
 		Logger::Log("Project last modified date set to " + last_modified_date.GetDate(), Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetProjectDescription(string description)
 	{
-		projectData["description"] = description;
+		GetData()["description"].SetString(description);
 		Logger::Log("Project description set to " + description, Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetProjectAuthor(string author)
 	{
-		projectData["author"] = author;
+		GetData()["author"].SetString(author);
 		Logger::Log("Project author set to " + author, Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetProjectVersion(string version)
 	{
-		projectData["version"] = version;
+		GetData()["version"].SetString(version);
 		Logger::Log("Project version set to " + version, Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetProjectLicense(File license)
 	{
-		projectData["license"] = license.GetPath();
+		GetData()["license"]["name"].SetString(license.GetName());
+		GetData()["license"]["file_path"].SetString(license.GetPath());
 		Logger::Log("Project license set to " + license.GetName(), Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetProjectWebsite(Url website)
 	{
-		projectData["website"] = website;
+		GetData()["website"].SetString(website.GetUrl());
 		Logger::Log("Project website set to " + website.GetDomain(), Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetProjectEmail(string email)
 	{
-		projectData["email"] = email;
+		GetData()["email"].SetString(email);
 		Logger::Log("Project email set to " + email, Logger::LogType::DEBUG);
 	}
 
 	void ProjectFile::SetProjectType(ProjectNS::ProjectType type)
 	{
-		projectData["type"] = type;
+		GetData()["type"].SetString(type.ToString());
 		Logger::Log("Project type set to " + type.ToString(), Logger::LogType::DEBUG);
 	}
 }

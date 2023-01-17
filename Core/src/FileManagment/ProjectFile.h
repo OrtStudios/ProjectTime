@@ -1,26 +1,22 @@
 #pragma once
 
-#include "src/Base/FileManagment/BasicFile.h"
+#include "src/FileManagment/DataFile.h"
 #include "src/Project/ProjectType.h"
-#include "src/Base/Time/Time.h"
-#include "src/Base/Types/Url.h"
+#include "src/Time/Time.h"
+#include "src/Types/Url.h"
 #include <string>                                                                      
 #include <map>
 #include <any>
 
 namespace Core
 {
-	class ProjectFile : File
+	class ProjectFile : DataFile
 	{
 	public:
 		ProjectFile(const std::string file_path);
 		~ProjectFile();
 
-		void Load();
 		void Reload();
-		void Save();
-
-		void SaveMap(std::string fileData, std::map<std::string, std::any> data = {});
 
 		std::string GetProjectName();
 		std::string GetProjectPath();
@@ -48,8 +44,5 @@ namespace Core
 		void SetProjectWebsite(Url website);
 		void SetProjectEmail(std::string);
 		void SetProjectType(ProjectNS::ProjectType);
-	
-	private:
-		std::map<std::string, std::any> projectData;
 	};
 }

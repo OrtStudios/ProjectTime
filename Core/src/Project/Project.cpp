@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "src/Base/Logger.h"
+#include "src/Logger.h"
 
 using std::string;
 

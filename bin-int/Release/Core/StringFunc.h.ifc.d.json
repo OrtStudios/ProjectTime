@@ -1,7 +1,7 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\dev\\projecttime\\core\\src\\base\\types\\stringfunc.h",
+        "Source": "c:\\dev\\projecttime\\core\\src\\types\\stringfunc.h",
         "ProvidedModule": "",
         "Includes": [
             "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.34.31933\\include\\string",
