@@ -1,13 +1,13 @@
-// ignore_for_file: file_names, library_prefixes
+// ignore_for_file: file_names, library_prefixes, curly_braces_in_flow_control_structures
 import 'package:flutter/material.dart';
-import "dart:math" as math;
 
 // Widgets
-import 'package:flutter_gui_test/widgets/shortcuts.dart';
+import 'package:project_time/widgets/shortcuts.dart';
+import 'package:project_time/widgets/Home/AddProjectButton.dart';
 
 // Other
-import 'package:flutter_gui_test/Themes.dart' as ptTheme;
-import 'package:flutter_gui_test/config.dart' as ptConfig;
+import 'package:project_time/Themes.dart' as ptTheme;
+import 'package:project_time/config.dart' as ptConfig;
 
 class HomePage extends StatefulWidget 
 {
@@ -56,10 +56,7 @@ class _HomePageState extends State<HomePage>
                                                         child: const Text("Unimplemented SearchBar")
                                                     ),
                                                     const Padding(padding: EdgeInsets.all(10)),
-                                                    Container(
-                                                        color: ptTheme.kPrimaryColor,
-                                                        child: const Text("Plus")
-                                                    )
+                                                    const AddProjectButton()
                                                 ]
                                             )
                                         ),
@@ -125,3 +122,4 @@ class _HomePageState extends State<HomePage>
         );
     }
 }
+

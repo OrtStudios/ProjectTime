@@ -7,15 +7,15 @@ import 'package:flutter_acrylic/flutter_acrylic.dart';
 import 'package:window_manager/window_manager.dart';
 
 // Pages
-import 'package:flutter_gui_test/pages/homePage.dart';
-import 'package:flutter_gui_test/pages/ProjectsLibrary.dart';
+import 'package:project_time/pages/homePage.dart';
+import 'package:project_time/pages/ProjectsLibrary.dart';
 
 // Widgets
-import 'package:flutter_gui_test/widgets/controlBar.dart';
+import 'package:project_time/widgets/controlBar.dart';
 
 // Other
-import 'package:flutter_gui_test/config.dart' as ptConfig;
-import 'package:flutter_gui_test/Themes.dart' as ptTheme;
+import 'package:project_time/config.dart' as ptConfig;
+import 'package:project_time/Themes.dart' as ptTheme;
 
 Future<void> main() async
 {

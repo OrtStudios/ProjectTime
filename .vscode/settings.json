@@ -70,12 +70,14 @@
         "any": "cpp"
     },
     "cSpell.words": [
+        "ARGB",
         "bitsdojo",
         "fout",
         "Frameless",
         "Inkscape",
         "Kivy",
         "Krita",
+        "LTRB",
         "msclr",
         "vrouter"
     ]

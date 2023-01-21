@@ -103,10 +103,10 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   # fonts:
-  #   - family: Schyler
+  #   - family: name
   #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+  #       - asset: fonts/name-Regular.ttf
+  #       - asset: fonts/name-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

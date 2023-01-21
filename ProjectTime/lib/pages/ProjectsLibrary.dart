@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 // Widgets
-import 'package:flutter_gui_test/widgets/shortcuts.dart';
+import 'package:project_time/widgets/shortcuts.dart';
 
 class ProjectsLibrary extends StatefulWidget 
 {
