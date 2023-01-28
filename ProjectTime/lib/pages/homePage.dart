@@ -66,7 +66,8 @@ class _HomePageState extends State<HomePage>
                                                 Row(
                                                     children: [
                                                         ClipRRect(
-                                                            borderRadius: const BorderRadius.all(Radius.circular(10)),
+                                                            borderRadius: const   
+                                                            BorderRadius.all(Radius.circular(10)),
                                                             clipBehavior: Clip.antiAliasWithSaveLayer,
                                                             child: Container(
                                                                 color: ptTheme.kPrimaryColor,

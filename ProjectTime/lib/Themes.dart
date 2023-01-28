@@ -20,6 +20,7 @@ const String kBackgroundImage = "assets/images/background.png";
 
 // Theme Text Styles
 ThemeData mainTheme = ThemeData(
+    useMaterial3: true,
     primaryColor: kPrimaryColor,
     colorScheme: const ColorScheme.dark(
         primary: kPrimaryColor,
