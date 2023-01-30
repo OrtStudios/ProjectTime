@@ -32,6 +32,7 @@ dependencies:
   flutter:
     sdk: flutter
   
+  ffi: ^2.0.1
   vrouter: ^1.2.1
   responsive_builder: ^0.4.3
   launch_at_startup: ^0.2.1

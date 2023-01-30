@@ -1,5 +1,6 @@
 // ignore_for_file: file_names, library_prefixes, curly_braces_in_flow_control_structures
 import 'package:flutter/material.dart';
+import 'package:project_time/Core.dart';
 
 // Widgets
 import 'package:project_time/widgets/shortcuts.dart';
@@ -21,7 +22,9 @@ class _HomePageState extends State<HomePage>
 {
     @override
     Widget build(BuildContext context) 
-    {
+    { 
+        Core.debug("Building HomePage");
+
         return Scaffold(
             backgroundColor: ptTheme.kBackgroundColor,
             body: ShortCuts(

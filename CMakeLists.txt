@@ -7,8 +7,8 @@ set(CMAKE_BUILD_TYPE "Release") #? Change this to "Debug" or "Dist" for differen
 include(CTest)
 enable_testing()
 
-add_library(Core Core/Core.h)
-include_directories(Core/include)
+add_library(Core STATIC Core/Core.h)
+include_directories(Core/include, Core/src, Core)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
