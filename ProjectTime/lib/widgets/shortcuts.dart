@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
+
+// Other
 import 'package:new_keyboard_shortcuts/keyboard_shortcuts.dart';
-import 'package:vrouter/vrouter.dart';
 
 class ShortCuts extends StatefulWidget 
 {
@@ -20,11 +22,11 @@ class _ShortCutsState extends State<ShortCuts>
         return KeyBoardShortcuts(
             globalShortcuts: true,
             keysToPress: {LogicalKeyboardKey.escape}, //! PLACEHOLDER SHORTCUT
-            onKeysPressed: () => context.vRouter.toNamed("home"),
+            onKeysPressed: () => context.go("/"),
             child: KeyBoardShortcuts(
                 globalShortcuts: true,
                 keysToPress: {LogicalKeyboardKey.keyF}, //! PLACEHOLDER SHORTCUT
-                onKeysPressed: () => context.vRouter.toNamed("account"),
+                onKeysPressed: () => context.go("/account"),
                 child: widget.child
             )
         );

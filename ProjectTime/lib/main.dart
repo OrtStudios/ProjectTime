@@ -1,7 +1,7 @@
 // ignore_for_file: library_prefixes
 
 import 'package:flutter/material.dart';
-import "package:vrouter/vrouter.dart";
+import 'package:go_router/go_router.dart';
 import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter_acrylic/flutter_acrylic.dart';
 import 'package:window_manager/window_manager.dart';
@@ -9,9 +9,6 @@ import 'package:window_manager/window_manager.dart';
 // Pages
 import 'package:project_time/pages/homePage.dart';
 import 'package:project_time/pages/ProjectsLibrary.dart';
-
-// Widgets
-import 'package:project_time/widgets/controlBar.dart';
 
 // Other
 import 'package:project_time/config.dart' as ptConfig;
@@ -73,71 +70,52 @@ class _ProjectTimeState extends State<ProjectTime>
     @override
     Widget build(BuildContext context) 
     {
-        return MaterialApp(
-            debugShowCheckedModeBanner: false,
-            title: "Project Time",
-            color: Colors.transparent,
-            theme: ptTheme.mainTheme,
-            home: ClipRRect(
-                borderRadius: BorderRadius.circular(25),
-                child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                        VRouter(
-                            debugShowCheckedModeBanner: false,
-                            darkTheme: ThemeData.dark(useMaterial3: true),
-                            initialUrl: "/",
-                            title: "Project Time",
-                            routes: [
-                                // Side Bar Buttons
-                                VWidget(
-                                    path: "/",
-                                    name: "home",
-                                    widget: const HomePage()
-                                ),
-                                VWidget(
-                                    path: "/projectsLibrary",
-                                    name: "library",
-                                    widget:  const ProjectsLibrary()
-                                ),
-                                VWidget(
-                                    path: "/calender",
-                                    name: "calender",
-                                    widget: const Text("calender")
-                                ),
-                                VWidget(
-                                    path: "/account",
-                                    name: "account",
-                                    widget: const Text("account")
-                                ),
-
-                                // Control Panel
-                                VWidget(
-                                    path: "/Settings",
-                                    name: "settings",
-                                    widget: const Text("Settings")
-                                ),
-
-                                // Other
-                                VWidget(
-                                    path: "/newProject",
-                                    name: "new",
-                                    widget: const Text("New Project")
-                                ),
-                            ]
-                        ),
-                        WindowBorder(
-                            color: Colors.transparent,
-                            width: 1,
-                            child: Row(
-                                children: const [
-                                    ControlPanel()
-                                ]
-                            )
-                        )
-                    ]
-                )
+        return ClipRRect(
+            borderRadius: BorderRadius.circular(25),
+            child: MaterialApp.router(
+                debugShowCheckedModeBanner: false,
+                title: "Project Time",
+                color: Colors.transparent,
+                theme: ptTheme.mainTheme,
+                routeInformationParser: _router.routeInformationParser,
+                routerDelegate: _router.routerDelegate,
+                routeInformationProvider: _router.routeInformationProvider
             )
         );
     }
+
+    final GoRouter _router = GoRouter(
+        initialLocation: "/",
+        routes: [
+            GoRoute(
+                path: "/",
+                builder: (context, state) => const HomePage()
+            ),
+            GoRoute(
+                path: "/projectsLibrary",
+                builder: (context, state) => const ProjectsLibrary()
+            ),
+            GoRoute(
+                path: "/calender",
+                builder: (context, state) => const Text("calender")
+            ),
+            GoRoute(
+                path: "/account",
+                builder: (context, state) => const Text("account")
+            ),
+
+            // Control Panel
+            GoRoute(
+                path: "/Settings",
+                builder: (context, state) => const Text("Settings")
+            ),
+
+            // Other
+            GoRoute(
+                path: "/newProject",
+                builder: (context, state) => const Text("New Project")
+            ),
+        ],
+        errorBuilder: (context, state) => const Text("Error")
+    );
 }

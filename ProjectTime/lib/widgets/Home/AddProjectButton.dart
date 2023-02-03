@@ -28,7 +28,7 @@ class _AddProjectButtonState extends State<AddProjectButton>
         // The button contains an "add" icon that is white and 27 pixels high.
 
         return TextButton(
-            onPressed: () {},
+            onPressed: () {print("Add Project Button Pressed");},
             style: ButtonStyle(
                 overlayColor: MaterialStateProperty.resolveWith<Color>(
                     (Set<MaterialState> states) 

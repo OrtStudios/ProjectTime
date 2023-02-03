@@ -1,10 +1,12 @@
 // ignore_for_file: file_names, library_prefixes, curly_braces_in_flow_control_structures
 import 'package:flutter/material.dart';
-import 'package:project_time/Core.dart';
+import 'package:bitsdojo_window/bitsdojo_window.dart';
 
 // Widgets
 import 'package:project_time/widgets/shortcuts.dart';
 import 'package:project_time/widgets/Home/AddProjectButton.dart';
+import 'package:project_time/widgets/Home/SearchBar.dart';
+import 'package:project_time/widgets/controlBar.dart';
 
 // Other
 import 'package:project_time/Themes.dart' as ptTheme;
@@ -23,8 +25,6 @@ class _HomePageState extends State<HomePage>
     @override
     Widget build(BuildContext context) 
     { 
-        Core.debug("Building HomePage");
-
         return Scaffold(
             backgroundColor: ptTheme.kBackgroundColor,
             body: ShortCuts(
@@ -35,6 +35,15 @@ class _HomePageState extends State<HomePage>
                             height: ptConfig.windowHeight,
                             width: ptConfig.windowWidth,
                             fit: BoxFit.cover,
+                        ),
+                        WindowBorder(
+                            color: Colors.transparent,
+                            width: 1,
+                            child: Row(
+                                children: const [
+                                    ControlPanel()
+                                ]
+                            )
                         ),
                         Row(
                             children: [
@@ -52,14 +61,10 @@ class _HomePageState extends State<HomePage>
                                             width: ptConfig.windowWidth - 320,
                                             child: Row(
                                                 mainAxisAlignment: MainAxisAlignment.center,
-                                                children: [
-                                                    Container(
-                                                        color: ptTheme.kPrimaryColor,
-                                                        padding: const EdgeInsets.fromLTRB(100, 5, 100, 20),
-                                                        child: const Text("Unimplemented SearchBar")
-                                                    ),
-                                                    const Padding(padding: EdgeInsets.all(10)),
-                                                    const AddProjectButton()
+                                                children: const [
+                                                    SearchBar(),
+                                                    Padding(padding: EdgeInsets.all(10)),
+                                                    AddProjectButton()
                                                 ]
                                             )
                                         ),
@@ -126,4 +131,3 @@ class _HomePageState extends State<HomePage>
         );
     }
 }
-

@@ -8,7 +8,6 @@ list(APPEND FLUTTER_PLUGIN_LIST
   local_notifier
   screen_retriever
   tray_manager
-  url_launcher_linux
   window_manager
 )
 

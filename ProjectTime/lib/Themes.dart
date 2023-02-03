@@ -27,36 +27,6 @@ ThemeData mainTheme = ThemeData(
         secondary: kSecondaryColor,
         onPrimary: kTextColor,
         onSecondary: kTextColor,
-    ),
-    backgroundColor: kBackgroundColor,
-    textTheme: const TextTheme(
-        headline1: TextStyle(
-            fontSize: 30,
-            color: kTextColor,
-        ),
-        headline2: TextStyle(
-            fontSize: 25,
-            color: kTextColor,
-        ),
-        headline3: TextStyle(
-            fontSize: 20,
-            color: kTextColor,
-        ),
-        headline4: TextStyle(
-            fontSize: 15,
-            color: kTextColor,
-        ),
-        headline5: TextStyle(
-            fontSize: 10,
-            color: kTextColor,
-        ),
-        bodyText1: TextStyle(
-            fontSize: 20,
-            color: kTextColor,
-        ),
-        bodyText2: TextStyle(
-            fontSize: 15,
-            color: kTextColor,
-        )
+        background: kBackgroundColor
     )
 );
