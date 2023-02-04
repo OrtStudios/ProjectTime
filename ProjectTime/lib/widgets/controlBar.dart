@@ -3,9 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:bitsdojo_window/bitsdojo_window.dart';
 
-const backgroundStartColor = Colors.transparent;
-const backgroundEndColor = Colors.transparent;
-
 class ControlPanel extends StatelessWidget 
 {
     const ControlPanel({Key? key}) : super(key: key);
@@ -15,14 +12,7 @@ class ControlPanel extends StatelessWidget
     {
         return Expanded(
             child: Container(
-                decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [backgroundStartColor, backgroundEndColor],
-                        stops: [0.0, 1.0]
-                    ),
-                ),
+                color: Colors.transparent,
                 child: Column(
                     children: [
                         WindowTitleBarBox(

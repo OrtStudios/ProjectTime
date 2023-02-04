@@ -1,16 +1,18 @@
 // ignore_for_file: library_prefixes
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter_acrylic/flutter_acrylic.dart';
 import 'package:window_manager/window_manager.dart';
+import 'package:vrouter/vrouter.dart';
 
 // Pages
+import 'package:project_time/pages/404.dart';
 import 'package:project_time/pages/homePage.dart';
 import 'package:project_time/pages/ProjectsLibrary.dart';
 
 // Other
+import 'package:project_time/pages/base.dart';
 import 'package:project_time/config.dart' as ptConfig;
 import 'package:project_time/Themes.dart' as ptTheme;
 
@@ -70,52 +72,63 @@ class _ProjectTimeState extends State<ProjectTime>
     @override
     Widget build(BuildContext context) 
     {
-        return ClipRRect(
-            borderRadius: BorderRadius.circular(25),
-            child: MaterialApp.router(
-                debugShowCheckedModeBanner: false,
-                title: "Project Time",
-                color: Colors.transparent,
-                theme: ptTheme.mainTheme,
-                routeInformationParser: _router.routeInformationParser,
-                routerDelegate: _router.routerDelegate,
-                routeInformationProvider: _router.routeInformationProvider
+        return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: "Project Time",
+            color: Colors.transparent,
+            theme: ptTheme.mainTheme,
+            home: ClipRRect(
+                borderRadius: BorderRadius.circular(25),
+                child: BaseWidget(
+                    child: VRouter(
+                        debugShowCheckedModeBanner: false,
+                        title: "Project Time",
+                        color: Colors.transparent,
+                        theme: ptTheme.mainTheme,
+                        initialUrl: "/",
+                        transitionDuration: const Duration(milliseconds: 0),
+                        routes: [
+                            VWidget(
+                                path: "/",
+                                widget: const HomePage(),
+                            ),
+                            VWidget(
+                                path: "/projectsLibrary",
+                                widget: const ProjectsLibrary(),
+                            ),
+                            VWidget(
+                                path: "/projects/addProject",
+                                name: "addProject",
+                                widget: const ErrorPage(),
+                            ),
+                            VWidget(
+                                path: "/projects/:projectID",
+                                widget: const ErrorPage(),
+                            ),
+                            VWidget(
+                                path: "/calender",
+                                widget: const ErrorPage(),
+                            ),
+                            VWidget(
+                                path: "/account",
+                                widget: const ErrorPage(),
+                            ),
+                            VWidget(
+                                path: "/settings",
+                                widget: const ErrorPage(),
+                            ),
+                            VWidget(
+                                path: "/about",
+                                widget: const ErrorPage(),
+                            ),
+                            VWidget(
+                                path: "/404",
+                                widget: const ErrorPage(),
+                            )
+                        ]
+                    )
+                )
             )
         );
     }
-
-    final GoRouter _router = GoRouter(
-        initialLocation: "/",
-        routes: [
-            GoRoute(
-                path: "/",
-                builder: (context, state) => const HomePage()
-            ),
-            GoRoute(
-                path: "/projectsLibrary",
-                builder: (context, state) => const ProjectsLibrary()
-            ),
-            GoRoute(
-                path: "/calender",
-                builder: (context, state) => const Text("calender")
-            ),
-            GoRoute(
-                path: "/account",
-                builder: (context, state) => const Text("account")
-            ),
-
-            // Control Panel
-            GoRoute(
-                path: "/Settings",
-                builder: (context, state) => const Text("Settings")
-            ),
-
-            // Other
-            GoRoute(
-                path: "/newProject",
-                builder: (context, state) => const Text("New Project")
-            ),
-        ],
-        errorBuilder: (context, state) => const Text("Error")
-    );
 }

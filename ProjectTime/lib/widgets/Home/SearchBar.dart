@@ -18,13 +18,17 @@ class _SearchBarState extends State<SearchBar>
     @override
     Widget build(BuildContext context) 
     {
-        
         return Container(
             decoration: const BoxDecoration(
-                color: ptTheme.kPrimaryColor,
-                borderRadius: BorderRadius.all(Radius.circular(10))
+                border: Border.fromBorderSide(
+                    BorderSide(
+                        color: ptTheme.kSecondaryColor,
+                        width: 3,
+                    )
+                ),
+                borderRadius: BorderRadius.all(Radius.circular(30))
             ),
-            padding: const EdgeInsets.fromLTRB(100, 5, 100, 20),
+            padding: const EdgeInsets.fromLTRB(100, 6, 100, 20),
             child: const Text("Unimplemented SearchBar")
         );
     }

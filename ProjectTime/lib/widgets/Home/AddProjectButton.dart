@@ -1,9 +1,11 @@
 // ignore_for_file: file_names, library_prefixes, curly_braces_in_flow_control_structures
 
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 // Other
 import 'package:project_time/Themes.dart' as ptTheme;
+import 'package:vrouter/vrouter.dart';
 
 class AddProjectButton extends StatefulWidget 
 {
@@ -28,21 +30,13 @@ class _AddProjectButtonState extends State<AddProjectButton>
         // The button contains an "add" icon that is white and 27 pixels high.
 
         return TextButton(
-            onPressed: () {print("Add Project Button Pressed");},
-            style: ButtonStyle(
-                overlayColor: MaterialStateProperty.resolveWith<Color>(
-                    (Set<MaterialState> states) 
-                    {
-                        if (states.contains(MaterialState.hovered) &&
-                            states.contains(MaterialState.focused))
-                            return ptTheme.kSecondaryColor;
-                        else
-                            return ptTheme.kSecondaryTransparentColor;
-                    }
-                )
+            onPressed: () => context.vRouter.toNamed("addProject"),
+            onHover: (isHovering) => setState(() => addProjectButtonColor = isHovering 
+                ? ptTheme.kSecondaryColor 
+                : ptTheme.kSecondaryTransparentColor
             ),
             child: Container(
-                padding: const EdgeInsets.all(3),
+                padding: const EdgeInsets.all(7),
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: const Border.fromBorderSide(
@@ -53,10 +47,10 @@ class _AddProjectButtonState extends State<AddProjectButton>
                     ),
                     color: addProjectButtonColor
                 ),
-                child: const Icon(
-                    Icons.add,
+                child: const FaIcon(
+                    FontAwesomeIcons.plus,
                     color: Colors.white,
-                    size: 27,
+                    size: 27
                 )
             ),
         );
