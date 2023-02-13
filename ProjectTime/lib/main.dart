@@ -79,54 +79,52 @@ class _ProjectTimeState extends State<ProjectTime>
             theme: ptTheme.mainTheme,
             home: ClipRRect(
                 borderRadius: BorderRadius.circular(25),
-                child: BaseWidget(
-                    child: VRouter(
-                        debugShowCheckedModeBanner: false,
-                        title: "Project Time",
-                        color: Colors.transparent,
-                        theme: ptTheme.mainTheme,
-                        initialUrl: "/",
-                        transitionDuration: const Duration(milliseconds: 0),
-                        routes: [
-                            VWidget(
-                                path: "/",
-                                widget: const HomePage(),
-                            ),
-                            VWidget(
-                                path: "/projectsLibrary",
-                                widget: const ProjectsLibrary(),
-                            ),
-                            VWidget(
-                                path: "/projects/addProject",
-                                name: "addProject",
-                                widget: const ErrorPage(),
-                            ),
-                            VWidget(
-                                path: "/projects/:projectID",
-                                widget: const ErrorPage(),
-                            ),
-                            VWidget(
-                                path: "/calender",
-                                widget: const ErrorPage(),
-                            ),
-                            VWidget(
-                                path: "/account",
-                                widget: const ErrorPage(),
-                            ),
-                            VWidget(
-                                path: "/settings",
-                                widget: const ErrorPage(),
-                            ),
-                            VWidget(
-                                path: "/about",
-                                widget: const ErrorPage(),
-                            ),
-                            VWidget(
-                                path: "/404",
-                                widget: const ErrorPage(),
-                            )
-                        ]
-                    )
+                child: VRouter(
+                    debugShowCheckedModeBanner: false,
+                    title: "Project Time",
+                    color: Colors.transparent,
+                    darkTheme: ThemeData.dark(useMaterial3: true),
+                    initialUrl: "/",
+                    transitionDuration: const Duration(milliseconds: 0),
+                    routes: [
+                        VWidget(
+                            path: "/",
+                            widget: const HomePage(),
+                        ),
+                        VWidget(
+                            path: "/projectsLibrary",
+                            widget: const ProjectsLibrary(),
+                        ),
+                        VWidget(
+                            path: "/projects/addProject",
+                            name: "addProject",
+                            widget: const ErrorPage(),
+                        ),
+                        VWidget(
+                            path: "/projects/:projectID",
+                            widget: const ErrorPage(),
+                        ),
+                        VWidget(
+                            path: "/calender",
+                            widget: const ErrorPage(),
+                        ),
+                        VWidget(
+                            path: "/account",
+                            widget: const ErrorPage(),
+                        ),
+                        VWidget(
+                            path: "/settings",
+                            widget: const ErrorPage(),
+                        ),
+                        VWidget(
+                            path: "/about",
+                            widget: const ErrorPage(),
+                        ),
+                        VWidget(
+                            path: "/404",
+                            widget: const ErrorPage(),
+                        )
+                    ]
                 )
             )
         );

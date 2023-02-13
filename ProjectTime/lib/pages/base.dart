@@ -25,9 +25,9 @@ class _BaseWidgetState extends State<BaseWidget>
     @override
     Widget build(BuildContext context) 
     {
-        return Scaffold(
-            backgroundColor: ptTheme.kBackgroundColor,
-            body: ShortCuts(
+        return Container(
+            color: ptTheme.kBackgroundColor,
+            child: ShortCuts(
                 child: Stack(
                     children: [
                         Image.asset(
@@ -45,7 +45,7 @@ class _BaseWidgetState extends State<BaseWidget>
                                 ]
                             )
                         ),
-                        widget.child
+                        widget.child,
                     ]
                 )
             )

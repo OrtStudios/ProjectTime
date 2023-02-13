@@ -29,7 +29,15 @@ class _SearchBarState extends State<SearchBar>
                 borderRadius: BorderRadius.all(Radius.circular(30))
             ),
             padding: const EdgeInsets.fromLTRB(100, 6, 100, 20),
-            child: const Text("Unimplemented SearchBar")
+            child: const Text(
+                "Unimplemented SearchBar",
+                style: TextStyle(
+                    color: ptTheme.kSecondaryColor,
+                    fontWeight: FontWeight.normal,
+                    decoration: TextDecoration.none,
+                    fontSize: 20,
+                ),
+            )
         );
     }
 }
