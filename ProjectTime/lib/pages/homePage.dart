@@ -22,21 +22,21 @@ class _HomePageState extends State<HomePage>
 {
     @override
     Widget build(BuildContext context) 
-    { 
+    {
         return BaseWidget(
             child: Row(
                 children: [
                     Container(
                         color: ptTheme.kPrimaryColor,
                         child: const Text(
-                            "Unimplemented SideBar",
+                            "Unimplemented SideBar", // TODO: #2 Implement SideBar
                             style: TextStyle(
                                 color: ptTheme.kSecondaryColor,
                                 fontWeight: FontWeight.normal,
                                 decoration: TextDecoration.none,
-                                fontSize: 15,
-                            ),
-                        ),
+                                fontSize: 15
+                            )
+                        )
                     ),
                     const Padding(padding: EdgeInsets.all(20)),
                     Column(
@@ -56,25 +56,30 @@ class _HomePageState extends State<HomePage>
                                 )
                             ),
                             const Padding(padding: EdgeInsets.all(20)),
-                            Column(
+                            Column( 
+                                // TODO: Implement Graphs
+                                //     - get data from database [C++]
+                                //     - organize data [C++]
+                                //     - write data to file [C++]
+                                //     - create graphs [Flutter]
+                                //     - add graphs to this page [Flutter]
                                 children: [
                                     Row(
                                         children: [
                                             ClipRRect(
-                                                borderRadius: const   
-                                                BorderRadius.all(Radius.circular(10)),
+                                                borderRadius: const BorderRadius.all(Radius.circular(10)),
                                                 clipBehavior: Clip.antiAliasWithSaveLayer,
                                                 child: Container(
                                                     color: ptTheme.kPrimaryColor,
                                                     padding: const EdgeInsets.fromLTRB(30, 5, 30, 200),
                                                     child: const Text(
-                                                        "Unimplemented Graph#1",
+                                                        "Unimplemented Graph#1", 
                                                         style: TextStyle(
                                                             color: ptTheme.kSecondaryColor,
                                                             fontWeight: FontWeight.normal,
                                                             decoration: TextDecoration.none,
-                                                            fontSize: 15,
-                                                        ),
+                                                            fontSize: 15
+                                                        )
                                                     )
                                                 )
                                             ),
@@ -89,7 +94,7 @@ class _HomePageState extends State<HomePage>
                                                         fontWeight: FontWeight.normal,
                                                         decoration: TextDecoration.none,
                                                         fontSize: 15,
-                                                    ),
+                                                    )
                                                 )
                                             ),
                                             const Padding(padding: EdgeInsets.all(15)),
@@ -149,7 +154,7 @@ class _HomePageState extends State<HomePage>
                                                         fontWeight: FontWeight.normal,
                                                         decoration: TextDecoration.none,
                                                         fontSize: 15,
-                                                    ),
+                                                    )
                                                 )
                                             )
                                         ]
