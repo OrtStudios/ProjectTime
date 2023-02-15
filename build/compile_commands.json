@@ -1,0 +1,7 @@
+[
+{
+  "directory": "C:/Dev/ProjectTime/build",
+  "command": "C:\\Dev\\sdks\\mingw64\\bin\\g++.exe -DCore_EXPORTS @CMakeFiles/Core.dir/includes_CXX.rsp -g -std=gnu++20 -o CMakeFiles\\Core.dir\\Core\\Core.cpp.obj -c C:\\Dev\\ProjectTime\\Core\\Core.cpp",
+  "file": "C:/Dev/ProjectTime/Core/Core.cpp"
+}
+]

@@ -1,0 +1,10 @@
+^C:\DEV\PROJECTTIME\BUILD\CMAKEFILES\E6AE64EE167C75ADF99CB160640F0FF2\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Dev/ProjectTime -BC:/Dev/ProjectTime/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Dev/ProjectTime/build/ProjectTime.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

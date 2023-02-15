@@ -8,11 +8,11 @@ final coreFunctionsContext = DynamicLibrary.open("assets/Core.dll");
 final _logDebug = coreFunctionsContext.lookupFunction<
         Pointer<Utf8> Function(Pointer<Utf8>),
         Pointer<Utf8> Function(Pointer<Utf8>)
-    >("greet");
+    >("LogDebug");
 
 class Core 
 {
-    static void debug(String message) {
+    static void logDebug(String message) {
         final Pointer<Utf8> messagePtr = message.toNativeUtf8();
         _logDebug(messagePtr);
     }

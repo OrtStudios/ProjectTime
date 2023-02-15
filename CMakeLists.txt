@@ -1,19 +1,27 @@
-cmake_minimum_required(VERSION 3.0.0)
-project(Core VERSION 0.1.0)
 
-set(CMAKE_CONFIGURATION_TYPES "Debug;Release;Dist")
-set(CMAKE_BUILD_TYPE "Release") #? Change this to "Debug" or "Dist" for different configurations
+cmake_minimum_required(VERSION 3.13)
 
-include(CTest)
-enable_testing()
+project(ProjectTime)
 
-add_library(Core STATIC Core/Core.h)
-include_directories(Core/include, Core/src, Core)
+add_library(Core SHARED
+    Core/Core.cpp
+    Core/Core.h
+)
 
-set(CPACK_PROJECT_NAME ${PROJECT_NAME})
-set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
-set (CMAKE_CXX_STANDARD 20)
-include(CPack)
+target_include_directories(Core
+    PRIVATE
+        Core/include
+        Core/src
+        Core
+)
+
+file(GLOB_RECURSE CPP_SOURCE_FILES "${CMAKE_CURRENT_SOURCE_DIR}/Core/src/*.cpp")
+file(GLOB_RECURSE H_SOURCE_FILES   "${CMAKE_CURRENT_SOURCE_DIR}/Core/src/*.h")
+target_sources(Core PRIVATE ${CPP_SOURCE_FILES})
+target_sources(Core PRIVATE ${H_SOURCE_FILES})
+
+target_compile_features(Core PRIVATE cxx_std_20)
 
 add_custom_command(TARGET Core POST_BUILD
-                COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:Core> ${CMAKE_SOURCE_DIR}/ProjectTime/assets/Core.dll)
+    COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:Core> ${CMAKE_SOURCE_DIR}/assets
+)

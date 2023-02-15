@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter_acrylic/flutter_acrylic.dart';
+import 'package:project_time/Core.dart';
 import 'package:window_manager/window_manager.dart';
 import 'package:vrouter/vrouter.dart';
 
@@ -12,7 +13,6 @@ import 'package:project_time/pages/homePage.dart';
 import 'package:project_time/pages/ProjectsLibrary.dart';
 
 // Other
-import 'package:project_time/pages/base.dart';
 import 'package:project_time/config.dart' as ptConfig;
 import 'package:project_time/Themes.dart' as ptTheme;
 
