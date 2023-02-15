@@ -108,5 +108,6 @@
         "editor.tabSize": 4
     },
     "editor.indentSize": "tabSize",
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "cmake.configureOnOpen": true
 }
