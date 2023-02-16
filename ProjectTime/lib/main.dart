@@ -72,6 +72,8 @@ class _ProjectTimeState extends State<ProjectTime>
     @override
     Widget build(BuildContext context) 
     {
+        Core.logDebug("Building ProjectTime");
+
         return MaterialApp(
             debugShowCheckedModeBanner: false,
             title: "Project Time",
