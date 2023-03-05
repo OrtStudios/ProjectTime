@@ -72,7 +72,7 @@ class _ProjectTimeState extends State<ProjectTime>
     @override
     Widget build(BuildContext context) 
     {
-        Core.logDebug("Building ProjectTime"); //FIXME: #4 isn't working, why?
+        Core.setLogLevel(LogLevel.DEBUG);
 
         return MaterialApp(
             debugShowCheckedModeBanner: false,

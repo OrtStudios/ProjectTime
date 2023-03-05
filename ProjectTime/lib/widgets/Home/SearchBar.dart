@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 // Other
 import 'package:project_time/Themes.dart' as ptTheme;
+import 'package:project_time/config.dart' as ptConfig;
 
 class SearchBar extends StatefulWidget 
 {
@@ -18,25 +19,42 @@ class _SearchBarState extends State<SearchBar>
     @override
     Widget build(BuildContext context) 
     {
-        return Container(
-            decoration: const BoxDecoration(
-                border: Border.fromBorderSide(
-                    BorderSide(
-                        color: ptTheme.kSecondaryColor,
-                        width: 3,
+        return Material(
+            color: Colors.transparent,
+            child: Container(
+                width: 550,
+                decoration: const BoxDecoration(
+                    border: Border.fromBorderSide(
+                        BorderSide(
+                            color: ptTheme.kSecondaryColor,
+                            width: 3,
+                        )
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(30))
+                ),
+                child: TextField(
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide: BorderSide.none,
+                        ),
+                        filled: true,
+                        fillColor: ptTheme.kSecondaryTransparentColor,
+                        hintText: "Search",
+                        hintStyle: const TextStyle(
+                            color: ptTheme.kAccentTransparentColor,
+                            fontWeight: FontWeight.normal,
+                            decoration: TextDecoration.none,
+                            fontSize: 20,
+                        ),
+                    ),
+                    style: const TextStyle(
+                        color: ptTheme.kAccentColor,
+                        fontWeight: FontWeight.normal,
+                        decoration: TextDecoration.none,
+                        fontSize: 20,
                     )
-                ),
-                borderRadius: BorderRadius.all(Radius.circular(30))
-            ),
-            padding: const EdgeInsets.fromLTRB(100, 6, 100, 20),
-            child: const Text(
-                "Unimplemented SearchBar",
-                style: TextStyle(
-                    color: ptTheme.kSecondaryColor,
-                    fontWeight: FontWeight.normal,
-                    decoration: TextDecoration.none,
-                    fontSize: 20,
-                ),
+                )
             )
         );
     }

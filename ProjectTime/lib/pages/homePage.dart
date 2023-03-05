@@ -27,6 +27,7 @@ class _HomePageState extends State<HomePage>
             child: Row(
                 children: [
                     Container(
+                        height: ptConfig.windowHeight,
                         color: ptTheme.kPrimaryColor,
                         child: const Text(
                             "Unimplemented SideBar", // TODO: #2 Implement SideBar
