@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 // Other
 import 'package:project_time/Themes.dart' as ptTheme;
-import 'package:project_time/config.dart' as ptConfig;
 
 class SearchBar extends StatefulWidget 
 {
@@ -40,7 +39,7 @@ class _SearchBarState extends State<SearchBar>
                         ),
                         filled: true,
                         fillColor: ptTheme.kSecondaryTransparentColor,
-                        hintText: "Search",
+                        hintText: "Search Project",
                         hintStyle: const TextStyle(
                             color: ptTheme.kAccentTransparentColor,
                             fontWeight: FontWeight.normal,

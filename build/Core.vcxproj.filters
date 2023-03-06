@@ -60,6 +60,9 @@
     <ClInclude Include="C:\Dev\ProjectTime\Core\src\Project\ProjectType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="C:\Dev\ProjectTime\Core\src\Project\ProjectTypeOLD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="C:\Dev\ProjectTime\Core\src\Time\Time.h">
       <Filter>Header Files</Filter>
     </ClInclude>

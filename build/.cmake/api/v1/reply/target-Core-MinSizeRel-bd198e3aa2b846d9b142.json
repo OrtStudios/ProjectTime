@@ -2,13 +2,13 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Release/Core.dll"
+			"path" : "MinSizeRel/Core.dll"
 		},
 		{
-			"path" : "Release/Core.lib"
+			"path" : "MinSizeRel/Core.lib"
 		},
 		{
-			"path" : "Release/Core.pdb"
+			"path" : "MinSizeRel/Core.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -68,7 +68,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG"
 				},
 				{
 					"fragment" : "-std:c++20"
@@ -181,7 +181,8 @@
 				18,
 				19,
 				20,
-				21
+				21,
+				22
 			]
 		}
 	],
@@ -290,6 +291,11 @@
 		{
 			"backtrace" : 5,
 			"path" : "Core/src/Project/ProjectType.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 5,
+			"path" : "Core/src/Project/ProjectTypeOLD.h",
 			"sourceGroupIndex" : 1
 		},
 		{

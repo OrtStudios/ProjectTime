@@ -384,6 +384,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Dev\ProjectTime\Core\src\Logger.h" />
     <ClInclude Include="C:\Dev\ProjectTime\Core\src\Project\Project.h" />
     <ClInclude Include="C:\Dev\ProjectTime\Core\src\Project\ProjectType.h" />
+    <ClInclude Include="C:\Dev\ProjectTime\Core\src\Project\ProjectTypeOLD.h" />
     <ClInclude Include="C:\Dev\ProjectTime\Core\src\Time\Time.h" />
     <ClInclude Include="C:\Dev\ProjectTime\Core\src\Types\StringFunc.h" />
     <ClInclude Include="C:\Dev\ProjectTime\Core\src\Types\Url.h" />
