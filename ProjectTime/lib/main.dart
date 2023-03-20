@@ -1,18 +1,19 @@
 // ignore_for_file: library_prefixes
 
+import 'package:vrouter/vrouter.dart';
 import 'package:flutter/material.dart';
+import 'package:window_manager/window_manager.dart';
 import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter_acrylic/flutter_acrylic.dart';
-import 'package:project_time/Core.dart';
-import 'package:window_manager/window_manager.dart';
-import 'package:vrouter/vrouter.dart';
 
 // Pages
 import 'package:project_time/pages/404.dart';
 import 'package:project_time/pages/homePage.dart';
 import 'package:project_time/pages/ProjectsLibrary.dart';
+import 'package:project_time/pages/projects/addProject.dart';
 
 // Other
+import 'package:project_time/Core.dart';
 import 'package:project_time/config.dart' as ptConfig;
 import 'package:project_time/Themes.dart' as ptTheme;
 
@@ -100,7 +101,7 @@ class _ProjectTimeState extends State<ProjectTime>
                         VWidget(
                             path: "/projects/addProject",
                             name: "addProject",
-                            widget: const ErrorPage(),
+                            widget: const AddProjectPage(),
                         ),
                         VWidget(
                             path: "/projects/:projectID",
