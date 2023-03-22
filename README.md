@@ -75,5 +75,5 @@ if you steel don't understand, you can watch [this](https://youtube.com/NotExsis
 6. open the file named <span style="color: #0094B1">project_time.exe</span> with [Resource Hacker](http://www.angusj.com/resourcehacker/#download)
 7. change the icon to the icon at: `/ProjectTime/assets/images/logoIcon.ico` with the command from the menu `Action` called `Replace Icon ...` or use the shortcut `Ctrl + R`
 8. delete the `project_time.exe` file, and change the name of the newly created file `project_time_original.exe` to `ProjectTime.exe`.
-9. create a new folder in `/ProjectTime/build/windows/runner/Release/` called `assets` and move the <span style="color: #D8A120">Core</span> dll to there. (<span style="color: red">To be automated</span>)
+9. create a new folder in `/ProjectTime/build/windows/runner/Release/` called `assets` and move the [Core](https://github.com/OrtStudios/PTCore/) dll to there. (<span style="color: red">To be automated</span>)
 10. use your version of Project Time ;)
