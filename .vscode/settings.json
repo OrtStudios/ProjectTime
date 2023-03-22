@@ -109,5 +109,11 @@
     },
     "editor.indentSize": "tabSize",
     "editor.tabSize": 4,
-    "cmake.configureOnOpen": true
+    "cmake.configureOnOpen": true,
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "*.dart": "${capture}.mobile.dart, ${capture}.tablet.dart, ${capture}.desktop.dart, ${capture}.form.dart, ${capture}.theme.dart, ${capture}.config.dart, ${cupture}.build.dart",
+        "*.h": "${capture}.cpp",
+        "*.hpp": "${capture}.cpp"
+    }
 }

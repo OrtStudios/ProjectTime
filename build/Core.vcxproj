@@ -375,6 +375,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Dev\ProjectTime\Core\src\Logger.cpp" />
     <ClCompile Include="C:\Dev\ProjectTime\Core\src\Project\Project.cpp" />
     <ClCompile Include="C:\Dev\ProjectTime\Core\src\Time\Time.cpp" />
+    <ClCompile Include="C:\Dev\ProjectTime\Core\src\Types\Path.cpp" />
     <ClCompile Include="C:\Dev\ProjectTime\Core\src\Types\Url.cpp" />
     <ClInclude Include="C:\Dev\ProjectTime\Core\src\Error\Error.h" />
     <ClInclude Include="C:\Dev\ProjectTime\Core\src\FileManagment\BasicFile.h" />
@@ -384,8 +385,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Dev\ProjectTime\Core\src\Logger.h" />
     <ClInclude Include="C:\Dev\ProjectTime\Core\src\Project\Project.h" />
     <ClInclude Include="C:\Dev\ProjectTime\Core\src\Project\ProjectType.h" />
-    <ClInclude Include="C:\Dev\ProjectTime\Core\src\Project\ProjectTypeOLD.h" />
     <ClInclude Include="C:\Dev\ProjectTime\Core\src\Time\Time.h" />
+    <ClInclude Include="C:\Dev\ProjectTime\Core\src\Types\Path.h" />
     <ClInclude Include="C:\Dev\ProjectTime\Core\src\Types\StringFunc.h" />
     <ClInclude Include="C:\Dev\ProjectTime\Core\src\Types\Url.h" />
   </ItemGroup>

@@ -28,6 +28,9 @@
     <ClCompile Include="C:\Dev\ProjectTime\Core\src\Time\Time.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Dev\ProjectTime\Core\src\Types\Path.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Dev\ProjectTime\Core\src\Types\Url.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -60,10 +63,10 @@
     <ClInclude Include="C:\Dev\ProjectTime\Core\src\Project\ProjectType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Dev\ProjectTime\Core\src\Project\ProjectTypeOLD.h">
+    <ClInclude Include="C:\Dev\ProjectTime\Core\src\Time\Time.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Dev\ProjectTime\Core\src\Time\Time.h">
+    <ClInclude Include="C:\Dev\ProjectTime\Core\src\Types\Path.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Dev\ProjectTime\Core\src\Types\StringFunc.h">

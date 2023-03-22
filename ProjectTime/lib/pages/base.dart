@@ -8,8 +8,8 @@ import 'package:project_time/widgets/shortcuts.dart';
 import 'package:project_time/widgets/controlBar.dart';
 
 // Other
-import 'package:project_time/Themes.dart' as ptTheme;
-import 'package:project_time/config.dart' as ptConfig;
+import 'package:project_time/main.theme.dart' as ptTheme;
+import 'package:project_time/main.config.dart' as ptConfig;
 
 class BaseWidget extends StatefulWidget 
 {

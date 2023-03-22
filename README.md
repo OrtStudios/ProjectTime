@@ -55,7 +55,7 @@ Project Time supports:
 
 The easiest way to install is:
 
-1. go to the [Project Time Website](https://OortStudios.github.io/Programing/Time/ProjectTime)
+1. go to the [Project Time Website](https://OrtStudios.github.io/Programing/Time/ProjectTime)
 2. click on the download button and wait
 3. follow the steps in the installer
 4. use Project Time
@@ -64,4 +64,16 @@ if you steel don't understand, you can watch [this](https://youtube.com/NotExsis
 
 ## How to tweak this project for your own uses
 
-TODO: make the explainer
+1. clone the project from the [repository](https://OrtStudios.github.io/ProjectTime.git)
+2. open the project in your IDE, preferably [Visual Studio Code](https://code.visualstudio.com)
+3. you can change the code in two diffrent locations:
+    * `Core/src` - the source code of the backhand of the project(the core)
+    * `ProjectTime/lib` - the source code of the project UI and main app
+4. when you are done, you can build the project with the `build.bat <platform>` file
+    * the project should work on all desktop platforms like Windows, Linux, and Mac.
+5. go to the `/ProjectTime/build/windows/runner/Release/`
+6. open the file named <span style="color: #0094B1">project_time.exe</span> with [Resource Hacker](http://www.angusj.com/resourcehacker/#download)
+7. change the icon to the icon at: `/ProjectTime/assets/images/logoIcon.ico` with the command from the menu `Action` called `Replace Icon ...` or use the shortcut `Ctrl + R`
+8. delete the `project_time.exe` file, and change the name of the newly created file `project_time_original.exe` to `ProjectTime.exe`.
+9. create a new folder in `/ProjectTime/build/windows/runner/Release/` called `assets` and move the <span style="color: #D8A120">Core</span> dll to there. (<span style="color: red">To be automated</span>)
+10. use your version of Project Time ;)

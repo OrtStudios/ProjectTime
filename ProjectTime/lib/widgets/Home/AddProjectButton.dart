@@ -1,11 +1,12 @@
 // ignore_for_file: file_names, library_prefixes, curly_braces_in_flow_control_structures
 
 import 'package:flutter/material.dart';
+import 'package:vrouter/vrouter.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 // Other
-import 'package:project_time/Themes.dart' as ptTheme;
-import 'package:vrouter/vrouter.dart';
+import 'package:project_time/main.theme.dart' as ptTheme;
+import 'package:project_time/extensions/VRouter.dart';
 
 class AddProjectButton extends StatefulWidget 
 {
@@ -15,7 +16,7 @@ class AddProjectButton extends StatefulWidget
     State<AddProjectButton> createState() => _AddProjectButtonState();
 }
 
-class _AddProjectButtonState extends State<AddProjectButton> 
+class _AddProjectButtonState extends State<AddProjectButton>
 {
     Color addProjectButtonColor = ptTheme.kSecondaryTransparentColor;
 
@@ -30,7 +31,7 @@ class _AddProjectButtonState extends State<AddProjectButton>
         // The button contains an "add" icon that is white and 27 pixels high.
 
         return TextButton(
-            onPressed: () => context.vRouter.toNamed("addProject"),
+            onPressed: () => widget.gotoNamed(context, "addProject"),
             onHover: (isHovering) => setState(() => addProjectButtonColor = isHovering 
                 ? ptTheme.kSecondaryColor 
                 : ptTheme.kSecondaryTransparentColor

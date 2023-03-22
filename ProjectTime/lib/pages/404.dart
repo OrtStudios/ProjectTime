@@ -4,7 +4,8 @@ import 'package:vrouter/vrouter.dart';
 
 // Other
 import 'package:project_time/pages/base.dart';
-import 'package:project_time/Themes.dart' as ptTheme;
+import 'package:project_time/extensions/VRouter.dart';
+import 'package:project_time/main.theme.dart' as ptTheme;
 
 class ErrorPage extends StatelessWidget 
 {
@@ -33,18 +34,21 @@ class ErrorPage extends StatelessWidget
                             "Page not found",
                             style: TextStyle(
                                 color: ptTheme.kAccentColor,
+                                decoration: TextDecoration.none,
                                 fontSize: 30
                             )
                         ),
                         const Padding(padding: EdgeInsets.all(10)),
                         ElevatedButton(
-                            onPressed: () => context.vRouter.to("/"),
+                            onPressed: () => goto(context, "/"),
                             style: ElevatedButton.styleFrom(
                                 backgroundColor: ptTheme.kAccentColor,
                             ),
                             child: const Text(
                                 "Go Home",
                                 style: TextStyle(
+                                    decoration: TextDecoration.none,
+                                    color: ptTheme.kPrimaryColor,
                                     fontSize: 30
                                 )
                             )

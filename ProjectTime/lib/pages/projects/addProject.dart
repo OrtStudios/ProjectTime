@@ -5,8 +5,8 @@ import "package:flutter/material.dart";
 import 'package:project_time/pages/base.dart';
 
 // Other
-import 'package:project_time/Themes.dart' as ptTheme;
-import 'package:project_time/config.dart' as ptConfig;
+import 'package:project_time/main.theme.dart' as ptTheme;
+import 'package:project_time/main.config.dart' as ptConfig;
 
 class AddProjectPage extends StatefulWidget
 {

@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 // Other
-import 'package:project_time/Themes.dart' as ptTheme;
+import 'package:project_time/main.theme.dart' as ptTheme;
 
 class SearchBar extends StatefulWidget 
 {

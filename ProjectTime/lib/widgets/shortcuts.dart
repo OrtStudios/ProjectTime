@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 // Other
 import 'package:new_keyboard_shortcuts/keyboard_shortcuts.dart';
+import 'package:project_time/extensions/VRouter.dart';
 
 class ShortCuts extends StatefulWidget 
 {
@@ -21,8 +22,8 @@ class _ShortCutsState extends State<ShortCuts>
     {
         return KeyBoardShortcuts(
             globalShortcuts: true,
-            keysToPress: {LogicalKeyboardKey.escape}, //! PLACEHOLDER SHORTCUT
-            onKeysPressed: () => context.go("/"),
+            keysToPress: {LogicalKeyboardKey.controlLeft, LogicalKeyboardKey.keyH},
+            onKeysPressed: () => widget.goto(context, "/"),
             child: KeyBoardShortcuts(
                 globalShortcuts: true,
                 keysToPress: {LogicalKeyboardKey.keyF}, //! PLACEHOLDER SHORTCUT
