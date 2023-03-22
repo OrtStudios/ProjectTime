@@ -60,7 +60,7 @@ The easiest way to install is:
 3. follow the steps in the installer
 4. use Project Time
 
-if you steel don't understand, you can watch [this](https://youtube.com/NotExsistsYet) youtube video.
+if you steal don't understand, you can watch [this](https://youtube.com/NotExsistsYet) youtube video.
 
 ## How to tweak this project for your own uses
 
