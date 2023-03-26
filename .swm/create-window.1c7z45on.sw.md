@@ -46,7 +46,7 @@ TODO
 
 setting the window properties:
 
-*   _size -> see in_ `config.dart`
+*   size -> see in_ `config.dart`
     
 *   title -> "Project Time"
     
