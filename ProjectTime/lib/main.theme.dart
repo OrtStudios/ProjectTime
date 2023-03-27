@@ -6,13 +6,15 @@ import 'package:flutter/material.dart';
 const Color kPrimaryColor = Color(0xFF0D2D5A);
 const Color kPrimaryTransparentColor = Color(0x7F0D2D5A);
 const Color kSecondaryColor = Color(0xFF0094B1);
-const Color kSecondaryTransparentColor = Color.fromARGB(73, 0, 147, 177);
+const Color kSecondaryTransparentColor = Color(0x480093B1);
 const Color kAccentColor = Color(0xFFD8A120);
 const Color kAccentTransparentColor = Color(0x7FD8A120);
-const Color kBackgroundColor = Color(0xFF000000);
-const Color kBackgroundTransparentColor = Color(0x7F000000);
+const Color kBackgroundColor = Color(0x00000000);
 const Color kTextColor = Color(0xFFFFFFFF);
+const Color kDisabledTextColor = Color(0xFF8D8D8D);
 const Color kTextTransparentColor = Color(0x7FFFFFFF);
+const Color kButtonBackgroundColor = Color(0x8F0093B1);
+const Color kDisabledButtonBackgroundColor = Color(0x8F002D36);
 
 // Theme Images
 const String kLogoImage = "assets/images/logo.png";
@@ -24,9 +26,9 @@ ThemeData mainTheme = ThemeData(
     primaryColor: kPrimaryColor,
     colorScheme: const ColorScheme.dark(
         primary: kPrimaryColor,
-        secondary: kSecondaryColor,
+        secondary: kAccentColor,
         onPrimary: kTextColor,
         onSecondary: kTextColor,
         background: kBackgroundColor
-    )
+    ),
 );

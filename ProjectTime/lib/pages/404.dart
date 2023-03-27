@@ -1,9 +1,8 @@
 // ignore_for_file: library_prefixes, file_names
 import 'package:flutter/material.dart';
-import 'package:vrouter/vrouter.dart';
 
 // Other
-import 'package:project_time/pages/base.dart';
+import 'package:project_time/widgets/base.dart';
 import 'package:project_time/extensions/VRouter.dart';
 import 'package:project_time/main.theme.dart' as ptTheme;
 
