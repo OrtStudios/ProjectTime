@@ -13,7 +13,7 @@ import 'package:project_time/pages/ProjectsLibrary.dart';
 import 'package:project_time/pages/projects/addProject.dart';
 
 // Other
-import 'package:project_time/Core.dart';
+import 'package:project_time/Core.logger.dart';
 import 'package:project_time/main.config.dart' as ptConfig;
 import 'package:project_time/main.theme.dart' as ptTheme;
 

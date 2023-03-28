@@ -112,7 +112,7 @@
     "cmake.configureOnOpen": true,
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {
-        "*.dart": "${capture}.mobile.dart, ${capture}.tablet.dart, ${capture}.desktop.dart, ${capture}.form.dart, ${capture}.theme.dart, ${capture}.config.dart, ${cupture}.build.dart",
+        "*.dart": "${capture}.mobile.dart, ${capture}.tablet.dart, ${capture}.desktop.dart, ${capture}.form.dart, ${capture}.form.*.dart, ${capture}.theme.dart, ${capture}.config.dart, ${cupture}.build.dart, ${capture}.*.dart",
         "*.h": "${capture}.cpp",
         "*.hpp": "${capture}.cpp"
     }
