@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 // Widgets
 import 'package:project_time/widgets/base.dart';
+import 'package:project_time/widgets/Sidebar.dart';
 import 'package:project_time/widgets/Home/AddProjectButton.dart';
 import 'package:project_time/widgets/Home/SearchBar.dart';
 
@@ -26,19 +27,7 @@ class _HomePageState extends State<HomePage>
         return BaseWidget(
             child: Row(
                 children: [
-                    Container(
-                        height: ptConfig.windowHeight,
-                        color: ptTheme.kPrimaryColor,
-                        child: const Text(
-                            "Unimplemented", // TODO: #2 Implement SideBar
-                            style: TextStyle(
-                                color: ptTheme.kSecondaryColor,
-                                fontWeight: FontWeight.normal,
-                                decoration: TextDecoration.none,
-                                fontSize: 15
-                            )
-                        )
-                    ),
+                    Sidebar(page: widget),
                     const Padding(padding: EdgeInsets.all(20)),
                     Column(
                         crossAxisAlignment: CrossAxisAlignment.baseline,

@@ -1,24 +1,23 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, library_prefixes
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 // Widgets
 import 'package:project_time/widgets/base.dart';
 
 // Other
-import 'package:project_time/extensions/VRouter.dart';
 import 'package:project_time/main.theme.dart' as ptTheme;
-import 'package:project_time/main.config.dart' as ptCongig;
 
-class ProjectsLibrary extends StatefulWidget 
+class ProjectsLibraryPage extends StatefulWidget 
 {
-    const ProjectsLibrary({Key? key}) : super(key: key);
+    const ProjectsLibraryPage({Key? key}) : super(key: key);
 
     @override
-    State<ProjectsLibrary> createState() => _ProjectsLibraryState();
+    State<ProjectsLibraryPage> createState() => _ProjectsLibraryPageState();
 }
 
-class _ProjectsLibraryState extends State<ProjectsLibrary> 
+class _ProjectsLibraryPageState extends State<ProjectsLibraryPage> 
 {
     @override
     Widget build(BuildContext context) 
@@ -49,7 +48,7 @@ class _ProjectsLibraryState extends State<ProjectsLibrary>
                         ),
                         const Padding(padding: EdgeInsets.all(10)),
                         ElevatedButton(
-                            onPressed: () => widget.goto(context, "/"),
+                            onPressed: () => context.go("/"),
                             style: ElevatedButton.styleFrom(
                                 backgroundColor: ptTheme.kAccentColor,
                             ),

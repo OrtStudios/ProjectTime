@@ -56,8 +56,9 @@ class AddProjectFormGeneralPage extends StatelessWidget
                                 color: ptTheme.kSecondaryLightColor
                             )
                         ),
-                        SizedBox(
+                        Container(
                             width: 500,
+                            color: Colors.grey,
                             child: TextFormField(
                                 maxLines: 3,
                                 maxLength: 500,

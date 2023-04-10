@@ -1,5 +1,6 @@
 // ignore_for_file: file_names, library_prefixes, curly_braces_in_flow_control_structures
 import "package:flutter/material.dart";
+import 'package:project_time/widgets/Sidebar.dart';
 
 // Widgets
 import 'package:project_time/widgets/base.dart';
@@ -26,19 +27,7 @@ class _AddProjectPageState extends State<AddProjectPage>
             child: BaseWidget(
                 child: Row(
                     children: [
-                        Container(
-                            height: ptConfig.windowHeight,
-                            color: ptTheme.kPrimaryColor,
-                            child: const Text(
-                                "Unimplemented", // TODO: Implement SideBar
-                                style: TextStyle(
-                                    color: ptTheme.kSecondaryLightColor,
-                                    fontWeight: FontWeight.normal,
-                                    decoration: TextDecoration.none,
-                                    fontSize: 15
-                                )
-                            )
-                        ),
+                        Sidebar(page: widget),
                         Column(
                             children: [
                                 const SizedBox(height: 10),

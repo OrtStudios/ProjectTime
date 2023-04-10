@@ -45,7 +45,7 @@ class _AddProjectFormState extends State<AddProjectForm>
         Step(
             state: currentStep > 3 ? StepState.complete : StepState.indexed,
             isActive: currentStep >= 3,
-            title: const Text("Autor"),
+            title: const Text("Author"),
             content: Container()
         ),
         Step(
@@ -57,7 +57,7 @@ class _AddProjectFormState extends State<AddProjectForm>
         Step(
             state: currentStep > 5 ? StepState.complete : StepState.indexed,
             isActive: currentStep >= 5,
-            title: const Text("Confermation"),
+            title: const Text("Confirmation"),
             content: Container()
         )
     ];
