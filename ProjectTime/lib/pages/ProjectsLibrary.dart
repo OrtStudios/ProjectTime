@@ -6,7 +6,7 @@ import 'package:go_router/go_router.dart';
 // Widgets
 import 'package:project_time/widgets/base.dart';
 
-// Other
+// Data
 import 'package:project_time/main.theme.dart' as ptTheme;
 
 class ProjectsLibraryPage extends StatefulWidget 
@@ -23,6 +23,7 @@ class _ProjectsLibraryPageState extends State<ProjectsLibraryPage>
     Widget build(BuildContext context) 
     {
         return BaseWidget(
+            page: const ProjectsLibraryPage(),
             child: Center(
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,

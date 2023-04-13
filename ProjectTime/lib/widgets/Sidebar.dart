@@ -2,11 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-//import 'package:project_time/extensions/VRouter.dart';
 
 // Utils
 import 'package:project_time/utils/pageIndex.dart';
-import 'package:project_time/utils/roundOutwards.dart';
 
 // Data
 import 'package:project_time/main.theme.dart' as ptTheme;
@@ -33,78 +31,54 @@ class Sidebar extends StatelessWidget
     ];
 
     final Widget page;
-    Sidebar({super.key, required this.page});
-
-    int setIndex()
-    {
-        int index = GetPageIndex(page);
-
-        // check if the index of the page is in the sidebar:
-        if (ptConfig.PagesInSidebar.contains(index))
-        {
-            return index;
-        }
-        else
-        {
-            return 0;
-        }
-    }
-
-    BuildContext? context;
+    const Sidebar({required this.page, Key? key}) : super(key: key);
 
     @override
     Widget build(BuildContext context) 
     {
-        this.context = context;
+        void changeDestination(int value) 
+        {
+            switch (value) 
+            {
+                case 0:
+                    context.go("/");
+                    break;
+                case 1:
+                    context.go("/projectsLibrary");
+                    break;
+                case 2:
+                    context.go("/settings");
+                    break;
+            }
+        }
+
         return Container(
-            height: ptConfig.windowHeight,
+            height: ptConfig.windowHeight + 2,
             width: ptConfig.sidebarWidth,
-            color: ptTheme.kPrimaryColor,
-            child: ClipPath(
-                clipper: OutwardsClipper(),
-                child: NavigationRail(
-                    destinations: const [
-                        NavigationRailDestination(
-                            icon: Icon(Icons.house_outlined),
-                            selectedIcon: Icon(Icons.house),
-                            label: Text('Home'),
-                        ),
-                        NavigationRailDestination(
-                            icon: Icon(Icons.library_books_outlined),
-                            selectedIcon: Icon(Icons.library_books),
-                            label: Text('Projects Library')
-                        ),
-                        NavigationRailDestination(
-                            icon: Icon(Icons.settings_outlined),
-                            selectedIcon: Icon(Icons.settings),
-                            label: Text('Settings'),
-                        ),
-                    ],
-                    selectedIndex: setIndex(),
-                    onDestinationSelected: changeDestination,
-                    useIndicator: true,
-                ),
+            color: Colors.transparent,
+            child: NavigationRail(
+                backgroundColor: Colors.transparent,
+                destinations: const [
+                    NavigationRailDestination(
+                        icon: Icon(Icons.house_outlined),
+                        selectedIcon: Icon(Icons.house),
+                        label: Text('Home'),
+                    ),
+                    NavigationRailDestination(
+                        icon: Icon(Icons.library_books_outlined),
+                        selectedIcon: Icon(Icons.library_books),
+                        label: Text('Projects Library')
+                    ),
+                    NavigationRailDestination(
+                        icon: Icon(Icons.settings_outlined),
+                        selectedIcon: Icon(Icons.settings),
+                        label: Text('Settings'),
+                    ),
+                ],
+                selectedIndex:  GetPageIndex(page),
+                onDestinationSelected: changeDestination,
+                useIndicator: true,
             )
         );
-    }
-
-    void changeDestination(int value) 
-    {
-        if (this.context == null) return;
-
-        BuildContext context = this.context!;
-
-        switch (value) 
-        {
-            case 0:
-                context.go("/");
-                break;
-            case 1:
-                context.go("/projectsLibrary");
-                break;
-            case 2:
-                context.go("/settings");
-                break;
-        }
     }
 }

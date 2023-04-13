@@ -46,6 +46,7 @@ class AddProjectFormGeneralPage extends StatelessWidget
 
                 //>> Description <<\\
                 Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                         const Text(
                             "Description: ",
@@ -58,7 +59,7 @@ class AddProjectFormGeneralPage extends StatelessWidget
                         ),
                         Container(
                             width: 500,
-                            color: Colors.grey,
+                            color: ptTheme.kSecondaryTransparentColor,
                             child: TextFormField(
                                 maxLines: 3,
                                 maxLength: 500,

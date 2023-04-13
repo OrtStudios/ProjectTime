@@ -26,14 +26,16 @@ class AddProjectFormExtrasPage extends StatelessWidget
                         color: ptTheme.kSecondaryLightColor
                     )
                 ),
-                SizedBox(
+                Container(
                     width: 700,
+                    color: ptTheme.kSecondaryTransparentColor,
                     child: TextFormField(
                         maxLines: 10,
                         maxLength: 2055,
                         cursorColor: ptTheme.kAccentColor,
                         decoration: const InputDecoration(
-                            hintText: "Extra information"
+                            hintText: "Extra information",
+                            counterText: ""
                         ),
                     ),
                 ),

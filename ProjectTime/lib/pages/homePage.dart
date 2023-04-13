@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 // Widgets
 import 'package:project_time/widgets/base.dart';
-import 'package:project_time/widgets/Sidebar.dart';
 import 'package:project_time/widgets/Home/AddProjectButton.dart';
 import 'package:project_time/widgets/Home/SearchBar.dart';
 
@@ -25,10 +24,10 @@ class _HomePageState extends State<HomePage>
     Widget build(BuildContext context) 
     {
         return BaseWidget(
+            page: const HomePage(),
             child: Row(
                 children: [
-                    Sidebar(page: widget),
-                    const Padding(padding: EdgeInsets.all(20)),
+                    const SizedBox(width: 10),
                     Column(
                         crossAxisAlignment: CrossAxisAlignment.baseline,
                         textBaseline: TextBaseline.alphabetic,
@@ -152,8 +151,8 @@ class _HomePageState extends State<HomePage>
                                 ]
                             )
                         ]
-                    )
-                ]
+                    ),
+                ],
             )
         );
         // End of Build Method //

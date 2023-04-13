@@ -16,6 +16,7 @@ const Color kDisabledTextColor = Color(0xFF8D8D8D);
 const Color kTextTransparentColor = Color(0x7FFFFFFF);
 const Color kButtonBackgroundColor = Color(0x8F0093B1);
 const Color kDisabledButtonBackgroundColor = Color(0x8F002D36);
+const Color kSidebarBackgroundColor = Color(0xFF0D2D5A);
 
 // Theme Images
 const String kLogoImage = "assets/images/logo.png";

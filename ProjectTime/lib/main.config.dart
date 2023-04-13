@@ -4,24 +4,19 @@ import 'package:flutter/material.dart';
 
 const double windowWidth = 1000;
 const double windowHeight = 600;
-const double sidebarWidth = 150;
+const double sidebarWidth = 120;
 
 const Size winSize = Size(windowWidth, windowHeight);
 
 const Map<String, int> PagesCategories = {
-    "404": -1,
     "Home": 0,
     "Project": 1,
     "settings": 2,
 };
 
-const PagesByCategories = {
+const Map<String, String> PagesByCategories = {
     "Home": "Home",
     "404": "Home",
     "ProjectsLibrary": "Project",
     "AddProject": "Project",
 };
-
-const PagesInSidebar = [
-    0, 1, 2
-];

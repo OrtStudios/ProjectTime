@@ -1,6 +1,7 @@
 // ignore_for_file: library_prefixes, curly_braces_in_flow_control_structures
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:project_time/pages/projects/addProject.form.extras.dart';
 
 // Widgets
@@ -9,7 +10,6 @@ import 'package:project_time/pages/projects/addProject.form.general.dart';
 
 // Other
 import 'package:project_time/Core.logger.dart';
-import 'package:project_time/extensions/VRouter.dart';
 
 class AddProjectForm extends StatefulWidget 
 {
@@ -67,6 +67,7 @@ class _AddProjectFormState extends State<AddProjectForm>
     {
         return Stepper(
             type: StepperType.horizontal,
+            margin: EdgeInsets.zero,
             elevation: 0,
             steps: getSteps(),
             currentStep: currentStep,
@@ -77,7 +78,7 @@ class _AddProjectFormState extends State<AddProjectForm>
                     if (isLastStep) 
                     {
                         Core.logInfo("continue");
-                        widget.goto(context, "/projectsLibrary");
+                        context.go("/projectsLibrary");
                     } 
                     else currentStep++;
                 }
