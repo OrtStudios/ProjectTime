@@ -172,6 +172,246 @@ Core/Core.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/Core.cpp.s
 .PHONY : Core/Core.cpp.s
 
+Core/src/Error/Error.obj: Core/src/Error/Error.cpp.obj
+.PHONY : Core/src/Error/Error.obj
+
+# target to build an object file
+Core/src/Error/Error.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/Error/Error.cpp.obj
+.PHONY : Core/src/Error/Error.cpp.obj
+
+Core/src/Error/Error.i: Core/src/Error/Error.cpp.i
+.PHONY : Core/src/Error/Error.i
+
+# target to preprocess a source file
+Core/src/Error/Error.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/Error/Error.cpp.i
+.PHONY : Core/src/Error/Error.cpp.i
+
+Core/src/Error/Error.s: Core/src/Error/Error.cpp.s
+.PHONY : Core/src/Error/Error.s
+
+# target to generate assembly for a file
+Core/src/Error/Error.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/Error/Error.cpp.s
+.PHONY : Core/src/Error/Error.cpp.s
+
+Core/src/FileManagment/BasicFile.obj: Core/src/FileManagment/BasicFile.cpp.obj
+.PHONY : Core/src/FileManagment/BasicFile.obj
+
+# target to build an object file
+Core/src/FileManagment/BasicFile.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/FileManagment/BasicFile.cpp.obj
+.PHONY : Core/src/FileManagment/BasicFile.cpp.obj
+
+Core/src/FileManagment/BasicFile.i: Core/src/FileManagment/BasicFile.cpp.i
+.PHONY : Core/src/FileManagment/BasicFile.i
+
+# target to preprocess a source file
+Core/src/FileManagment/BasicFile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/FileManagment/BasicFile.cpp.i
+.PHONY : Core/src/FileManagment/BasicFile.cpp.i
+
+Core/src/FileManagment/BasicFile.s: Core/src/FileManagment/BasicFile.cpp.s
+.PHONY : Core/src/FileManagment/BasicFile.s
+
+# target to generate assembly for a file
+Core/src/FileManagment/BasicFile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/FileManagment/BasicFile.cpp.s
+.PHONY : Core/src/FileManagment/BasicFile.cpp.s
+
+Core/src/FileManagment/DataFile.obj: Core/src/FileManagment/DataFile.cpp.obj
+.PHONY : Core/src/FileManagment/DataFile.obj
+
+# target to build an object file
+Core/src/FileManagment/DataFile.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/FileManagment/DataFile.cpp.obj
+.PHONY : Core/src/FileManagment/DataFile.cpp.obj
+
+Core/src/FileManagment/DataFile.i: Core/src/FileManagment/DataFile.cpp.i
+.PHONY : Core/src/FileManagment/DataFile.i
+
+# target to preprocess a source file
+Core/src/FileManagment/DataFile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/FileManagment/DataFile.cpp.i
+.PHONY : Core/src/FileManagment/DataFile.cpp.i
+
+Core/src/FileManagment/DataFile.s: Core/src/FileManagment/DataFile.cpp.s
+.PHONY : Core/src/FileManagment/DataFile.s
+
+# target to generate assembly for a file
+Core/src/FileManagment/DataFile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/FileManagment/DataFile.cpp.s
+.PHONY : Core/src/FileManagment/DataFile.cpp.s
+
+Core/src/FileManagment/DataStructures/DataFileStructure.obj: Core/src/FileManagment/DataStructures/DataFileStructure.cpp.obj
+.PHONY : Core/src/FileManagment/DataStructures/DataFileStructure.obj
+
+# target to build an object file
+Core/src/FileManagment/DataStructures/DataFileStructure.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/FileManagment/DataStructures/DataFileStructure.cpp.obj
+.PHONY : Core/src/FileManagment/DataStructures/DataFileStructure.cpp.obj
+
+Core/src/FileManagment/DataStructures/DataFileStructure.i: Core/src/FileManagment/DataStructures/DataFileStructure.cpp.i
+.PHONY : Core/src/FileManagment/DataStructures/DataFileStructure.i
+
+# target to preprocess a source file
+Core/src/FileManagment/DataStructures/DataFileStructure.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/FileManagment/DataStructures/DataFileStructure.cpp.i
+.PHONY : Core/src/FileManagment/DataStructures/DataFileStructure.cpp.i
+
+Core/src/FileManagment/DataStructures/DataFileStructure.s: Core/src/FileManagment/DataStructures/DataFileStructure.cpp.s
+.PHONY : Core/src/FileManagment/DataStructures/DataFileStructure.s
+
+# target to generate assembly for a file
+Core/src/FileManagment/DataStructures/DataFileStructure.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/FileManagment/DataStructures/DataFileStructure.cpp.s
+.PHONY : Core/src/FileManagment/DataStructures/DataFileStructure.cpp.s
+
+Core/src/FileManagment/ProjectFile.obj: Core/src/FileManagment/ProjectFile.cpp.obj
+.PHONY : Core/src/FileManagment/ProjectFile.obj
+
+# target to build an object file
+Core/src/FileManagment/ProjectFile.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/FileManagment/ProjectFile.cpp.obj
+.PHONY : Core/src/FileManagment/ProjectFile.cpp.obj
+
+Core/src/FileManagment/ProjectFile.i: Core/src/FileManagment/ProjectFile.cpp.i
+.PHONY : Core/src/FileManagment/ProjectFile.i
+
+# target to preprocess a source file
+Core/src/FileManagment/ProjectFile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/FileManagment/ProjectFile.cpp.i
+.PHONY : Core/src/FileManagment/ProjectFile.cpp.i
+
+Core/src/FileManagment/ProjectFile.s: Core/src/FileManagment/ProjectFile.cpp.s
+.PHONY : Core/src/FileManagment/ProjectFile.s
+
+# target to generate assembly for a file
+Core/src/FileManagment/ProjectFile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/FileManagment/ProjectFile.cpp.s
+.PHONY : Core/src/FileManagment/ProjectFile.cpp.s
+
+Core/src/Logger.obj: Core/src/Logger.cpp.obj
+.PHONY : Core/src/Logger.obj
+
+# target to build an object file
+Core/src/Logger.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/Logger.cpp.obj
+.PHONY : Core/src/Logger.cpp.obj
+
+Core/src/Logger.i: Core/src/Logger.cpp.i
+.PHONY : Core/src/Logger.i
+
+# target to preprocess a source file
+Core/src/Logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/Logger.cpp.i
+.PHONY : Core/src/Logger.cpp.i
+
+Core/src/Logger.s: Core/src/Logger.cpp.s
+.PHONY : Core/src/Logger.s
+
+# target to generate assembly for a file
+Core/src/Logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/Logger.cpp.s
+.PHONY : Core/src/Logger.cpp.s
+
+Core/src/Project/Project.obj: Core/src/Project/Project.cpp.obj
+.PHONY : Core/src/Project/Project.obj
+
+# target to build an object file
+Core/src/Project/Project.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/Project/Project.cpp.obj
+.PHONY : Core/src/Project/Project.cpp.obj
+
+Core/src/Project/Project.i: Core/src/Project/Project.cpp.i
+.PHONY : Core/src/Project/Project.i
+
+# target to preprocess a source file
+Core/src/Project/Project.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/Project/Project.cpp.i
+.PHONY : Core/src/Project/Project.cpp.i
+
+Core/src/Project/Project.s: Core/src/Project/Project.cpp.s
+.PHONY : Core/src/Project/Project.s
+
+# target to generate assembly for a file
+Core/src/Project/Project.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/Project/Project.cpp.s
+.PHONY : Core/src/Project/Project.cpp.s
+
+Core/src/Time/Time.obj: Core/src/Time/Time.cpp.obj
+.PHONY : Core/src/Time/Time.obj
+
+# target to build an object file
+Core/src/Time/Time.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/Time/Time.cpp.obj
+.PHONY : Core/src/Time/Time.cpp.obj
+
+Core/src/Time/Time.i: Core/src/Time/Time.cpp.i
+.PHONY : Core/src/Time/Time.i
+
+# target to preprocess a source file
+Core/src/Time/Time.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/Time/Time.cpp.i
+.PHONY : Core/src/Time/Time.cpp.i
+
+Core/src/Time/Time.s: Core/src/Time/Time.cpp.s
+.PHONY : Core/src/Time/Time.s
+
+# target to generate assembly for a file
+Core/src/Time/Time.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/Time/Time.cpp.s
+.PHONY : Core/src/Time/Time.cpp.s
+
+Core/src/Types/Path.obj: Core/src/Types/Path.cpp.obj
+.PHONY : Core/src/Types/Path.obj
+
+# target to build an object file
+Core/src/Types/Path.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/Types/Path.cpp.obj
+.PHONY : Core/src/Types/Path.cpp.obj
+
+Core/src/Types/Path.i: Core/src/Types/Path.cpp.i
+.PHONY : Core/src/Types/Path.i
+
+# target to preprocess a source file
+Core/src/Types/Path.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/Types/Path.cpp.i
+.PHONY : Core/src/Types/Path.cpp.i
+
+Core/src/Types/Path.s: Core/src/Types/Path.cpp.s
+.PHONY : Core/src/Types/Path.s
+
+# target to generate assembly for a file
+Core/src/Types/Path.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/Types/Path.cpp.s
+.PHONY : Core/src/Types/Path.cpp.s
+
+Core/src/Types/Url.obj: Core/src/Types/Url.cpp.obj
+.PHONY : Core/src/Types/Url.obj
+
+# target to build an object file
+Core/src/Types/Url.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/Types/Url.cpp.obj
+.PHONY : Core/src/Types/Url.cpp.obj
+
+Core/src/Types/Url.i: Core/src/Types/Url.cpp.i
+.PHONY : Core/src/Types/Url.i
+
+# target to preprocess a source file
+Core/src/Types/Url.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/Types/Url.cpp.i
+.PHONY : Core/src/Types/Url.cpp.i
+
+Core/src/Types/Url.s: Core/src/Types/Url.cpp.s
+.PHONY : Core/src/Types/Url.s
+
+# target to generate assembly for a file
+Core/src/Types/Url.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Core.dir\build.make CMakeFiles/Core.dir/Core/src/Types/Url.cpp.s
+.PHONY : Core/src/Types/Url.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -186,6 +426,36 @@ help:
 	@echo ... Core/Core.obj
 	@echo ... Core/Core.i
 	@echo ... Core/Core.s
+	@echo ... Core/src/Error/Error.obj
+	@echo ... Core/src/Error/Error.i
+	@echo ... Core/src/Error/Error.s
+	@echo ... Core/src/FileManagment/BasicFile.obj
+	@echo ... Core/src/FileManagment/BasicFile.i
+	@echo ... Core/src/FileManagment/BasicFile.s
+	@echo ... Core/src/FileManagment/DataFile.obj
+	@echo ... Core/src/FileManagment/DataFile.i
+	@echo ... Core/src/FileManagment/DataFile.s
+	@echo ... Core/src/FileManagment/DataStructures/DataFileStructure.obj
+	@echo ... Core/src/FileManagment/DataStructures/DataFileStructure.i
+	@echo ... Core/src/FileManagment/DataStructures/DataFileStructure.s
+	@echo ... Core/src/FileManagment/ProjectFile.obj
+	@echo ... Core/src/FileManagment/ProjectFile.i
+	@echo ... Core/src/FileManagment/ProjectFile.s
+	@echo ... Core/src/Logger.obj
+	@echo ... Core/src/Logger.i
+	@echo ... Core/src/Logger.s
+	@echo ... Core/src/Project/Project.obj
+	@echo ... Core/src/Project/Project.i
+	@echo ... Core/src/Project/Project.s
+	@echo ... Core/src/Time/Time.obj
+	@echo ... Core/src/Time/Time.i
+	@echo ... Core/src/Time/Time.s
+	@echo ... Core/src/Types/Path.obj
+	@echo ... Core/src/Types/Path.i
+	@echo ... Core/src/Types/Path.s
+	@echo ... Core/src/Types/Url.obj
+	@echo ... Core/src/Types/Url.i
+	@echo ... Core/src/Types/Url.s
 .PHONY : help
 
 

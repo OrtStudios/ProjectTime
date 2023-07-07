@@ -5,15 +5,15 @@ import 'package:flutter/material.dart';
 // Other
 import 'package:project_time/main.theme.dart' as ptTheme;
 
-class SearchBar extends StatefulWidget 
+class PTSearchBar extends StatefulWidget 
 {
-    const SearchBar({super.key});
+    const PTSearchBar({super.key});
 
     @override
-    State<SearchBar> createState() => _SearchBarState();
+    State<PTSearchBar> createState() => _PTSearchBarState();
 }
 
-class _SearchBarState extends State<SearchBar> 
+class _PTSearchBarState extends State<PTSearchBar> 
 {
     @override
     Widget build(BuildContext context) 

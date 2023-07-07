@@ -1,4 +1,5 @@
 C:/Dev/ProjectTime/build/CMakeFiles/Core.dir
-C:/Dev/ProjectTime/build/CMakeFiles/PACKAGE.dir
-C:/Dev/ProjectTime/build/CMakeFiles/ALL_BUILD.dir
-C:/Dev/ProjectTime/build/CMakeFiles/ZERO_CHECK.dir
+C:/Dev/ProjectTime/build/CMakeFiles/package.dir
+C:/Dev/ProjectTime/build/CMakeFiles/package_source.dir
+C:/Dev/ProjectTime/build/CMakeFiles/edit_cache.dir
+C:/Dev/ProjectTime/build/CMakeFiles/rebuild_cache.dir

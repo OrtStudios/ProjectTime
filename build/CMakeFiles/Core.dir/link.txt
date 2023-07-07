@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Core.dir/objects.a
+C:\Dev\sdks\mingw64\bin\ar.exe qc CMakeFiles\Core.dir/objects.a @CMakeFiles\Core.dir\objects1
+C:\Dev\sdks\mingw64\bin\g++.exe -g -shared -o libCore.dll -Wl,--out-implib,libCore.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles\Core.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\Core.dir\linkLibs.rsp

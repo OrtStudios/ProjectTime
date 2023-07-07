@@ -35,10 +35,10 @@ class _HomePageState extends State<HomePage>
                             Container(
                                 padding: const EdgeInsets.only(top: 10),
                                 width: ptConfig.windowWidth - 320,
-                                child: Row(
+                                child: const Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
-                                    children: const [
-                                        SearchBar(),
+                                    children: [
+                                        PTSearchBar(),
                                         Padding(padding: EdgeInsets.all(10)),
                                         AddProjectButton()
                                     ]

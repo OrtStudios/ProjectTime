@@ -29,7 +29,7 @@ class _BaseWidgetState extends State<BaseWidget>
     @override
     Widget build(BuildContext context) 
     {
-        final BorderRadius _borderRadius = BorderRadius.only(
+        final BorderRadius borderRadius = BorderRadius.only(
             topLeft: Radius.circular(_roundingRadius),
             bottomLeft: Radius.circular(_roundingRadius)
         );
@@ -50,7 +50,7 @@ class _BaseWidgetState extends State<BaseWidget>
                                 Positioned(
                                     left: ptConfig.sidebarWidth,
                                     child: ClipRRect(
-                                        borderRadius: _borderRadius, 
+                                        borderRadius: borderRadius, 
                                         child: Image.asset(
                                             ptTheme.kBackgroundImage,
                                             height: ptConfig.windowHeight,
@@ -65,8 +65,8 @@ class _BaseWidgetState extends State<BaseWidget>
                     WindowBorder(
                         color: Colors.transparent,
                         width: 1,
-                        child: Row(
-                            children: const [
+                        child: const Row(
+                            children: [
                                 ControlPanel()
                             ]
                         )

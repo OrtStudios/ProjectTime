@@ -7,7 +7,6 @@ import 'package:go_router/go_router.dart';
 import 'package:project_time/utils/pageIndex.dart';
 
 // Data
-import 'package:project_time/main.theme.dart' as ptTheme;
 import 'package:project_time/main.config.dart' as ptConfig;
 
 class Sidebar extends StatelessWidget 
